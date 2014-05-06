@@ -9,6 +9,11 @@
             (my-lisp-mode-hook)
             (require 'jcm-elisp)))
 
+(add-hook 'slime-repl-mode-hook
+          (lambda ()
+            (my-lisp-mode-hook)
+            (require 'jcm-elisp)))
+
 (add-hook 'php-mode-hook
 		  (lambda ()
             (require 'jcm-web)

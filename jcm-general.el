@@ -1,7 +1,7 @@
 ;;; -*- mode: emacs-lisp; -*-
 
 ;; Stuff we want.
-(line-number-mode t)					; already have this?
+;(line-number-mode t)					; already have this?
 (column-number-mode t)
 (transient-mark-mode t)
 (delete-selection-mode t)
@@ -46,10 +46,11 @@
 (add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
 (add-to-list 'auto-mode-alist '("\\([Jj]\\)\\([Ss]\\)\\.resource" . javascript-mode))
 
-;; Experimental
+;;; Experimental
+
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
-(global-linum-mode 1)
+;(global-linum-mode 1)
 
 ;(require 'clojure-mode)
 ;(require 'clojure-test-mode)

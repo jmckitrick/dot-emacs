@@ -130,7 +130,7 @@ vi style of % jumping to matching brace."
     (when tag
       (tags-search tag))))
 
-;; fix the PATH variable
+;; Fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
   (interactive)
   (let ((path-from-shell (shell-command-to-string "zsh -i -c 'echo $PATH'")))
@@ -225,12 +225,27 @@ vi style of % jumping to matching brace."
                                                        ))))
     (jcm-do-sf-operation "refresh" temp-filename)))
 
+(defun jcm-create-sf-metadata (project metadata-type api-name)
+  (interactive "sProject: \nsMetadata type: \nsAPI name: ")
+  (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
+                                                       (cons 'metadata_type metadata-type)
+                                                       (cons 'api_name api-name)
+                                                       (cons 'github_template (list (cons 'author "J McKitrick")
+                                                                                    (cons 'description "Default class")
+                                                                                    (cons 'name "Default")
+                                                                                    (cons 'file_name "ApexClass.cls")))))))
+    (jcm-do-sf-operation "new_metadata" temp-filename)))
+
 (defun jcm-compile-sf-project (project)
   (interactive "sProject: ")
   (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
-                                                       ;;(cons 'username username)
-                                                       ;;(cons 'password password)
                                                        ))))
+    (jcm-do-sf-operation "compile_project" temp-filename)))
+
+(defun jcm-compile-sf-file (project)
+  (interactive "sProject: ")
+  (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
+                                                       (cons 'files (vector (file-truename buffer-file-name)))))))
     (jcm-do-sf-operation "compile_project" temp-filename)))
 
 (defun jcm-test-sf-project (project)
@@ -243,6 +258,15 @@ vi style of % jumping to matching brace."
   (interactive "sProject: ")
   (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)))))
     (jcm-do-sf-operation "code_coverage_report" temp-filename)))
+
+(defun jcm-session-sf-project (project username password orgtype)
+  (interactive "sProject: \nsUsername: \nsPassword: \nsOrgtype: ")
+  (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
+                                                       (cons 'username username)
+                                                       (cons 'password password)
+                                                       (cons 'org_type orgtype)
+                                                       ))))
+    (jcm-do-sf-operation "get_active_session" temp-filename)))
 
 (defun jcm-create-sf-stdin-file (content)
   (require 'json)
