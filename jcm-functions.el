@@ -229,7 +229,7 @@ vi style of % jumping to matching brace."
   (interactive "sProject: \nsMetadata type: \nsAPI name: ")
   (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
                                                        (cons 'metadata_type metadata-type)
-                                                       (cons 'api_name api-name)
+                                                       (cons 'params (list (cons'api_name api-name)))
                                                        (cons 'github_template (list (cons 'author "J McKitrick")
                                                                                     (cons 'description "Default class")
                                                                                     (cons 'name "Default")

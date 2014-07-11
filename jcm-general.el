@@ -45,6 +45,7 @@
 (add-to-list 'auto-mode-alist '("css\\.resource" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
 (add-to-list 'auto-mode-alist '("\\([Jj]\\)\\([Ss]\\)\\.resource" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.cljs" . clojure-mode))
 
 ;;; Experimental
 
@@ -69,5 +70,14 @@
 (setq cider-popup-stacktraces nil)
 (setq cider-auto-select-error-buffer t)
 (setq cider-repl-display-in-current-window t)
+
+;;(require 'better-defaults)
+(setq save-interprogram-paste-before-kill nil)
+
+  (require 'auto-complete)
+  (global-auto-complete-mode t)
+  (setq ac-auto-start 3)
+
+(ido-mode)
 
 (provide 'jcm-general)

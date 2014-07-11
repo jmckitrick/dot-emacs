@@ -28,7 +28,7 @@ eyes   = one pane, max height for Pro, large font"
 		  (left-full '(left . 0))
 		  (left-pad '(left . 4))
 		  (left-out '(left . 130))
-          (left-over '(left . 80))
+          (left-over '(left . 60))
 		  (left-less '(left . 280))     ; 240
           (left-one '(left . 320))
 		  (left-two '(left . 640))
