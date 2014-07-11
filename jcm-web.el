@@ -97,9 +97,6 @@
   (global-set-key "\M-." 'etags-select-find-tag-at-point)
   (global-set-key (kbd "M-,") 'pop-tag-mark)
   
-  (require 'auto-complete)
-  (global-auto-complete-mode t)
-  (setq ac-auto-start 3)
   (define-key ac-complete-mode-map "\t" 'ac-complete)
   (define-key ac-complete-mode-map "\r" nil)
   ;;(add-to-list 'completion-at-point-functions 'semantic-com)

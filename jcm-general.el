@@ -45,6 +45,7 @@
 (add-to-list 'auto-mode-alist '("css\\.resource" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
 (add-to-list 'auto-mode-alist '("\\([Jj]\\)\\([Ss]\\)\\.resource" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.rake" . ruby-mode))
 
 ;;; Experimental
 
@@ -56,7 +57,7 @@
 ;(require 'clojure-test-mode)
 (autoload 'clojure-mode "clojure-mode" t)
 (autoload 'clojure-mode-hook "clojure-mode" t)
-(autoload 'clojure-test-mode "clojure-test-mode" t)
+;(autoload 'clojure-test-mode "clojure-test-mode" t)
 (autoload 'nrepl-jack-in "nrepl" t)
 
 (require 'package)
@@ -64,10 +65,22 @@
 (package-initialize)
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'company-mode)
 (setq nrepl-hide-special-buffers t)
 (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-popup-stacktraces nil)
 (setq cider-auto-select-error-buffer t)
 (setq cider-repl-display-in-current-window t)
+(setq cider-prompt-save-file-on-load nil)
+
+(add-to-list 'vc-handled-backends 'GIT)
+
+;(require 'auto-complete)
+;(global-auto-complete-mode t)
+;(setq ac-auto-start 3)
+;(add-hook 'after-init-hook 'global-company-mode)
+
+(ido-mode)
 
 (provide 'jcm-general)

@@ -25,7 +25,13 @@
 		  (lambda ()
             (require 'jcm-web)
 			(jcm-setup-web-settings)
-            (jcm-setup-javascript-settings)))
+            ;(jcm-setup-javascript-settings)
+            ))
+
+(add-hook 'ruby-mode-hook
+		  (lambda ()
+            (require 'jcm-web)
+			(jcm-setup-web-settings)))
 
 (add-hook 'sgml-mode-hook
 		  (lambda ()
