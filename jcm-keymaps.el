@@ -50,7 +50,7 @@
 ;;(global-set-key [(control l)] 'centerer)
 ;;(global-set-key [(control tab)] 'bury-buffer)
 
-;(define-key global-map (kbd "C-<f5>") 'cider-jack-in)
-(define-key global-map (kbd "C-<f5>") 'nrepl-jack-in)
+(define-key global-map (kbd "C-<f5>") 'cider-jack-in)
+;(define-key global-map (kbd "C-<f5>") 'nrepl-jack-in)
 
 (provide 'jcm-keymaps)
