@@ -49,8 +49,8 @@ eyes   = one pane, max height for Pro, large font"
   (if (member config '(pairs eyes))
 	  ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
       ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-      (set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
-      (set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")))
+      (set-frame-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-fontset-auto6")
+      (set-frame-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-fontset-auto6")))
 
 ;;(add-to-list 'load-path (expand-file-name "color-theme-6.6.0/" jcm-elib-dir))
 

@@ -79,8 +79,26 @@
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
-;(add-hook 'after-init-hook 'global-company-mode)
+
+;(add-to-list 'ac-modes 'enh-ruby-mode)
+;(add-to-list 'ac-modes 'web-mode)
+
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'ruby-mode-hook 'company-mode)
+(push 'company-robe company-backends)
+
+;(require 'flymake-ruby)
+;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
 (ido-mode)
+(flx-ido-mode)
+
+(require 'projectile)
+(projectile-global-mode)
+;(add-hook 'ruby-mode-hook 'projectile-on)
+
+;(require 'robe)
+;(add-hook 'ruby-mode-hook 'robe-mode)
 
 (provide 'jcm-general)
