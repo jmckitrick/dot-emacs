@@ -59,7 +59,8 @@
 (autoload 'clojure-mode "clojure-mode" t)
 (autoload 'clojure-mode-hook "clojure-mode" t)
 ;(autoload 'clojure-test-mode "clojure-test-mode" t)
-(autoload 'nrepl-jack-in "nrepl" t)
+;(autoload 'nrepl-jack-in "nrepl" t)
+(autoload 'cider-jack-in "cider" t)
 
 (require 'package)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
@@ -80,9 +81,27 @@
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
+
+;(add-to-list 'ac-modes 'enh-ruby-mode)
+;(add-to-list 'ac-modes 'web-mode)
+
+(require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'ruby-mode-hook 'company-mode)
+(push 'company-robe company-backends)
+
+;(require 'flymake-ruby)
+;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
 (ido-mode)
+(flx-ido-mode)
+
+(require 'projectile)
+(projectile-global-mode)
+;(add-hook 'ruby-mode-hook 'projectile-on)
+
+;(require 'robe)
+;(add-hook 'ruby-mode-hook 'robe-mode)
 
 ;;(require 'better-defaults)
 (setq save-interprogram-paste-before-kill nil)
@@ -90,7 +109,5 @@
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
-
-(flx-ido-mode)
 
 (provide 'jcm-general)

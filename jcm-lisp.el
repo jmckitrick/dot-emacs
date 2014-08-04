@@ -16,9 +16,9 @@
   ;(require 'paredit)
   ;(paredit-mode 1)
   (enable-paredit-mode)
-  (require 'mic-paren)
-  (paren-activate)                      ; mic-paren
-  (setq paren-priority 'both)
+  ;(require 'mic-paren)
+  ;(paren-activate)                      ; mic-paren
+  ;(setq paren-priority 'both)
 
   (local-set-key (kbd "C-n") 'forward-sexp)
   (local-set-key (kbd "C-h") 'backward-sexp)
