@@ -80,17 +80,17 @@
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
-;(add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
 
-(ido-mode)
+;(ido-mode)
 
 ;;(require 'better-defaults)
 (setq save-interprogram-paste-before-kill nil)
 
-  (require 'auto-complete)
-  (global-auto-complete-mode t)
-  (setq ac-auto-start 3)
+;(require 'auto-complete)
+;(global-auto-complete-mode t)
+;(setq ac-auto-start 3)
 
-(ido-mode)
+(flx-ido-mode)
 
 (provide 'jcm-general)
