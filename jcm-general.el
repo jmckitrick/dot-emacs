@@ -82,7 +82,7 @@
 ;(setq ac-auto-start 3)
 (add-hook 'after-init-hook 'global-company-mode)
 
-;(ido-mode)
+(ido-mode)
 
 ;;(require 'better-defaults)
 (setq save-interprogram-paste-before-kill nil)
