@@ -46,7 +46,6 @@
 (add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
 (add-to-list 'auto-mode-alist '("\\([Jj]\\)\\([Ss]\\)\\.resource" . javascript-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.cljs" . clojure-mode))
-(add-to-list 'auto-mode-alist '("\\.rake" . ruby-mode))
 
 ;;; Experimental
 
@@ -78,6 +77,7 @@
 
 (add-to-list 'vc-handled-backends 'GIT)
 
+;; Switched to company mode, so this might be deprecated.
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
@@ -88,7 +88,7 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'ruby-mode-hook 'company-mode)
-(push 'company-robe company-backends)
+;(push 'company-robe company-backends)
 
 ;(require 'flymake-ruby)
 ;(add-hook 'ruby-mode-hook 'flymake-ruby-load)

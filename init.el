@@ -14,9 +14,9 @@
 (require 'jcm-keymaps)
 (require 'jcm-hooks)
 
-(when (is-work-machine t)
+(when (is-work-machine)
   (require 'jcm-work))
-(when (is-home-machine t)
+(when (is-home-machine)
   (require 'jcm-home))
 
 (case emacs-major-version

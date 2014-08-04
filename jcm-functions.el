@@ -27,14 +27,16 @@
   (or force
       (match-system-name "jcm-macbook")
       (match-system-name "jonathons-mbp")
-      (match-system-name "gateway.2wire.net")
-      (match-system-configuration "i386")))
+      ;(match-system-name "gateway.2wire.net")
+      ;(match-system-configuration "i386")
+      ))
 
 (defun* is-work-machine (&optional force)
   (interactive)
   (or force
-      (match-system-name "RK")
-      (match-system-configuration "86_64")))
+      (match-system-name "jmckitrick-mbp.local")
+      ;(match-system-configuration "86_64")
+      ))
 
 (defun jcm-irc ()
   "Start IRC for a freenode session."
