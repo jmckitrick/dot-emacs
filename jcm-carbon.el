@@ -13,6 +13,7 @@ wider  = two panes, max height for Pro
 widest = three panes, max height for Cinema
 pro    = three panes, max height for Pro
 eyes   = one pane, max height for Pro, large font"
+  (interactive)
   (cl-flet ((set-dims (width height left top)
                       ;;(setq initial-frame-alist (list width height left top))
                       ;;(setq default-frame-alist (list width height left top))
