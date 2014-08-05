@@ -34,7 +34,7 @@ eyes   = one pane, max height for Pro, large font"
           (left-one '(left . 320))
 		  (left-two '(left . 640))
 		  (left-eyes '(left . 400))
-		  (top '(top . 16)))            ; 24?
+		  (top '(top . 24)))            ; 16? 24?
 	  (case config
 		(small (set-dims width-one height-small left-less top))
 		(fat (set-dims width-two height-small left-full top))

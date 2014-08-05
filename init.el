@@ -1,6 +1,6 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(defvar jcm-mac-window-size 'small)     ;widest, chunky
+(defvar jcm-mac-window-size 'none)     ;widest, chunky
 (defvar jcm-theme-name 'solarized-dark)
 (defvar jcm-elisp-dir (expand-file-name "~/.emacs.d/"))
 (defvar jcm-elib-dir (expand-file-name "~/.emacs.d/elib/"))
