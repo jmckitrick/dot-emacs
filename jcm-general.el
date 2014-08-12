@@ -110,4 +110,6 @@
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
 
+(require 'recentf)
+
 (provide 'jcm-general)
