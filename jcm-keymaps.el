@@ -48,7 +48,7 @@
 ;;(define-key global-map (kbd "C-c i") 'increment-number-at-point)
 ;;(define-key global-map (kbd "C-c d") 'decrement-number-at-point)
 ;;(global-set-key [(control l)] 'centerer)
-;;(global-set-key [(control tab)] 'bury-buffer)
+(global-set-key [(control tab)] 'bury-buffer)
 
 (define-key global-map (kbd "C-<f5>") 'cider-jack-in)
 ;(define-key global-map (kbd "C-<f5>") 'nrepl-jack-in)
