@@ -31,7 +31,7 @@
 (defun* is-work-machine (&optional force)
   (interactive)
   (or force
-      (match-system-name "jmckitrick-mbp.local")))
+      (match-system-name "jmckitrick-mbp")))
 
 (defun jcm-irc ()
   "Start IRC for a freenode session."
@@ -40,18 +40,6 @@
               :port 6667
               :nick "jmckitrick"
               :full-name "Jonathon McKitrick"))
-
-;; (defun centerer ()
-;;   "Center the current buffer on this line."
-;;   (interactive)
-;;   (cond ((eq last-command 'centerer2)
-;; 		 (recenter -1))
-;; 		((eq last-command 'centerer1)
-;; 		 (recenter 0)
-;; 		 (setq this-command 'centerer2))
-;; 		(t
-;; 		 (recenter)
-;; 		 (setq this-command 'centerer1))))
 
 (defun nuke-all-buffers ()
   "Kill all emacs buffers."

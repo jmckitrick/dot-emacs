@@ -37,7 +37,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (iswitchb-mode 1)
 (setq enable-local-variables :safe)
-(setq vc-handled-backends nil)          ;'(svn)
+;(setq vc-handled-backends nil)          ;'(svn)
 
 ;; File/mode associations.
 (add-to-list 'auto-mode-alist '("\\.js" . javascript-mode))
@@ -62,7 +62,9 @@
 (autoload 'cider-jack-in "cider" t)
 
 (require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
@@ -88,13 +90,17 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'ruby-mode-hook 'company-mode)
+;(add-hook 'clojure-mode-hook 'company-mode)
 ;(push 'company-robe company-backends)
 
 ;(require 'flymake-ruby)
 ;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
-(ido-mode)
-(flx-ido-mode)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
 
 (require 'projectile)
 (projectile-global-mode)
@@ -110,6 +116,6 @@
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
 
-(require 'recentf)
+;(require 'recentf)
 
 (provide 'jcm-general)
