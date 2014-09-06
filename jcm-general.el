@@ -20,7 +20,7 @@
 ;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; Editing settings.
-(setq default-tab-width 4)            ;could be 4 or 8?
+(setq tab-width 4)            ;could be 4 or 8?
 (setq-default indent-tabs-mode nil)
 (setq fill-column 80)
 (setq c-default-style "bsd"
@@ -74,6 +74,8 @@
 (setq cider-auto-select-error-buffer t)
 (setq cider-repl-display-in-current-window t)
 (setq cider-prompt-save-file-on-load nil)
+;(setq cider-repl-result-prefix ";; => ")
+;(setq cider-interactive-eval-result-prefix ";; => ")
 
 (add-to-list 'vc-handled-backends 'GIT)
 
@@ -85,6 +87,9 @@
 ;(add-to-list 'ac-modes 'enh-ruby-mode)
 ;(add-to-list 'ac-modes 'web-mode)
 
+(ido-mode)
+(flx-ido-mode)
+
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'ruby-mode-hook 'company-mode)
@@ -93,9 +98,6 @@
 ;(require 'flymake-ruby)
 ;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
-(ido-mode)
-(flx-ido-mode)
-
 (require 'projectile)
 (projectile-global-mode)
 ;(add-hook 'ruby-mode-hook 'projectile-on)
@@ -103,11 +105,23 @@
 ;(require 'robe)
 ;(add-hook 'ruby-mode-hook 'robe-mode)
 
-;;(require 'better-defaults)
 (setq save-interprogram-paste-before-kill nil)
 
 ;(require 'auto-complete)
 ;(global-auto-complete-mode t)
 ;(setq ac-auto-start 3)
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;;(require 'javadoc-help)
+;;(require 'recentf)
 
 (provide 'jcm-general)
