@@ -92,7 +92,7 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'ruby-mode-hook 'company-mode)
-;(add-hook 'clojure-mode-hook 'company-mode)
+(add-hook 'clojure-mode-hook 'company-mode)
 ;(push 'company-robe company-backends)
 
 ;(require 'flymake-ruby)
@@ -102,7 +102,7 @@
 (ido-everywhere 1)
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t)
-(setq ido-use-faces nil)
+(setq ido-use-faces t)
 
 (require 'projectile)
 (projectile-global-mode)
@@ -128,6 +128,11 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;;(require 'javadoc-help)
-;;(require 'recentf)
+;(require 'recentf)
+(require 'magit)
+
+;(require 'cider-browse-ns)
+;(eval-after-load 'clojure-mode
+;  '(define-key clojure-mode-map (kbd "C-c M-b") 'cider-browse-ns-all))
 
 (provide 'jcm-general)
