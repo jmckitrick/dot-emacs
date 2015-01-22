@@ -19,39 +19,42 @@ eyes   = one pane, max height for Pro, large font"
                       ;;(setq default-frame-alist (list width height left top))
                       (set-frame-position (selected-frame) (cdr left) (cdr top))
                       (set-frame-size (selected-frame) (cdr width) (cdr height))))
-	(let ((width-one '(width . 96))     ; 88
-		  (width-two '(width . 180))
-		  (width-three '(width . 210))
-		  (width-full '(width . 270))
-		  (width-eyes '(width . 160))
-		  (height-small '(height . 49)) ; 47
-		  (height-tall '(height . 73))
-		  (left-full '(left . 0))
-		  (left-pad '(left . 4))
-		  (left-out '(left . 130))
+    (let ((width-one '(width . 96))     ; 88
+          (width-two '(width . 176))
+          (width-three '(width . 210))
+          (width-full '(width . 270))
+          (width-eyes '(width . 160))
+          (height-small '(height . 49)) ; 47
+          (height-tall '(height . 73))
+          (left-full '(left . 0))
+          (left-pad '(left . 4))
+          (left-out '(left . 130))
           (left-over '(left . 60))
-		  (left-less '(left . 280))     ; 240
+          (left-less '(left . 280))     ; 240
           (left-one '(left . 320))
-		  (left-two '(left . 640))
-		  (left-eyes '(left . 400))
-		  (top '(top . 24)))            ; 16? 24?
-	  (case config
-		(small (set-dims width-one height-small left-less top))
-		(fat (set-dims width-two height-small left-full top))
+          (left-two '(left . 640))
+          (left-eyes '(left . 400))
+          (top '(top . 24)))            ; 16? 24?
+      (case config
+        (small (set-dims width-one height-small left-less top))
+        (fat (set-dims width-two height-small left-full top))
         (chunky (set-dims width-eyes height-small left-over top))
-		(pairs (set-dims width-two height-small left-full top))
-		(tall (set-dims width-one height-tall left-two top))
-		(wide (set-dims width-two height-tall left-one top))
-		(wider (set-dims width-three height-tall left-out top))
-		(widest (set-dims width-full height-tall left-full top))
-		(pro (set-dims width-full height-tall left-pad top))
-		(eyes (set-dims width-eyes height-tall left-eyes top)))))
+        (pairs (set-dims width-two height-small left-full top))
+        (tall (set-dims width-one height-tall left-two top))
+        (wide (set-dims width-two height-tall left-one top))
+        (wider (set-dims width-three height-tall left-out top))
+        (widest (set-dims width-full height-tall left-full top))
+        (pro (set-dims width-full height-tall left-pad top))
+        (eyes (set-dims width-eyes height-tall left-eyes top)))))
 
   (if (member config '(pairs eyes))
-	  ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
       ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-      (set-frame-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-fontset-auto6")
-      (set-frame-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-fontset-auto6")))
+      ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
+      (set-default-font "Menlo 18")
+    (set-default-font "Menlo 18")
+    ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
+    ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
+    ))
 
 ;;(add-to-list 'load-path (expand-file-name "color-theme-6.6.0/" jcm-elib-dir))
 

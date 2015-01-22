@@ -20,8 +20,8 @@
 
 (defun jcm-setup-slime-paths ()
   "Set up slime load paths."
-  (add-to-list 'load-path (expand-file-name "~/loc/slime/"))
-  (add-to-list 'load-path (expand-file-name "~/loc/slime/contrib/"))
+  ;;(add-to-list 'load-path (expand-file-name "~/loc/slime/"))
+  ;;(add-to-list 'load-path (expand-file-name "~/loc/slime/contrib/"))
   (require 'slime-autoloads))
 
 (defun jcm-setup-slime-options ()

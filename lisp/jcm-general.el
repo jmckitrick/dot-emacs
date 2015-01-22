@@ -32,12 +32,12 @@
 (put 'dired-find-alternate-file 'disabled nil)
 (setq dired-recursive-deletes 'top)
 (setq find-grep-options "-q -i")
+(setq dired-use-ls-dired nil)
 
 ;; Other settings.
 (fset 'yes-or-no-p 'y-or-n-p)
-(iswitchb-mode 1)
+(icomplete-mode 1)
 (setq enable-local-variables :safe)
-;(setq vc-handled-backends nil)          ;'(svn)
 
 ;; File/mode associations.
 (add-to-list 'auto-mode-alist '("\\.js" . javascript-mode))
@@ -50,26 +50,23 @@
 ;;; Experimental
 
 (setq scroll-step 1)
-(setq scroll-conservatively 10000)
+(setq scroll-conservatively 40)
 ;(global-linum-mode 1)
 
-;(require 'clojure-mode)
-;(require 'clojure-test-mode)
 (autoload 'clojure-mode "clojure-mode" t)
 (autoload 'clojure-mode-hook "clojure-mode" t)
-;(autoload 'clojure-test-mode "clojure-test-mode" t)
-;(autoload 'nrepl-jack-in "nrepl" t)
 (autoload 'cider-jack-in "cider" t)
 
 (require 'package)
-(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+;(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
 ;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (add-hook 'cider-repl-mode-hook 'company-mode)
+(setq nrepl-log-messages t)
 (setq nrepl-hide-special-buffers t)
 (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-popup-stacktraces nil)
@@ -81,18 +78,10 @@
 
 (add-to-list 'vc-handled-backends 'GIT)
 
-;; Switched to company mode, so this might be deprecated.
-;(require 'auto-complete)
-;(global-auto-complete-mode t)
-;(setq ac-auto-start 3)
-
-;(add-to-list 'ac-modes 'enh-ruby-mode)
-;(add-to-list 'ac-modes 'web-mode)
-
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
-(add-hook 'ruby-mode-hook 'company-mode)
-(add-hook 'clojure-mode-hook 'company-mode)
+;(add-hook 'ruby-mode-hook 'company-mode)
+;(add-hook 'clojure-mode-hook 'company-mode)
 ;(push 'company-robe company-backends)
 
 ;(require 'flymake-ruby)
@@ -113,10 +102,6 @@
 
 (setq save-interprogram-paste-before-kill nil)
 
-;(require 'auto-complete)
-;(global-auto-complete-mode t)
-;(setq ac-auto-start 3)
-
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -126,9 +111,9 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-markup-indent-offset 2)
 
-;;(require 'javadoc-help)
-;(require 'recentf)
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/"))
 (require 'magit)
 
 ;(require 'cider-browse-ns)

@@ -263,7 +263,7 @@ vi style of % jumping to matching brace."
 (defun jcm-do-sf-operation (operation temp-filename)
   (require 'json)
   (with-temp-buffer
-    (call-process "python" temp-filename t t "/Users/jmckitrick/loc/mm/mm.py" "-o" operation "-c" "EMACS")
+    (call-process "python" temp-filename t t "/Users/jmckitrick/devel/mm/mm.py" "-o" operation "-c" "EMACS")
     (let ((response (json-read-from-string (buffer-string))))
       (jcm-dump-mm-result-str (buffer-string))
       (jcm-extract-sf-body response)
