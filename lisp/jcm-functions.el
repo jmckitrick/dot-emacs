@@ -3,7 +3,7 @@
 (defun jcm-edit-startup-file ()
   "Edit the startup file for emacs."
   (interactive)
-  (find-file (expand-file-name "init.el" jcm-elisp-dir)))
+  (find-file (expand-file-name "~/.emacs.d/init.el")))
 
 (defun jcm-dired-elisp ()
   "Open the elisp directory in dired."
