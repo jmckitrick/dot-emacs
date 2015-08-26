@@ -49,8 +49,8 @@
 
 ;;; Experimental
 
-(setq scroll-step 1)
-(setq scroll-conservatively 40)
+(setq scroll-step 1000)
+(setq scroll-conservatively 0)
 ;(global-linum-mode 1)
 
 (autoload 'clojure-mode "clojure-mode" t)
@@ -92,6 +92,8 @@
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces t)
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
 
 (require 'projectile)
 (projectile-global-mode)
@@ -113,11 +115,15 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/lisp"))
 (require 'magit)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 ;(require 'cider-browse-ns)
 ;(eval-after-load 'clojure-mode
 ;  '(define-key clojure-mode-map (kbd "C-c M-b") 'cider-browse-ns-all))
+
+(require 'linum)
+(global-linum-mode)
 
 (provide 'jcm-general)

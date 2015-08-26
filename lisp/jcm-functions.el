@@ -13,22 +13,22 @@
 (defun match-system-name (target-name)
   (interactive)
   (let ((result (string-match target-name system-name)))
-    (and (typep result 'integer)
+    (and (cl-typep result 'integer)
          (>= result 0))))
 
 (defun match-system-configuration (target-configuration)
   (interactive)
   (let ((result (string-match target-configuration system-configuration)))
-    (and (typep result 'integer)
+    (and (cl-typep result 'integer)
          (>= result 0))))
 
-(defun* is-home-machine (&optional force)
+(cl-defun is-home-machine (&optional force)
   (interactive)
   (or force
       (match-system-name "jcm-macbook")
       (match-system-name "jonathons-mbp")))
 
-(defun* is-work-machine (&optional force)
+(cl-defun is-work-machine (&optional force)
   (interactive)
   (or force
       (match-system-name "jmckitrick-mbp")))
@@ -52,13 +52,13 @@
   "Copy word at point into kill-ring."
   (interactive "P")
   (let ((beg (progn
-			   (if (looking-back "[a-zA-Z0-9]" 1)
-				   (backward-word 1))
-			   (point)))
-		(end (progn
-			   (forward-word arg)
-			   (point))))
-	(copy-region-as-kill beg end)
+               (if (looking-back "[a-zA-Z0-9]" 1)
+                   (backward-word 1))
+               (point)))
+        (end (progn
+               (forward-word arg)
+               (point))))
+    (copy-region-as-kill beg end)
     (backward-word 1)
     (message "Copied word.")))
 
@@ -132,7 +132,7 @@ vi style of % jumping to matching brace."
   (jcm-setup-web-settings)
   (global-auto-revert-mode))
 
-(defun jcm-compile-sf-project0 ()
+(defun x0jcm-compile-sf-project0 ()
   (interactive)
   (require 'json)
   ;;(cd "/Users/jmckitrick/mmworkspace/")
@@ -152,6 +152,13 @@ vi style of % jumping to matching brace."
           (message "SF error: !%s : %s" (cdr (assoc 'fileName err)) (cdr (assoc 'problem err))))
       (message (cdr (assoc 'body response))))))
 
+(defun jcm-dump-mm-raw-str (raw)
+  (let ((buffer-name "*mm-raw-buffer*"))
+    (get-buffer-create buffer-name)
+    (set-buffer buffer-name))
+  (erase-buffer)
+  (insert raw))
+
 (defun jcm-dump-mm-result-str (result)
   (let ((buffer-name "*mm-buffer*"))
     (get-buffer-create buffer-name)
@@ -167,7 +174,7 @@ vi style of % jumping to matching brace."
   (interactive)
   (jcm-compile-sf-project "MEN" "menninger@endeavormgmt.com.dev" "EndGelb14"))
 
-(defun jcm-compile-sf-project1 (project username password)
+(defun x1jcm-compile-sf-project1 (project username password)
   (interactive "sProject: \nsUsername: \nsPassword: ")
   (require 'json)
   (let ((temp-filename (make-temp-file "mm"))
@@ -264,17 +271,19 @@ vi style of % jumping to matching brace."
   (require 'json)
   (with-temp-buffer
     (call-process "python" temp-filename t t "/Users/jmckitrick/devel/mm/mm.py" "-o" operation "-c" "EMACS")
-    (let ((response (json-read-from-string (buffer-string))))
-      (jcm-dump-mm-result-str (buffer-string))
-      (jcm-extract-sf-body response)
-      (if (eql (cdr (assoc 'success response)) json-false)
-          (let ((messages (cdr (assoc 'Messages response))))
-            (if (> (length messages) 0)
-                (let ((err (aref messages 0)))
-                  (message "SF error: %s:%s - %s"
-                           (cdr (assoc 'fileName err))
-                           (cdr (assoc 'lineNumber err))
-                           (cdr (assoc 'problem err))))))))))
+    (let ((raw-response (buffer-string)))
+      (jcm-dump-mm-raw-str raw-response)
+      (let ((response (json-read-from-string raw-response)))
+        (jcm-dump-mm-result-str (buffer-string))
+        (jcm-extract-sf-body response)
+        (if (eql (cdr (assoc 'success response)) json-false)
+            (let ((messages (cdr (assoc 'Messages response))))
+              (if (> (length messages) 0)
+                  (let ((err (aref messages 0)))
+                    (message "SF error: %s:%s - %s"
+                             (cdr (assoc 'fileName err))
+                             (cdr (assoc 'lineNumber err))
+                             (cdr (assoc 'problem err)))))))))))
 
 (defun jcm-extract-sf-body (response)
   (let ((body (cdr (assoc 'body response))))
