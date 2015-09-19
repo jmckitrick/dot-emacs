@@ -115,13 +115,6 @@ vi style of % jumping to matching brace."
     (when tag
       (tags-search tag))))
 
-;; Fix the PATH variable
-(defun set-exec-path-from-shell-PATH ()
-  (interactive)
-  (let ((path-from-shell (shell-command-to-string "zsh -i -c 'echo $PATH'")))
-    (setenv "PATH" path-from-shell)
-    (setq exec-path (split-string path-from-shell path-separator))))
-
 (defun set-clojure-prod-env ()
   (interactive)
   (setenv "DATABASE_URL" "postgresql://jcm:none@localhost:5432/insperity-webhook"))

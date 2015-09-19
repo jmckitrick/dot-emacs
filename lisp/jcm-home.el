@@ -10,7 +10,7 @@
 
 ;;; General
 
-(require 'php-mode)
+;(require 'php-mode)
 (require 'tramp)
 (jcm-setup-tramp)
 

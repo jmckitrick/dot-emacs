@@ -1,0 +1,90 @@
+(require 'cl-lib)
+(require 's)
+
+(defun report-init-results (errors)
+  (if (not errors)
+      (message "Initialization successful!")
+    (message "Errors during init, see buffer *init-errors*")
+    (switch-to-buffer "*init-errors*")
+    (insert (mapconcat #'identity errors "\n"))))
+
+(defun file-to-feature (file)
+  (intern (file-name-nondirectory (s-chop-suffix "\.el" file))))
+
+(defun safe-load-init-files (dir &optional regexp)
+  "Require all elisp files in DIR.  When REGEXP is provided match
+only those files with name of form REGEXP.el.
+REGEXP defaults to ^init-.*\.el$"
+  (let* ((regexp (if regexp regexp "^init-.\*\.el\$"))
+         (files (directory-files dir t regexp))
+         (features (mapcar #'file-to-feature files))
+         (init-errors nil))
+    (cl-loop for feature in features
+          do (condition-case err
+                 (load (symbol-name feature))
+               (error (push (format "Error requiring %s: %s" feature err)
+                            init-errors))))
+    (report-init-results init-errors)))
+
+(defun match-system-name (target-name)
+  (interactive)
+  (let ((result (string-match target-name system-name)))
+    (and (cl-typep result 'integer)
+         (>= result 0))))
+
+(defun match-system-configuration (target-configuration)
+  (interactive)
+  (let ((result (string-match target-configuration system-configuration)))
+    (and (cl-typep result 'integer)
+         (>= result 0))))
+
+(cl-defun is-home-machine (&optional force)
+  (interactive)
+  (or force
+      (match-system-name "jcm-macbook")
+      (match-system-name "jonathons-mbp")))
+
+(cl-defun is-work-machine (&optional force)
+  (interactive)
+  (or force
+      (match-system-name "jmckitrick-mbp")))
+
+(defun nuke-all-buffers ()
+  "Kill all emacs buffers."
+  (interactive)
+  (mapcar (lambda (x) (kill-buffer x))
+		  (buffer-list))
+  (delete-other-windows))
+
+(defun jcm-edit-startup-file ()
+  "Edit the startup file for emacs."
+  (interactive)
+  (find-file (expand-file-name "~/.emacs.d/init.el")))
+
+(defun jcm-dired-elisp ()
+  "Open the elisp directory in dired."
+  (interactive)
+  (find-file jcm-elisp-dir))
+
+(defun copy-word (&optional arg)
+  "Copy word at point into kill-ring."
+  (interactive "P")
+  (let ((beg (progn
+               (if (looking-back "[a-zA-Z0-9]" 1)
+                   (backward-word 1))
+               (point)))
+        (end (progn
+               (forward-word arg)
+               (point))))
+    (copy-region-as-kill beg end)
+    (backward-word 1)
+    (message "Copied word.")))
+
+(defun jcm-tags-search-at-point ()
+  "Search tags file for symbol under point."
+  (interactive)
+  (let ((tag (find-tag-default)))
+    (when tag
+      (tags-search tag))))
+
+(provide 'init-util)
