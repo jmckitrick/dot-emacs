@@ -229,17 +229,18 @@
                 (concat "/ssh:jcm@li168-147.members.linode.com:" lisp-filename)))
         slime-filename-translations))
 
-(defun jcm-setup-tramp ()
-  "Setup cnacompass proxy for tramp."
-  (interactive)
-  (add-to-list 'tramp-default-proxies-alist
-			   '("cnacompass.org" nil "/ssh:jcm@mynode:")))
+;; XXX Might not need this anymore.
+;; (defun jcm-setup-tramp ()
+;;   "Setup cnacompass proxy for tramp."
+;;   (interactive)
+;;   (add-to-list 'tramp-default-proxies-alist
+;; 			   '("cnacompass.org" nil "/ssh:jcm@mynode:")))
 
 ;;; General
 
 ;(require 'php-mode)
 (require 'tramp)
-(jcm-setup-tramp)
+;(jcm-setup-tramp)
 
 (mapc (lambda (f) (autoload f "jcm-slime" "" t))
       '(jcm-start-slime

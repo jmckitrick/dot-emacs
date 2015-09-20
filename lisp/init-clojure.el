@@ -1,12 +1,14 @@
 ;;(require 'clj-refactor)
 
+;(require 'clojure-mode)
+;(require 'cider)
 (autoload 'clojure-mode-hook "clojure-mode" t)
 (autoload 'clojure-mode "clojure-mode" t)
 (autoload 'cider-jack-in "cider" t)
 
 (defun my-cider-mode-hook ()
   (require 'yesql-ghosts)
-  (cider-turn-on-eldoc-mode))
+  (eldoc-mode))
 
 (defun my-cider-repl-mode-hook ()
   (company-mode 1)
@@ -15,6 +17,10 @@
 
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
+
+;; (require 'cider-browse-ns)
+;; (eval-after-load 'clojure-mode
+;;   '(define-key clojure-mode-map (kbd "C-c M-b") 'cider-browse-ns-all))
 
 (defun my-clojure-mode-hook ()
   (cider-mode 1))

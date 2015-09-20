@@ -10,10 +10,13 @@
       company-selection-changed t
       company-tooltip-flip-when-above nil
       company-require-match nil
+      company-quickhelp-max-lines 60
       pos-tip-border-width 0)
 
 (company-quickhelp-mode 1)
 (global-company-mode 1)
+
+;(add-to-list 'company-dabbrev-code-modes 'clojure-mode)
 
 ;;(add-hook 'ruby-mode-hook 'company-mode)
 ;(add-hook 'clojure-mode-hook 'company-mode)
