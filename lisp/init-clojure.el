@@ -13,7 +13,7 @@
 (defun my-cider-repl-mode-hook ()
   (company-mode 1)
   (paredit-mode 1)
-  (eldoc-mode))
+  (cider-eldoc-setup))
 
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
