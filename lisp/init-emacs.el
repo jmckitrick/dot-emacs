@@ -8,6 +8,7 @@
  '(kill-whole-line t)
  '(visible-bell t)
  '(tooltip-mode nil))
+(column-number-mode t)
 
 ;; Stuff we don't.
 (setq make-backup-files nil)
@@ -27,6 +28,7 @@
       c-basic-offset 4
       track-eol t)
 (c-set-offset 'case-label '+)
+(setq js-indent-level 2)
 
 ;; Dired settings.
 (put 'dired-find-alternate-file 'disabled nil)
@@ -40,7 +42,7 @@
 (setq enable-local-variables :safe)
 
 (setq scroll-step 1000)
-(setq scroll-conservatively 100000)
+(setq scroll-conservatively 1)
 (setq scroll-preserve-screen-position t)
 ;(global-linum-mode 1)
 
@@ -105,8 +107,8 @@ eyes   = one pane, max height for Pro, large font"
     (if (member config '(pairs eyes))
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-        (set-default-font "Menlo 18")
-      (set-default-font "Menlo 18")
+        (set-default-font "Menlo 24")
+      (set-default-font "Menlo 24")
       ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
       ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
       ))
