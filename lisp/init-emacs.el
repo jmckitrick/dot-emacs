@@ -90,6 +90,7 @@ eyes   = one pane, max height for Pro, large font"
             (left-one '(left . 320))
             (left-two '(left . 640))
             (left-eyes '(left . 400))
+            (left-test '(left . 600))
             (top '(top . 24)))          ; 16? 24?
         (cl-case config
           (small (set-dims width-one height-small left-less top))
@@ -102,7 +103,8 @@ eyes   = one pane, max height for Pro, large font"
           (widest (set-dims width-full height-tall left-full top))
           (pro (set-dims width-full height-tall left-pad top))
           (eyes (set-dims width-eyes height-tall left-eyes top))
-          (retina (set-dims '(width . 120) height-small left-eyes top)))))
+          (retina (set-dims '(width . 120) height-small left-eyes top))
+          (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
 
     (if (member config '(pairs eyes))
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
