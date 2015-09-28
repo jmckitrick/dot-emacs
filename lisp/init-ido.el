@@ -7,6 +7,9 @@
 (ido-everywhere 1)
 (flx-ido-mode 1)
 
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
+
 (add-to-list 'ido-ignore-files "\\.DS_Store")
 
 ;(setq ido-enable-flex-matching t)
