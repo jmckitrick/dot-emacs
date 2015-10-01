@@ -1,12 +1,15 @@
 (require 'ido-vertical-mode)
-(require 'flx-ido)
+;(require 'ido-hacks)
+;(require 'flx-ido)
 
 (ido-mode 1)
 (ido-mode 'both)
 (ido-vertical-mode)
+;(ido-hacks-mode)
 (ido-everywhere 1)
-(flx-ido-mode 1)
+;(flx-ido-mode 1)
 
+;; flx-ido and ido-hacks might be more performants
 (require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
 

@@ -76,6 +76,7 @@ eyes   = one pane, max height for Pro, large font"
                         (set-frame-position (selected-frame) (cdr left) (cdr top))
                         (set-frame-size (selected-frame) (cdr width) (cdr height))))
       (let ((width-one '(width . 96))   ; 88
+	    (width-one-one '(width . 110))
             (width-two '(width . 176))
             (width-three '(width . 210))
             (width-full '(width . 270))
