@@ -13,6 +13,9 @@
 (require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
 
+;; C-n/p is more intuitive in vertical layout
+(setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right)
+
 (add-to-list 'ido-ignore-files "\\.DS_Store")
 
 ;(setq ido-enable-flex-matching t)
