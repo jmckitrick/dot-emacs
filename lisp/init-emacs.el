@@ -124,6 +124,10 @@ eyes   = one pane, max height for Pro, large font"
     ;;(setq ns-command-modifier 'meta)
     (jcm-set-carbon-prefs jcm-mac-window-size))
 
+  (add-to-list 'default-frame-alist '(font . "Menlo 24"))
+  ;(add-to-list 'default-frame-alist '(height . 48))
+  ;(add-to-list 'default-frame-alist '(width . 110))
+
   (setq shell-file-name "/bin/zsh")
   (set-exec-path-from-shell-PATH)
   ;(require 'exec-path-from-shell)
