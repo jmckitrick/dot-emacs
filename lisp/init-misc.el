@@ -23,6 +23,8 @@
 (require 'linum)
 (global-linum-mode)
 
+(require 'etags-select)
+
 (defun jcm-edit-startup-file ()
   "Edit the startup file for emacs."
   (interactive)
