@@ -152,4 +152,7 @@ eyes   = one pane, max height for Pro, large font"
 (require 'smex)
 (smex-initialize)
 
+;; Stuff to try from JJR
+(setq gc-cons-threshold 20000000)
+
 (provide 'init-emacs)
