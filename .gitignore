@@ -8,3 +8,4 @@ projectile*
 site-lisp
 smex-items
 tramp
+elib/*

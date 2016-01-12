@@ -1,4 +1,5 @@
 (setq custom-file (concat user-emacs-directory "customize.el"))
+(load custom-file)
 
 ;; Stuff we want.
 (transient-mark-mode t)
@@ -9,6 +10,7 @@
  '(visible-bell t)
  '(tooltip-mode nil))
 (column-number-mode t)
+(setq ring-bell-function 'ignore)
 
 ;; Stuff we don't.
 (setq make-backup-files nil)
@@ -110,8 +112,8 @@ eyes   = one pane, max height for Pro, large font"
     (if (member config '(pairs eyes))
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-        (set-default-font "Menlo 24")
-      (set-default-font "Menlo 24")
+        (set-default-font "Menlo 18")
+      (set-default-font "Menlo 18")
       ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
       ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
       ))
@@ -124,7 +126,7 @@ eyes   = one pane, max height for Pro, large font"
     ;;(setq ns-command-modifier 'meta)
     (jcm-set-carbon-prefs jcm-mac-window-size))
 
-  (add-to-list 'default-frame-alist '(font . "Menlo 24"))
+  (add-to-list 'default-frame-alist '(font . "Menlo 18"))
   ;(add-to-list 'default-frame-alist '(height . 48))
   ;(add-to-list 'default-frame-alist '(width . 110))
 

@@ -2,6 +2,8 @@
 
 (add-to-list 'vc-handled-backends 'GIT)
 
+(add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
+
 (require 'projectile)
 (projectile-global-mode)
 

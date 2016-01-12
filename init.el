@@ -1,6 +1,6 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(defvar jcm-mac-window-size 'tj-medium)     ;wider, widest, chunky, tj
+(defvar jcm-mac-window-size 'skinny)     ;wider, widest, chunky, tj
 (defvar jcm-theme-name 'solarized-light)
 (defvar jcm-elisp-dir (concat user-emacs-directory "lisp"))
 
@@ -10,7 +10,6 @@
 (require 'init-util)
 
 (safe-load-init-files jcm-elisp-dir)
-
 
 ;; OLD
 

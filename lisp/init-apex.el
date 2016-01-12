@@ -72,14 +72,26 @@
 
 (defun jcm-create-sf-project (project username password orgtype)
   (interactive "sProject: \nsUsername: \nsPassword: \nsOrgtype: ")
-  (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
-                                                       (cons 'username username)
-                                                       (cons 'password password)
-                                                       (cons 'org_type orgtype)
-                                                       ;;(cons 'directories ["classes"])
-                                                       ;;(cons 'package )
-                                                       ))))
+  (let ((temp-filename (jcm-create-sf-stdin-file (list
+                                                  ;;(cons 'directories ["classes"])
+                                                  ;;(cons 'package )
+                                                  (cons 'project_name project)
+                                                  (cons 'username username)
+                                                  (cons 'password password)
+                                                  (cons 'org_type orgtype)))))
     (jcm-do-sf-operation "new_project" temp-filename)))
+
+(defun jcm-create-sf-project-fast (project username password orgtype)
+  (interactive "sProject: \nsUsername: \nsPassword: \nsOrgtype: ")
+  (let ((temp-filename (jcm-create-sf-stdin-file (list
+                                                  ;;(cons 'directories ["classes"])
+                                                  ;;(cons 'package )
+                                                  (cons 'name project)
+                                                  (cons 'workspace "/Users/jmckitrick/Documents/mmworkspace/")
+                                                  (cons 'username username)
+                                                  (cons 'password password)
+                                                  (cons 'org_type orgtype)))))
+    (jcm-do-sf-operation-fast "new-project" temp-filename)))
 
 (defun jcm-refresh-sf-project (project)
   (interactive "sProject: ")
@@ -105,6 +117,11 @@
   (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'project_name project)
                                                        ))))
     (jcm-do-sf-operation "compile_project" temp-filename)))
+
+(defun jcm-compile-sf-project-fast (project)
+  (interactive "sProject: ")
+  (let ((temp-filename (jcm-create-sf-stdin-file (list (cons 'name project)))))
+    (jcm-do-sf-operation-fast "compile-project" temp-filename)))
 
 (defun jcm-compile-sf-file (project)
   (interactive "sProject: ")
@@ -157,6 +174,26 @@
                              (cdr (assoc 'lineNumber err))
                              (cdr (assoc 'problem err)))))))))))
 
+(defun jcm-do-sf-operation-fast (operation temp-filename)
+  (require 'json)
+  (with-temp-buffer
+    (message temp-filename)
+    ;;(call-process "cd" nil t t (concat "/Users/jmckitrick/Documents/mmworkspace/" project))
+    (call-process "mavensmate" temp-filename t t operation)
+    (let ((raw-response (buffer-string)))
+      (jcm-dump-mm-raw-str raw-response)
+      (let ((response (json-read-from-string raw-response)))
+        (jcm-dump-mm-result-str (buffer-string))
+        (jcm-extract-sf-body response)
+        (if (eql (cdr (assoc 'success response)) json-false)
+            (let ((messages (cdr (assoc 'Messages response))))
+              (if (> (length messages) 0)
+                  (let ((err (aref messages 0)))
+                    (message "SF error: %s:%s - %s"
+                             (cdr (assoc 'fileName err))
+                             (cdr (assoc 'lineNumber err))
+                             (cdr (assoc 'problem err)))))))))))
+
 (defun jcm-extract-sf-body (response)
   (let ((body (cdr (assoc 'body response))))
     (if (> (length body) 0)
@@ -195,12 +232,13 @@
   ;;(define-key ac-complete-mode-map "\r" nil)
   ;;(add-to-list 'completion-at-point-functions 'semantic-com)
 
-  (define-key sgml-mode-map (kbd "<f16>") 'php-mode)
+  ;(define-key sgml-mode-map (kbd "<f16>") 'php-mode)
   (define-key sgml-mode-map (kbd "C-<left>") 'sgml-skip-tag-backward)
   (define-key sgml-mode-map (kbd "C-<right>") 'sgml-skip-tag-forward)
 
   ;;(define-key global-map (kbd "C-<f16>") 'javascript-mode)
-  (define-key sgml-mode-map (kbd "C-<f16>") 'javascript-mode))
+  ;(define-key sgml-mode-map (kbd "C-<f16>") 'javascript-mode)
+  )
 
 (add-hook 'java-mode-hook
           (lambda ()

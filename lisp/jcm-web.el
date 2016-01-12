@@ -1,8 +1,8 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(require 'php-mode)
+;(require 'php-mode)
 (require 'sgml-mode)
-(require 'javascript-mode)
+;(require 'javascript-mode)
 
 (defun jcm-setup-php-docblock ()
 
@@ -101,12 +101,13 @@
   ;;(define-key ac-complete-mode-map "\r" nil)
   ;;(add-to-list 'completion-at-point-functions 'semantic-com)
 
-  (define-key sgml-mode-map (kbd "<f16>") 'php-mode)
+  ;(define-key sgml-mode-map (kbd "<f16>") 'php-mode)
   (define-key sgml-mode-map (kbd "C-<left>") 'sgml-skip-tag-backward)
   (define-key sgml-mode-map (kbd "C-<right>") 'sgml-skip-tag-forward)
 
   ;;(define-key global-map (kbd "C-<f16>") 'javascript-mode)
-  (define-key sgml-mode-map (kbd "C-<f16>") 'javascript-mode))
+  ;;(define-key sgml-mode-map (kbd "C-<f16>") 'javascript-mode)
+  )
 
 ;(add-to-list 'auto-mode-alist '("\\.module\\'" . php-mode))
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
