@@ -1,0 +1,13 @@
+_darcs/*
+elpa/*
+ac*.dat
+auto-save-list
+bookmarks
+elib
+projectile*
+site-lisp
+smex-items
+tramp
+elib/*
+arc
+server

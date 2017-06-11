@@ -19,7 +19,8 @@
 ;(keyboard-translate ?\] ?\))
 
 ;;; From GNU Emacs Extensions book.
-(global-set-key (kbd "C-x C-m") 'execute-extended-command) ; C-m = RET
+(global-set-key (kbd "C-x C-m") 'smex) ; C-m = RET
+;(global-set-key (kbd "C-x C-m") 'execute-extended-command) ; C-m = RET
 (global-set-key (kbd "C-c C-m") 'execute-extended-command) ; C-m = RET
 (global-set-key (kbd "M-?") 'help-command)
 (global-set-key (kbd "C-x ?") 'help-command)
@@ -28,7 +29,6 @@
 (define-key global-map (kbd "M-g") 'goto-line)
 (define-key global-map (kbd "C-c C-g") 'goto-line)
 
-(define-key global-map (kbd "%") 'goto-match-paren)
 (define-key global-map (kbd "C-c w") 'copy-word)
 (fset 'copy-sexp [?\C-\M-\ ?\M-w])      ; keyboard macro
 
@@ -51,6 +51,15 @@
 (global-set-key [(control tab)] 'bury-buffer)
 
 (define-key global-map (kbd "C-<f5>") 'cider-jack-in)
-;(define-key global-map (kbd "C-<f5>") 'nrepl-jack-in)
 
-(provide 'jcm-keymaps)
+;; (require 'guide-key)
+;; (setq guide-key/guide-key-sequence '("C-x r" "C-c"))
+;; (guide-key-mode 1)
+
+(which-key-mode)
+
+(global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-,") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
+
+(provide 'init-keys)
