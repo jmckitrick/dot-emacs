@@ -51,10 +51,15 @@
 (global-set-key [(control tab)] 'bury-buffer)
 
 (define-key global-map (kbd "C-<f5>") 'cider-jack-in)
-;(define-key global-map (kbd "C-<f5>") 'nrepl-jack-in)
 
-(require 'guide-key)
-(setq guide-key/guide-key-sequence '("C-x r"))
-(guide-key-mode 1)
+;; (require 'guide-key)
+;; (setq guide-key/guide-key-sequence '("C-x r" "C-c"))
+;; (guide-key-mode 1)
+
+(which-key-mode)
+
+(global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
+(global-set-key (kbd "s-,") 'avy-goto-char)
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
 
 (provide 'init-keys)

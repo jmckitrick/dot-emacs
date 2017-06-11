@@ -11,6 +11,7 @@
  '(tooltip-mode nil))
 (column-number-mode t)
 (setq ring-bell-function 'ignore)
+(global-hl-line-mode 1)
 
 ;; Stuff we don't.
 (setq make-backup-files nil)
@@ -40,11 +41,13 @@
 
 ;; Other settings.
 (fset 'yes-or-no-p 'y-or-n-p)
+;;(require 'icomplete)
 (icomplete-mode 1)
 (setq enable-local-variables :safe)
 
-(setq scroll-step 1000)
-(setq scroll-conservatively 1)
+(setq scroll-step 1)
+(setq scroll-margin 1)
+(setq scroll-conservatively 0)
 (setq scroll-preserve-screen-position t)
 ;(global-linum-mode 1)
 
@@ -101,7 +104,7 @@ eyes   = one pane, max height for Pro, large font"
           (chunky (set-dims width-eyes height-small left-over top))
           (pairs (set-dims width-two height-small left-full top))
           (tall (set-dims width-one height-tall left-two top))
-          (wide (set-dims width-two height-tall left-one top))
+          (wide (set-dims width-two height-tall left-full top))
           (wider (set-dims width-three height-tall left-out top))
           (widest (set-dims width-full height-tall left-full top))
           (pro (set-dims width-full height-tall left-pad top))
@@ -112,10 +115,10 @@ eyes   = one pane, max height for Pro, large font"
     (if (member config '(pairs eyes))
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
         ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-        (set-default-font "Menlo 18")
-      (set-default-font "Menlo 18")
-      ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
-      ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-fontset-auto6")
+        (set-default-font "menlo 12")
+      (set-default-font "menlo 12")
+      ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-fontset-auto6")
+      ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-fontset-auto6")
       ))
 
   ;;(add-to-list 'load-path (expand-file-name "color-theme-6.6.0/" jcm-elib-dir))
@@ -126,7 +129,7 @@ eyes   = one pane, max height for Pro, large font"
     ;;(setq ns-command-modifier 'meta)
     (jcm-set-carbon-prefs jcm-mac-window-size))
 
-  (add-to-list 'default-frame-alist '(font . "Menlo 18"))
+  (add-to-list 'default-frame-alist '(font . "menlo 12"))
   ;(add-to-list 'default-frame-alist '(height . 48))
   ;(add-to-list 'default-frame-alist '(width . 110))
 
@@ -150,11 +153,14 @@ eyes   = one pane, max height for Pro, large font"
 (push (concat user-emacs-directory "/elib/emacs-color-theme-solarized") load-path)
 (require 'color-theme-solarized)
 (color-theme-solarized)
+;;(color-theme-solarized-light)
 
 (require 'smex)
-(smex-initialize)
+;;(smex-initialize)
 
 ;; Stuff to try from JJR
 (setq gc-cons-threshold 20000000)
+
+;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode-enable)
 
 (provide 'init-emacs)

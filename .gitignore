@@ -9,3 +9,5 @@ site-lisp
 smex-items
 tramp
 elib/*
+arc
+server
