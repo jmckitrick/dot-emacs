@@ -3,7 +3,7 @@
 (require 'flx-ido)
 
 (ido-mode 1)
-(ido-vertical-mode t)
+(ido-vertical-mode 1)
 (ido-everywhere 1)
 (setq ido-enable-flex-matching t)
 (flx-ido-mode 1)

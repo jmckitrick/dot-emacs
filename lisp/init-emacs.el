@@ -41,15 +41,13 @@
 
 ;; Other settings.
 (fset 'yes-or-no-p 'y-or-n-p)
-;;(require 'icomplete)
 (icomplete-mode 1)
 (setq enable-local-variables :safe)
 
-(setq scroll-step 1)
-(setq scroll-margin 1)
-(setq scroll-conservatively 0)
-(setq scroll-preserve-screen-position t)
-;(global-linum-mode 1)
+(setq scroll-step 1
+      scroll-margin 1
+      scroll-conservatively 0
+      scroll-preserve-screen-position t)
 
 (setq save-interprogram-paste-before-kill nil)
 
@@ -160,7 +158,7 @@ eyes   = one pane, max height for Pro, large font"
 ;;(smex-initialize)
 
 ;; Stuff to try from JJR
-(setq gc-cons-threshold 20000000)
+(setq gc-cons-threshold (* 10 1024 1024))
 
 ;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode-enable)
 

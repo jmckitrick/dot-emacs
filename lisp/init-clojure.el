@@ -19,7 +19,10 @@
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
 (defun my-clojure-mode-hook ()
-  (cider-mode 1))
+  (cider-mode 1)
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1)
+  (cljr-add-keybindings-with-prefix "C-c C-m"))
 
 (setq nrepl-log-messages t
       nrepl-hide-special-buffers t
