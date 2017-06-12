@@ -25,7 +25,7 @@
  '(kill-whole-line t)
  '(package-selected-packages
    (quote
-    (which-key wgrep-ag web-mode smex rainbow-delimiters projectile paredit magit macrostep ido-vertical-mode ido-ubiquitous guide-key flx-ido etags-select company-quickhelp color-theme cider avy ag)))
+    (clj-refactor cider which-key wgrep-ag web-mode smex rainbow-delimiters projectile paredit magit macrostep ido-vertical-mode ido-ubiquitous guide-key flx-ido etags-select company-quickhelp color-theme avy ag)))
  '(solarized-italic nil)
  '(tooltip-mode nil)
  '(visible-bell t))

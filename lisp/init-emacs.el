@@ -153,7 +153,8 @@ eyes   = one pane, max height for Pro, large font"
 (push (concat user-emacs-directory "/elib/emacs-color-theme-solarized") load-path)
 (require 'color-theme-solarized)
 (color-theme-solarized)
-;;(color-theme-solarized-light)
+;(color-theme-solarized-light)
+;;(color-theme-solarized)
 
 (require 'smex)
 ;;(smex-initialize)
