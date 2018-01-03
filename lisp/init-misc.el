@@ -34,6 +34,11 @@
 
 (global-set-key "\M-\C-y" 'kill-ring-search)
 
+(require 'wgrep)
+
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 (defun jcm-edit-startup-file ()
   "Edit the startup file for emacs."
   (interactive)
@@ -51,6 +56,8 @@
               :port 6667
               :nick "jmckitrick"
               :full-name "Jonathon McKitrick"))
+
+(recentf-mode 1)
 
 
 (provide 'init-misc)
