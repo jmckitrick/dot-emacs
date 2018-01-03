@@ -41,13 +41,17 @@
 
 ;; Other settings.
 (fset 'yes-or-no-p 'y-or-n-p)
-(icomplete-mode 1)
+;;(icomplete-mode 1)
 (setq enable-local-variables :safe)
 
+;; Scrolling settings
 (setq scroll-step 1
       scroll-margin 1
       scroll-conservatively 0
       scroll-preserve-screen-position t)
+
+(setq-default scroll-up-aggressively 0.5
+              scroll-down-aggressively 0.5)
 
 (setq save-interprogram-paste-before-kill nil)
 
@@ -151,11 +155,8 @@ eyes   = one pane, max height for Pro, large font"
 (push (concat user-emacs-directory "/elib/emacs-color-theme-solarized") load-path)
 (require 'color-theme-solarized)
 (color-theme-solarized)
-;(color-theme-solarized-light)
-;;(color-theme-solarized)
 
 (require 'smex)
-;;(smex-initialize)
 
 ;; Stuff to try from JJR
 (setq gc-cons-threshold (* 10 1024 1024))
