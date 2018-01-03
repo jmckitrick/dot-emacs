@@ -1,5 +1,4 @@
 ;; (require 'ido-vertical-mode)
-;; ;(require 'ido-hacks)
 ;; (require 'flx-ido)
 
 ;; (ido-mode 1)

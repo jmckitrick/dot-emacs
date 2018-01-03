@@ -47,7 +47,9 @@ REGEXP defaults to ^init-.*\.el$"
 (cl-defun is-work-machine (&optional force)
   (interactive)
   (or force
-      (match-system-name "jmckitrick-mbp")))
+      (match-system-name "jmckitrick-mbp")
+      (match-system-name "devmbp42")
+      (match-system-name "MacBook-Pro.local")))
 
 (defun nuke-all-buffers ()
   "Kill all emacs buffers."
@@ -55,16 +57,6 @@ REGEXP defaults to ^init-.*\.el$"
   (mapcar (lambda (x) (kill-buffer x))
 		  (buffer-list))
   (delete-other-windows))
-
-(defun jcm-edit-startup-file ()
-  "Edit the startup file for emacs."
-  (interactive)
-  (find-file (expand-file-name "~/.emacs.d/init.el")))
-
-(defun jcm-dired-elisp ()
-  "Open the elisp directory in dired."
-  (interactive)
-  (find-file jcm-elisp-dir))
 
 (defun copy-word (&optional arg)
   "Copy word at point into kill-ring."
@@ -80,11 +72,29 @@ REGEXP defaults to ^init-.*\.el$"
     (backward-word 1)
     (message "Copied word.")))
 
+(defun jcm-edit-startup-file ()
+  "Edit the startup file for emacs."
+  (interactive))
+(find-file (expand-file-name "~/.emacs.d/init.el"))
+
+(defun jcm-dired-elisp ()
+  "Open the elisp directory in dired."
+  (interactive)
+  (find-file jcm-elisp-dir))
+
 (defun jcm-tags-search-at-point ()
   "Search tags file for symbol under point."
   (interactive)
   (let ((tag (find-tag-default)))
     (when tag
       (tags-search tag))))
+
+(defun jcm-irc ()
+  "Start IRC for a freenode session."
+  (interactive)
+  (erc-select :server "irc.freenode.net"
+              :port 6667
+              :nick "jmckitrick"
+              :full-name "Jonathon McKitrick"))
 
 (provide 'init-util)

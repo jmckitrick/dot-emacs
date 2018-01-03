@@ -20,8 +20,7 @@
 
 ;;; From GNU Emacs Extensions book.
 (global-set-key (kbd "C-x C-m") 'smex) ; C-m = RET
-;(global-set-key (kbd "C-x C-m") 'execute-extended-command) ; C-m = RET
-;(global-set-key (kbd "C-c C-m") 'execute-extended-command) ; C-m = RET
+;;(global-set-key (kbd "C-c C-m") 'execute-extended-command) ; C-m = RET
 (global-set-key (kbd "M-?") 'help-command)
 (global-set-key (kbd "C-x ?") 'help-command)
 (global-set-key (kbd "C-h") 'delete-backward-char)
@@ -45,19 +44,13 @@
 (global-set-key [f15] 'etags-select-find-tag-at-point)
 (global-set-key [\C-f15] 'etags-select-find-tag)
 
-;;(define-key global-map (kbd "C-c i") 'increment-number-at-point)
-;;(define-key global-map (kbd "C-c d") 'decrement-number-at-point)
-;;(global-set-key [(control l)] 'centerer)
 (global-set-key [(control tab)] 'bury-buffer)
 
 (define-key global-map (kbd "C-<f5>") 'cider-jack-in)
 
-;; (require 'guide-key)
-;; (setq guide-key/guide-key-sequence '("C-x r" "C-c"))
-;; (guide-key-mode 1)
-
 (which-key-mode)
 
+(avy-setup-default)
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-,") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
