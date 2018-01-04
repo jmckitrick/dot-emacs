@@ -19,7 +19,7 @@
 ;(keyboard-translate ?\] ?\))
 
 ;;; From GNU Emacs Extensions book.
-(global-set-key (kbd "C-x C-m") 'smex) ; C-m = RET
+;;(global-set-key (kbd "C-x C-m") 'smex) ; C-m = RET
 ;;(global-set-key (kbd "C-c C-m") 'execute-extended-command) ; C-m = RET
 (global-set-key (kbd "M-?") 'help-command)
 (global-set-key (kbd "C-x ?") 'help-command)

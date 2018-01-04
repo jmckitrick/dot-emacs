@@ -2,6 +2,9 @@
 
 (package-initialize)
 
+(eval-when-compile
+  (require 'use-package))
+
 (defvar jcm-mac-window-size 'wide)     ;wider, widest, chunky, tj
 (defvar jcm-theme-name 'solarized-dark)
 (defvar jcm-elisp-dir (concat user-emacs-directory "lisp"))
