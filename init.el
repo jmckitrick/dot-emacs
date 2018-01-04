@@ -11,14 +11,7 @@
 (setq gc-cons-threshold (* 50 1024 1024))
 
 (require 'init-util)
-
-(when (is-home-machine)
-  (require 'init-package))
-
-(when (is-work-machine)
-  (require 'init-package-work)
-  (setq custom-file (concat user-emacs-directory "customize-work.el"))
-  (load custom-file))
+(require 'init-package)
 
 (require 'init-emacs)
 (require 'init-company)
@@ -26,10 +19,18 @@
 (require 'init-keys)
 
 (require 'init-lisp)
+
 (require 'init-clojure)
 (require 'init-misc)
 
+(when (is-home-machine)
+  (setq custom-file (concat user-emacs-directory "customize.el"))
+  (load custom-file))
+
 (when (is-work-machine)
+  (require 'init-package-work)
+  (setq custom-file (concat user-emacs-directory "customize-work.el"))
+  (load custom-file)
   (require 'init-work))
 
 (setq gc-cons-threshold (* 1 1024 1024))

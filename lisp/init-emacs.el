@@ -1,7 +1,3 @@
-(when (is-home-machine)
-  (setq custom-file (concat user-emacs-directory "customize.el"))
-  (load custom-file))
-
 ;; Stuff we want.
 (transient-mark-mode t)
 (delete-selection-mode t)
