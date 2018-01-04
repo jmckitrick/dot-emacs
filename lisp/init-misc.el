@@ -56,4 +56,11 @@
 (yas-initialize)
 (yas-global-mode 1)
 
+(setq-default indicate-empty-lines t)
+(global-visual-line-mode)
+(global-subword-mode)
+(require 'smooth-scrolling)
+
+;;(icomplete-mode 0)
+
 (provide 'init-misc)

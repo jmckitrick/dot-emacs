@@ -15,12 +15,13 @@
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
-;; (defun my-clojure-mode-hook ()
-;;   ;;(clj-refactor-mode 1)
-;;   ;;(yas-minor-mode 1)
-;;   ;;(cljr-add-keybindings-with-prefix "C-c C-m")
-;;   ;;(require 'yesql-ghosts)
-;;   (cider-mode 1))
+(defun my-clojure-mode-hook ()
+  ;;(clj-refactor-mode 1)
+  ;;(yas-minor-mode 1)
+  ;;(cljr-add-keybindings-with-prefix "C-c C-m")
+  ;;(require 'yesql-ghosts)
+  ;;(cider-mode 1)
+  (my-lisp-setup))
 
 (setq nrepl-log-messages t
       nrepl-hide-special-buffers t

@@ -1,7 +1,7 @@
 ;; Stuff we want.
 (transient-mark-mode t)
 (delete-selection-mode t)
-(show-paren-mode 1)
+(show-paren-mode t)
 (custom-set-variables
  '(kill-whole-line t)
  '(visible-bell t)
@@ -16,8 +16,8 @@
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
 ;;(if (fboundp 'menu-bar-mode) (menu-bar-mode 0))
 
 ;; Editing settings.
@@ -131,6 +131,6 @@ eyes   = one pane, max height for Pro, large font"
 
 (require 'smex)
 
-(recentf-mode 1)
+(recentf-mode t)
 
 (provide 'init-emacs)
