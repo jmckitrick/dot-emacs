@@ -1,6 +1,6 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-;;(package-initialize)
+(package-initialize)
 
 (defvar jcm-mac-window-size 'wide)     ;wider, widest, chunky, tj
 (defvar jcm-theme-name 'solarized-dark)
@@ -14,6 +14,11 @@
 
 (when (is-home-machine)
   (require 'init-package))
+
+(when (is-work-machine)
+  (require 'init-package-work)
+  (setq custom-file (concat user-emacs-directory "customize-work.el"))
+  (load custom-file))
 
 (require 'init-emacs)
 (require 'init-company)

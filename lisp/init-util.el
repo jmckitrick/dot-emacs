@@ -1,5 +1,5 @@
 (require 'cl-lib)
-(require 's)
+;(require 's)
 
 (defun report-init-results (errors)
   (if (not errors)
