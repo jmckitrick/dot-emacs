@@ -148,20 +148,13 @@ eyes   = one pane, max height for Pro, large font"
 (custom-set-variables
  '(solarized-italic nil))
 ;;(load-theme 'solarized-light t)
-(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-dark t)
 
-;(when jcm-theme-name
-;  (load-theme jcm-theme-name t))
-(push (concat user-emacs-directory "/elib/emacs-color-theme-solarized") load-path)
-;(require 'color-theme-solarized)
-;(color-theme-solarized)
-;(color-theme-solarized-light)
-;;(color-theme-solarized)
+(when jcm-theme-name
+  ;;(require 'solarized)
+  (load-theme jcm-theme-name t))
 
 (require 'smex)
-
-;; Stuff to try from JJR
-(setq gc-cons-threshold (* 10 1024 1024))
 
 (recentf-mode 1)
 
