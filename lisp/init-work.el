@@ -16,20 +16,9 @@
   ;;(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
   (define-key ensime-mode-map (kbd "M-.") 'ensime-edit-definition))
 
-(defun cider-repl-set-type [type]
-  "REPL `type' should be either \"clj\" or \"cljs\"."
-  (interactive "s")
-  (setq cider-repl-type type))
-
-(defun cider-connect-clojurescript ()
-  "Connect to a clojurescript repl."
-  (interactive)
-  (cider-connect)
-  (cider-repl-set-type "cljs"))
-
-(add-hook 'js2-jsx-mode-hook #'company-mode)
-(add-hook 'clojure-mode-hook #'company-mode)
-(add-hook 'c-mode-hook #'company-mode)
+;(add-hook 'js2-jsx-mode-hook #'company-mode)
+;(add-hook 'clojure-mode-hook #'company-mode)
+;(add-hook 'c-mode-hook #'company-mode)
 
 ;; More stuff to try
 ;; http://timothypratley.blogspot.com/2015/07/seven-specialty-emacs-settings-with-big.html
@@ -44,15 +33,6 @@
 ;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;;(set-frame-font "Source Code Pro-16" nil t)
-
-(defun toggle-comment-on-line ()
-  "comment or uncomment current line"
-  (interactive)
-    (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
-
-(global-set-key (kbd "C-c /") 'toggle-comment-on-line)
-
-(global-unset-key (kbd "C-z"))
 
 ;; ****
 
@@ -70,11 +50,5 @@
 
 (require 'nav-flash)
 (nav-flash-show)
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(require 'yasnippet)
-(yas-initialize)
-(yas-global-mode 1)
 
 (provide 'init-work)

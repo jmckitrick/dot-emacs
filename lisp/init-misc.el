@@ -41,4 +41,19 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+(defun toggle-comment-on-line ()
+  "comment or uncomment current line"
+  (interactive)
+    (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+
+(global-set-key (kbd "C-c /") 'toggle-comment-on-line)
+
+(global-unset-key (kbd "C-z"))
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(require 'yasnippet)
+(yas-initialize)
+(yas-global-mode 1)
+
 (provide 'init-misc)

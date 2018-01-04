@@ -31,4 +31,15 @@
       cider-repl-display-in-current-window t
       cider-prompt-save-file-on-load nil)
 
+(defun cider-repl-set-type [type]
+  "REPL `type' should be either \"clj\" or \"cljs\"."
+  (interactive "s")
+  (setq cider-repl-type type))
+
+(defun cider-connect-clojurescript ()
+  "Connect to a clojurescript repl."
+  (interactive)
+  (cider-connect)
+  (cider-repl-set-type "cljs"))
+
 (provide 'init-clojure)
