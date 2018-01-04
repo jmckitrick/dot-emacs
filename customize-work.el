@@ -15,6 +15,7 @@
     (:java "-classpath" :classpath "-Dscala.usejavacp=true" "scala.tools.nsc.MainGenericRunner" "-Xnojline")))
  '(ensime-startup-notification nil)
  '(grep-find-ignored-directories (quote (".svn" ".git" "target")))
+ '(inhibit-startup-echo-area-message "devmbp42")
  '(js2-strict-missing-semi-warning nil)
  '(kill-whole-line t)
  '(magit-diff-expansion-threshold 4.0)

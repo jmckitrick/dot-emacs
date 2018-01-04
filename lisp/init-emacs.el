@@ -14,11 +14,11 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (setq inhibit-startup-message t)
-(setq inhibit-startup-echo-area-message t)
+(setq inhibit-splash-screen t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-;;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;;(if (fboundp 'menu-bar-mode) (menu-bar-mode 0))
 
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
@@ -38,7 +38,6 @@
 
 ;; Other settings.
 (fset 'yes-or-no-p 'y-or-n-p)
-;;(icomplete-mode 1)
 (setq enable-local-variables :safe)
 
 ;; Scrolling settings
@@ -59,6 +58,7 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
+;; OSX settings
 (when (string-match "apple" system-configuration)
   (defun jcm-set-carbon-prefs (config)
     "Set up emacs for carbon.
@@ -75,8 +75,6 @@ pro    = three panes, max height for Pro
 eyes   = one pane, max height for Pro, large font"
     (interactive)
     (cl-flet ((set-dims (width height left top)
-                        ;;(setq initial-frame-alist (list width height left top))
-                        ;;(setq default-frame-alist (list width height left top))
                         (set-frame-position (selected-frame) (cdr left) (cdr top))
                         (set-frame-size (selected-frame) (cdr width) (cdr height))))
       (let ((width-one '(width . 96))   ; 88
@@ -110,45 +108,25 @@ eyes   = one pane, max height for Pro, large font"
           (eyes (set-dims width-eyes height-tall left-eyes top))
           (retina (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-
-    (if (member config '(pairs eyes))
-        ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-        ;;(set-frame-font "-apple-Monaco-medium-normal-normal-Regular-18-*-*-*-*-*-iso10646-1")
-        (set-default-font "menlo 12")
-      (set-default-font "menlo 12")
-      ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-fontset-auto6")
-      ;;(set-frame-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-fontset-auto6")
-      ))
-
-  ;;(add-to-list 'load-path (expand-file-name "color-theme-6.6.0/" jcm-elib-dir))
+    (set-default-font "menlo 12"))
 
   (when window-system
-    ;;(global-linum-mode t)
     ;;(setq mac-option-modifier 'super)
     ;;(setq ns-command-modifier 'meta)
     (jcm-set-carbon-prefs jcm-mac-window-size))
 
   (add-to-list 'default-frame-alist '(font . "menlo 12"))
-  ;(add-to-list 'default-frame-alist '(height . 48))
-  ;(add-to-list 'default-frame-alist '(width . 110))
 
   (setq shell-file-name "/bin/zsh")
   (set-exec-path-from-shell-PATH)
-  ;(require 'exec-path-from-shell)
-  ;(exec-path-from-shell-initialize)
 
   ;; Bind Mac external keyboard delete key to delete rather than backspace.
   (global-set-key (kbd "<kp-delete>") 'delete-char))
 
-;(add-to-list 'custom-theme-load-path
-;             (expand-file-name "~/.emacs.d/elib/emacs-color-theme-solarized"))
 (custom-set-variables
  '(solarized-italic nil))
-;;(load-theme 'solarized-light t)
-;;(load-theme 'solarized-dark t)
 
 (when jcm-theme-name
-  ;;(require 'solarized)
   (load-theme jcm-theme-name t))
 
 (require 'smex)

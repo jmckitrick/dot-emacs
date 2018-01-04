@@ -57,7 +57,7 @@
 ;; ****
 
 (setq
- inhibit-startup-screen t
+ ;;inhibit-startup-screen t
  create-lockfiles nil
  make-backup-files nil
  scroll-error-top-bottom t
