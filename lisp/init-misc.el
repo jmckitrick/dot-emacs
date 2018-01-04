@@ -21,9 +21,9 @@
 (add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
 (setq web-mode-markup-indent-offset 2)
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/lisp"))
+;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/lisp"))
 (require 'magit)
-(setq magit-last-seen-setup-instructions "1.4.0")
+;;(setq magit-last-seen-setup-instructions "1.4.0")
 
 (require 'linum)
 (global-linum-mode)
