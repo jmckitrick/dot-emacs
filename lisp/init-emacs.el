@@ -28,7 +28,7 @@
 (setq-default indent-tabs-mode nil)
 (setq fill-column 80)
 (setq c-default-style "bsd"
-      c-basic-offset 4
+      c-basic-offset 2
       track-eol t)
 (c-set-offset 'case-label '+)
 (setq js-indent-level 2)
@@ -148,19 +148,21 @@ eyes   = one pane, max height for Pro, large font"
 (custom-set-variables
  '(solarized-italic nil))
 ;;(load-theme 'solarized-light t)
-;;(load-theme 'solarized-dark t)
+(load-theme 'solarized-dark t)
 
 ;(when jcm-theme-name
 ;  (load-theme jcm-theme-name t))
 (push (concat user-emacs-directory "/elib/emacs-color-theme-solarized") load-path)
-(require 'color-theme-solarized)
-(color-theme-solarized)
+;(require 'color-theme-solarized)
+;(color-theme-solarized)
+;(color-theme-solarized-light)
+;;(color-theme-solarized)
 
 (require 'smex)
 
 ;; Stuff to try from JJR
 (setq gc-cons-threshold (* 10 1024 1024))
 
-;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode-enable)
+;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode-enable)
 
 (provide 'init-emacs)
