@@ -63,13 +63,18 @@
   (yas-global-mode 1))
 
 (setq-default indicate-empty-lines t)
+
 (global-visual-line-mode)
 (diminish 'visual-line-mode)
+
 (global-subword-mode)
 (diminish 'subword-mode)
+
 (use-package smooth-scrolling)
 
 (which-key-mode)
 (diminish 'which-key-mode)
+
+(diminish 'auto-revert-mode)
 
 (provide 'init-misc)

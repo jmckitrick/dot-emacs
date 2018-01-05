@@ -8,7 +8,7 @@
   (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 
   (use-package ensime
-    :bind ("M-." . ensime-edit-definition))
+    :bind (:map ensime-mode-map ("M-." . ensime-edit-definition)))
   ;; This is the original before use-package.
   ;;(define-key ensime-mode-map (kbd "M-.") 'ensime-edit-definition)
 

@@ -22,6 +22,7 @@
 (require 'init-keys)
 
 (require 'init-lisp)
+;;(require 'init-elisp)
 
 (require 'init-clojure)
 (require 'init-misc)
