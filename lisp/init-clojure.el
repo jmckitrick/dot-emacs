@@ -3,13 +3,13 @@
 (autoload 'cider-jack-in "cider" t)
 
 (defun my-cider-mode-hook ()
-  (require 'yesql-ghosts)
+  (use-package yesql-ghosts)
   (eldoc-mode 1))
 
 (defun my-cider-repl-mode-hook ()
   (company-mode 1)
   (cider-eldoc-setup)
-  (require 'init-lisp)
+  (use-package init-lisp)
   (my-lisp-setup))
 
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)

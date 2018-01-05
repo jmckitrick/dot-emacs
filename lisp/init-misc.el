@@ -4,10 +4,11 @@
 
 (add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
 
-(require 'projectile)
-(projectile-global-mode)
+(use-package projectile
+  :config
+  (projectile-global-mode))
 
-(require 'web-mode)
+(use-package web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
@@ -22,13 +23,14 @@
 (setq web-mode-markup-indent-offset 2)
 
 ;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/lisp"))
-(require 'magit)
+(use-package magit)
 ;;(setq magit-last-seen-setup-instructions "1.4.0")
 
-(require 'linum)
-(global-linum-mode)
+(use-package linum
+  :config
+  (global-linum-mode))
 
-(require 'etags-select)
+(use-package etags-select)
 
 (autoload 'kill-ring-search "kill-ring-search"
   "Search the kill ring in the minibuffer."
@@ -36,10 +38,13 @@
 
 (global-set-key "\M-\C-y" 'kill-ring-search)
 
-(require 'wgrep)
+(use-package wgrep)
 
-(require 'undo-tree)
-(global-undo-tree-mode)
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode)
+  :diminish
+  undo-tree-mode)
 
 (defun toggle-comment-on-line ()
   "comment or uncomment current line"
@@ -52,15 +57,19 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(require 'yasnippet)
-(yas-initialize)
-(yas-global-mode 1)
+(use-package yasnippet
+  :config
+  (yas-initialize)
+  (yas-global-mode 1))
 
 (setq-default indicate-empty-lines t)
 (global-visual-line-mode)
+(diminish 'visual-line-mode)
 (global-subword-mode)
-(require 'smooth-scrolling)
+(diminish 'subword-mode)
+(use-package smooth-scrolling)
 
-;;(icomplete-mode 0)
+(which-key-mode)
+(diminish 'which-key-mode)
 
 (provide 'init-misc)

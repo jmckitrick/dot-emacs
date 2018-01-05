@@ -12,7 +12,7 @@
        (define-key paredit-mode-map (kbd "C-c w") 'copy-sexp)
        (define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
        (define-key paredit-mode-map (kbd "C-M-k") 'paredit-kill)))
-  
+
   (enable-paredit-mode)
 
   (local-set-key (kbd "C-n") 'forward-sexp)
@@ -23,15 +23,7 @@
   (local-set-key (kbd "C-,") 'backward-up-list)
 
   (local-set-key (kbd "C-<up>") 'beginning-of-defun)
-  (local-set-key (kbd "C-<down>") 'end-of-defun)
-
-  (define-skeleton comment-doc-banner
-    "Inserting doc block"
-    nil
-    ";;; ---------------------------------------------------------------------------\n"
-    ";;; Docs here\n"
-    ";;; ---------------------------------------------------------------------------\n"
-    ))
+  (local-set-key (kbd "C-<down>") 'end-of-defun))
 
 (defvar jcm-slime-params-regular '(slime-fancy slime-asdf slime-indentation)
   "Slime setup params for regular mode.")
@@ -122,9 +114,7 @@
 
 ;;; General
 
-;(require 'php-mode)
-(require 'tramp)
-;(jcm-setup-tramp)
+(use-package tramp)
 
 (mapc (lambda (f) (autoload f "jcm-slime" "" t))
       '(jcm-start-slime
@@ -227,7 +217,7 @@
     (with-temp-buffer
       (byte-compile-file filename t))))
 
-(defvar elisp-extra-keys 
+(defvar elisp-extra-keys
   '(((kbd "C-c d")   'elisp-disassemble)
     ((kbd "C-c m")   'elisp-macroexpand)
     ((kbd "C-c M")   'elisp-macroexpand-all)

@@ -6,7 +6,7 @@
  '(avy-keys (quote (97 111 101 117 104 116 110 115)))
  '(c-basic-offset 2)
  '(cider-prompt-for-symbol nil)
- '(cider-repl-display-in-current-window t)
+ '(cider-repl-display-in-current-window t t)
  '(company-dabbrev-downcase nil)
  '(ensime-default-java-flags (quote ("-Xms1G" "-Xmx4G" "-XX:+UseG1GC")))
  '(ensime-graphical-tooltips t)
@@ -22,7 +22,9 @@
  '(magit-refs-sections-hook
    (quote
     (magit-insert-error-header magit-insert-branch-description magit-insert-local-branches magit-insert-remote-branches)))
+ '(magit-visit-ref-behavior (quote (checkout-branch)))
  '(max-mini-window-height 8)
+ '(org-todo-keywords (quote ((sequence "TODO(t)" "DONE(d)"))))
  '(package-selected-packages
    (quote
     (yesql-ghosts smooth-scrolling diminish magit use-package undo-tree cider counsel which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))

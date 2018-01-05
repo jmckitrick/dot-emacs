@@ -48,8 +48,6 @@
 
 (define-key global-map (kbd "C-<f5>") 'cider-jack-in)
 
-(which-key-mode)
-
 (avy-setup-default)
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-,") 'avy-goto-char)

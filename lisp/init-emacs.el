@@ -1,16 +1,15 @@
-;; Stuff we want.
+;; ENABLE
+(setq ring-bell-function 'ignore)
+(setq kill-whole-line t)
+(setq visible-bell t)
 (transient-mark-mode t)
 (delete-selection-mode t)
 (show-paren-mode t)
-(custom-set-variables
- '(kill-whole-line t)
- '(visible-bell t)
- '(tooltip-mode nil))
-(column-number-mode t)
-(setq ring-bell-function 'ignore)
 (global-hl-line-mode 1)
+(column-number-mode t)
 
-;; Stuff we don't.
+;; DISABLE
+(setq tooltip-mode nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 (setq inhibit-startup-message t)
@@ -18,7 +17,6 @@
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
-;;(if (fboundp 'menu-bar-mode) (menu-bar-mode 0))
 
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
@@ -45,11 +43,11 @@
       scroll-margin 1
       scroll-conservatively 0
       scroll-preserve-screen-position t)
-
 (setq-default scroll-up-aggressively 0.5
               scroll-down-aggressively 0.5)
 
-(setq save-interprogram-paste-before-kill nil)
+;; Try this out.
+(setq save-interprogram-paste-before-kill t)
 
 ;; Fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
@@ -123,13 +121,13 @@ eyes   = one pane, max height for Pro, large font"
   ;; Bind Mac external keyboard delete key to delete rather than backspace.
   (global-set-key (kbd "<kp-delete>") 'delete-char))
 
-(custom-set-variables
- '(solarized-italic nil))
-
+;; Themes
 (when jcm-theme-name
-  (load-theme jcm-theme-name t))
+  (load-theme jcm-theme-name t)
+  (setq solarized-use-less-bold t)
+  (setq solarized-use-more-italic nil))
 
-(require 'smex)
+(use-package smex)
 
 (recentf-mode t)
 

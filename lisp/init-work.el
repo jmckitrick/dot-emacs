@@ -7,14 +7,18 @@
   ;; This has been working
   (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 
-  (require 'ensime)
+  (use-package ensime
+    :bind ("M-." . ensime-edit-definition))
+  ;; This is the original before use-package.
+  ;;(define-key ensime-mode-map (kbd "M-.") 'ensime-edit-definition)
+
   ;;(setq ensime-sbt-command "/usr/local/bin/sbt")
   ;; But try this
   ;;(setq ensime-sbt-command "/usr/local/sbt13/sbt.sh")
   ;;(setq ensime-server-version "2.0.0-graph-SNAPSHOT")
   ;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
   ;;(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
-  (define-key ensime-mode-map (kbd "M-.") 'ensime-edit-definition))
+  )
 
 ;(add-hook 'js2-jsx-mode-hook #'company-mode)
 ;(add-hook 'clojure-mode-hook #'company-mode)
@@ -37,7 +41,6 @@
 ;; ****
 
 (setq
- ;;inhibit-startup-screen t
  create-lockfiles nil
  make-backup-files nil
  scroll-error-top-bottom t
@@ -48,8 +51,9 @@
 (magit-define-popup-switch 'magit-log-popup
   ?i "Ignore case in grep" "-i")
 
-(require 'nav-flash)
-(nav-flash-show)
+(use-package nav-flash
+  :config
+  (nav-flash-show))
 
 ;; (defadvice magit-status (around magit-fullscreen activate)
 ;;   (window-configuration-to-register :magit-fullscreen)
