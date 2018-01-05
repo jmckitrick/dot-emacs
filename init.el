@@ -31,9 +31,9 @@
   (load custom-file))
 
 (when (is-work-machine)
-  (require 'init-package-work)
   (setq custom-file (concat user-emacs-directory "customize-work.el"))
   (load custom-file)
+  (require 'init-package-work)
   (require 'init-work))
 
-(setq gc-cons-threshold (* 1 1024 1024))
+(setq gc-cons-threshold (* 2 1024 1024))
