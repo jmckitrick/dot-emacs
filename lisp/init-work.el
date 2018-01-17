@@ -18,7 +18,8 @@
   ;;(setq ensime-server-version "2.0.0-graph-SNAPSHOT")
   ;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
   ;;(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
-  )
+  (use-package autopair)
+  (add-hook 'scala-mode-hook 'autopair-mode))
 
 ;(add-hook 'js2-jsx-mode-hook #'company-mode)
 ;(add-hook 'clojure-mode-hook #'company-mode)

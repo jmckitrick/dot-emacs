@@ -27,10 +27,14 @@
  '(org-todo-keywords (quote ((sequence "TODO(t)" "DONE(d)"))))
  '(package-selected-packages
    (quote
-    (yesql-ghosts smooth-scrolling diminish magit use-package undo-tree cider counsel which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
+    (autopair aggressive-indent jsx-mode yesql-ghosts smooth-scrolling diminish magit use-package undo-tree cider counsel which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
  '(projectile-tags-command "etags *.c")
  '(scala-indent:align-parameters t)
+ '(solarized-distinct-fringe-background t)
+ '(solarized-high-contrast-mode-line t)
  '(solarized-italic nil)
+ '(solarized-use-less-bold t)
+ '(solarized-use-variable-pitch nil)
  '(tooltip-mode nil)
  '(visible-bell t)
  '(which-key-popup-type (quote minibuffer))

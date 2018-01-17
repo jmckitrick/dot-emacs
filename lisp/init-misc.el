@@ -8,6 +8,8 @@
   :config
   (projectile-global-mode))
 
+(use-package js2-mode)
+
 (use-package web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
@@ -31,6 +33,9 @@
   (global-linum-mode))
 
 (use-package etags-select)
+
+;;;; EVERYTHING BELOW THIS LINE IS BEING EVALUATED
+;;;; AND SHOULD EVENTUALLY BE MOVED TO THE APPROPRIATE MODULE.
 
 (autoload 'kill-ring-search "kill-ring-search"
   "Search the kill ring in the minibuffer."
@@ -76,5 +81,8 @@
 (diminish 'which-key-mode)
 
 (diminish 'auto-revert-mode)
+
+;(use-package aggressive-indent)
+;(global-aggressive-indent-mode -1)
 
 (provide 'init-misc)
