@@ -8,7 +8,10 @@
  '(cider-prompt-for-symbol nil)
  '(cider-repl-display-in-current-window t t)
  '(company-dabbrev-downcase nil)
- '(ensime-default-java-flags (quote ("-Xms1G" "-Xmx4G" "-XX:+UseG1GC")))
+ '(ensime-default-java-flags
+   (quote
+    ("-Xms1G" "-Xmx4G" "-XX:+UseG1GC" "-XX:MaxDirectMemorySize=16384m")))
+ '(ensime-eldoc-hints nil)
  '(ensime-graphical-tooltips t)
  '(ensime-inf-cmd-template
    (quote
