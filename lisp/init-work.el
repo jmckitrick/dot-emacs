@@ -1,25 +1,33 @@
 (require 'init-util)
 
-(when (is-work-machine)
-  ;(require 'jcm-web)
-  ;(jcm-setup-web-settings)
+;(require 'jcm-web)
+;;(jcm-setup-web-settings)
 
-  ;; This has been working
-  (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
+;; This has been working
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 
-  (use-package ensime
-    :bind (:map ensime-mode-map ("M-." . ensime-edit-definition)))
-  ;; This is the original before use-package.
-  ;;(define-key ensime-mode-map (kbd "M-.") 'ensime-edit-definition)
+(use-package ensime
+  :bind (:map ensime-mode-map ("M-." . ensime-edit-definition)))
+;; This is the original before use-package.
+;;(define-key ensime-mode-map (kbd "M-.") 'ensime-edit-definition)
 
-  ;;(setq ensime-sbt-command "/usr/local/bin/sbt")
-  ;; But try this
-  ;;(setq ensime-sbt-command "/usr/local/sbt13/sbt.sh")
-  ;;(setq ensime-server-version "2.0.0-graph-SNAPSHOT")
-  ;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-  ;;(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
-  (use-package autopair)
-  (add-hook 'scala-mode-hook 'autopair-mode))
+;;(setq ensime-sbt-command "/usr/local/bin/sbt")
+;; But try this
+;;(setq ensime-sbt-command "/usr/local/sbt13/sbt.sh")
+;;(setq ensime-server-version "2.0.0-graph-SNAPSHOT")
+;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+;;(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(defadvice web-mode-highlight-part (around tweak-jsx-activate)
+  (if (equal web-mode-content-type "jsx")
+      (let ((web-mode-enable-part-face nil))
+        ad-do-it)
+    ad-do-it))
+;;(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
+;;(add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
+
+(use-package autopair)
+(add-hook 'scala-mode-hook 'autopair-mode)
 
 ;(add-hook 'js2-jsx-mode-hook #'company-mode)
 ;(add-hook 'clojure-mode-hook #'company-mode)
