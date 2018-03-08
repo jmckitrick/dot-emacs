@@ -15,10 +15,14 @@
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
+;; Move this into the README for the project??
+(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
+
 (defun my-clojure-mode-hook ()
-  ;;(clj-refactor-mode 1)
-  ;;(yas-minor-mode 1)
-  ;;(cljr-add-keybindings-with-prefix "C-c C-m")
+  (require 'clj-refactor)
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1)
+  (cljr-add-keybindings-with-prefix "C-c C-m")
   ;;(require 'yesql-ghosts)
   ;;(cider-mode 1)
   (my-lisp-setup))
@@ -31,16 +35,5 @@
       cider-auto-select-error-buffer t
       cider-repl-display-in-current-window t
       cider-prompt-save-file-on-load nil)
-
-(defun cider-repl-set-type [type]
-  "REPL `type' should be either \"clj\" or \"cljs\"."
-  (interactive "s")
-  (setq cider-repl-type type))
-
-(defun cider-connect-clojurescript ()
-  "Connect to a clojurescript repl."
-  (interactive)
-  (cider-connect)
-  (cider-repl-set-type "cljs"))
 
 (provide 'init-clojure)

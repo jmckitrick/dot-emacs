@@ -26,8 +26,13 @@
 ;;(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
 ;;(add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
 
+(autoload 'enable-paredit-mode "paredit" "..." t)
+
+;(enable-paredit-mode)
+
 (use-package autopair)
 (add-hook 'scala-mode-hook 'autopair-mode)
+;;(add-hook 'scala-mode-hook 'enable-paredit-mode)
 
 ;(add-hook 'js2-jsx-mode-hook #'company-mode)
 ;(add-hook 'clojure-mode-hook #'company-mode)
