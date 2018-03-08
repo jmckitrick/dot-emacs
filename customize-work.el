@@ -6,9 +6,12 @@
  '(avy-keys (quote (97 111 101 117 104 116 110 115)))
  '(c-basic-offset 2)
  '(cider-prompt-for-symbol nil)
- '(cider-repl-display-in-current-window t t)
+ '(cider-repl-display-in-current-window t)
  '(company-dabbrev-downcase nil)
- '(ensime-default-java-flags (quote ("-Xms1G" "-Xmx4G" "-XX:+UseG1GC")))
+ '(ensime-default-java-flags
+   (quote
+    ("-Xms1G" "-Xmx4G" "-XX:+UseG1GC" "-XX:MaxDirectMemorySize=16384m")))
+ '(ensime-eldoc-hints nil)
  '(ensime-graphical-tooltips t)
  '(ensime-inf-cmd-template
    (quote
@@ -27,12 +30,18 @@
  '(org-todo-keywords (quote ((sequence "TODO(t)" "DONE(d)"))))
  '(package-selected-packages
    (quote
-    (yesql-ghosts smooth-scrolling diminish magit use-package undo-tree cider counsel which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
+    (clj-refactor haskell-mode paredit-everywhere autopair aggressive-indent jsx-mode yesql-ghosts smooth-scrolling diminish magit use-package undo-tree cider counsel which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
  '(projectile-tags-command "etags *.c")
  '(scala-indent:align-parameters t)
+ '(solarized-distinct-fringe-background t)
+ '(solarized-high-contrast-mode-line t)
  '(solarized-italic nil)
+ '(solarized-use-less-bold t)
+ '(solarized-use-variable-pitch nil)
  '(tooltip-mode nil)
  '(visible-bell t)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-css-indent-offset 2)
  '(which-key-popup-type (quote minibuffer))
  '(yas-snippet-dirs
    (quote

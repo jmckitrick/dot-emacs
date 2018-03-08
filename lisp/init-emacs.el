@@ -130,5 +130,6 @@ eyes   = one pane, max height for Pro, large font"
 (use-package smex)
 
 (recentf-mode t)
+(save-place-mode)
 
 (provide 'init-emacs)
