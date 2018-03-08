@@ -15,8 +15,7 @@
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
-;; Move this into the README for the project??
-(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
+;;(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
 
 (defun my-clojure-mode-hook ()
   (require 'clj-refactor)

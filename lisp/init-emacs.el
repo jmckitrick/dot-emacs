@@ -12,7 +12,7 @@
 (setq tooltip-mode nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
-(setq inhibit-startup-message t)
+;;(setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
@@ -23,7 +23,7 @@
 (setq-default indent-tabs-mode nil)
 (setq fill-column 80)
 (setq c-default-style "bsd"
-      c-basic-offset 2
+      c-basic-offset 4
       track-eol t)
 (c-set-offset 'case-label '+)
 (setq js-indent-level 2)
@@ -125,7 +125,8 @@ eyes   = one pane, max height for Pro, large font"
 (when jcm-theme-name
   (load-theme jcm-theme-name t)
   (setq solarized-use-less-bold t)
-  (setq solarized-use-more-italic nil))
+  (setq solarized-use-more-italic nil)
+  )
 
 (use-package smex)
 
