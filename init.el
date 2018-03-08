@@ -2,8 +2,8 @@
 
 (package-initialize)
 
-(eval-when-compile
-  (require 'use-package))
+;(eval-when-compile
+;  (require 'use-package))
 
 (defvar jcm-mac-window-size 'wide)     ;wider, widest, chunky, tj
 (defvar jcm-theme-name 'solarized-dark)
@@ -29,7 +29,8 @@
 
 (when (is-home-machine)
   (setq custom-file (concat user-emacs-directory "customize.el"))
-  (load custom-file))
+  (load custom-file)
+  (require 'init-consult))
 
 (when (is-work-machine)
   (setq custom-file (concat user-emacs-directory "customize-work.el"))
