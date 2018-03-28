@@ -42,6 +42,8 @@
     (let-routes 1)
     (context 2)))
 
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+
 (setq nrepl-log-messages t
       nrepl-hide-special-buffers t
       cider-repl-pop-to-buffer-on-connect nil
