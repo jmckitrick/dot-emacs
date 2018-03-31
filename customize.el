@@ -6,6 +6,7 @@
  '(avy-keys (quote (97 111 101 117 104 116 110 115)))
  '(cider-prompt-for-symbol nil)
  '(kill-whole-line t)
+ '(magit-visit-ref-behavior (quote (checkout-branch)))
  '(package-selected-packages
    (quote
     (js2-mode coffee-mode robe haml-mode solarized-theme ag avy cider clj-refactor company-quickhelp counsel diminish etags-select macrostep magit nav-flash paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts)))
