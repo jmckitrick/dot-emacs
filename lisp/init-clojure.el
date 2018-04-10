@@ -3,7 +3,7 @@
 ;(autoload 'cider-jack-in-clojurescript "cider" t)
 ;(autoload 'cider-jack-in "cider" t)
 
-(require 'cider)
+(use-package cider)
 
 (defun my-cider-mode-hook ()
   (use-package yesql-ghosts)
