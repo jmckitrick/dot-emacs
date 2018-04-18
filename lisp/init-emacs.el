@@ -12,7 +12,7 @@
 (setq tooltip-mode nil)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
-;;(setq inhibit-startup-message t)
+(setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))

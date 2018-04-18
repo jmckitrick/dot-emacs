@@ -69,6 +69,8 @@
   :config
   (nav-flash-show))
 
+(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
+
 ;; (defadvice magit-status (around magit-fullscreen activate)
 ;;   (window-configuration-to-register :magit-fullscreen)
 ;;   ad-do-it

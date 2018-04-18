@@ -50,7 +50,6 @@ REGEXP defaults to ^init-.*\.el$"
   (or force
       (match-system-name "jmckitrick-mbp")
       (match-system-name "devmbp42")
-      (match-system-name "MacBook-Pro.local")
       (match-system-name "MacBook-Pro")))
 
 (defun nuke-all-buffers ()
