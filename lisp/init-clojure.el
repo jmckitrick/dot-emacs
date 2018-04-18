@@ -18,8 +18,6 @@
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
-;;(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api) (start-figwheel!) (cljs-repl))")
-
 (defun my-clojure-mode-hook ()
   (require 'clj-refactor)
   (clj-refactor-mode 1)
