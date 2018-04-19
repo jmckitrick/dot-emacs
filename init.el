@@ -14,7 +14,6 @@
 (setq gc-cons-threshold (* 50 1024 1024))
 
 (require 'init-util)
-(require 'init-package)
 
 (require 'init-emacs)
 (require 'init-company)
