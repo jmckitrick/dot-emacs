@@ -1,5 +1,8 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+
+(require 'init-apex)
+
 (use-package haml-mode)
 
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
