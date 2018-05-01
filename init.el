@@ -29,6 +29,7 @@
 (when (is-home-machine)
   (setq custom-file (concat user-emacs-directory "customize.el"))
   (load custom-file)
+  (require 'init-package)
   (require 'init-consult)
   (message "Ready for fun!"))
 
