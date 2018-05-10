@@ -6,7 +6,7 @@
 (use-package cider)
 
 (defun my-cider-mode-hook ()
-  (use-package yesql-ghosts)
+  ;;(use-package yesql-ghosts)
   (eldoc-mode 1))
 
 (defun my-cider-repl-mode-hook ()
@@ -20,11 +20,11 @@
 
 (defun my-clojure-mode-hook ()
   (require 'clj-refactor)
-  (clj-refactor-mode 1)
+  ;(clj-refactor-mode 1)
+  ;(cljr-add-keybindings-with-prefix "C-c C-m")
   (yas-minor-mode 1)
-  (cljr-add-keybindings-with-prefix "C-c C-m")
   ;;(require 'yesql-ghosts)
-  ;;(cider-mode 1)
+  (cider-mode 1)
   (my-lisp-setup)
   (define-clojure-indent
     (defroutes 'defun)
