@@ -66,8 +66,8 @@
 
 (setq-default indicate-empty-lines t)
 
-(global-visual-line-mode)
-(diminish 'visual-line-mode)
+;(global-visual-line-mode)
+;(diminish 'visual-line-mode)
 
 (global-subword-mode)
 (diminish 'subword-mode)

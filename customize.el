@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(avy-keys (quote (97 111 101 117 104 116 110 115)))
+ '(c-basic-offset 2)
  '(cider-prompt-for-symbol nil)
  '(kill-whole-line t)
  '(magit-visit-ref-behavior (quote (checkout-branch)))
