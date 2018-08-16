@@ -122,7 +122,7 @@ eyes   = one pane, max height for Pro, large font"
   (global-set-key (kbd "<kp-delete>") 'delete-char))
 
 ;; Themes
-(when jcm-theme-name
+(when (and jcm-theme-name window-system)
   (load-theme jcm-theme-name t)
   (setq solarized-use-less-bold t)
   (setq solarized-use-more-italic nil)

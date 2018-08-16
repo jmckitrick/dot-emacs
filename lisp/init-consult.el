@@ -1,6 +1,5 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-
 (require 'init-apex)
 
 (use-package haml-mode)

@@ -19,7 +19,7 @@
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
 
 (defun my-clojure-mode-hook ()
-  (require 'clj-refactor)
+  ;(require 'clj-refactor)
   ;(clj-refactor-mode 1)
   ;(cljr-add-keybindings-with-prefix "C-c C-m")
   (yas-minor-mode 1)
