@@ -6,7 +6,11 @@
 
 (use-package projectile
   :config
-  (projectile-global-mode))
+  (projectile-global-mode)
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
+
+
 
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
@@ -71,8 +75,8 @@
 ;(global-visual-line-mode)
 ;(diminish 'visual-line-mode)
 
-(global-subword-mode)
-(diminish 'subword-mode)
+;(global-subword-mode -1)
+;(diminish 'subword-mode)
 
 (use-package smooth-scrolling)
 
