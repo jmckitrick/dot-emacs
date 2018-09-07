@@ -2,7 +2,7 @@
 (setq magit-completing-read-function 'ivy-completing-read)
 (setq projectile-completion-system 'ivy)
 
-(setq ivy-use-virtual-buffers t)
+;;(setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
 
 (global-set-key (kbd "C-x C-m") 'counsel-M-x)

@@ -55,6 +55,7 @@
     ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
  '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
  '(inhibit-startup-echo-area-message "devmbp42")
+ '(ivy-use-virtual-buffers nil)
  '(js2-strict-missing-semi-warning nil)
  '(kill-whole-line t)
  '(magit-diff-expansion-threshold 4.0)
