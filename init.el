@@ -17,7 +17,7 @@
 
 (require 'init-emacs)
 (require 'init-company)
-(require 'init-ido)
+(require 'init-ivy)
 (require 'init-keys)
 
 (require 'init-lisp)
