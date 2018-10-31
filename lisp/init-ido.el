@@ -5,6 +5,28 @@
 ;;(setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
 
+;; https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/
+;; (use-package ivy :ensure t
+;;   :diminish (ivy-mode . "")
+;;   :bind
+;;   (:map ivy-mode-map
+;;    ("C-'" . ivy-avy))
+;;   :config
+;;   (ivy-mode 1)
+;;   ;; add ‘recentf-mode’ and bookmarks to ‘ivy-switch-buffer’.
+;;   (setq ivy-use-virtual-buffers t)
+;;   ;; number of result lines to display
+;;   (setq ivy-height 10)
+;;   ;; does not count candidates
+;;   (setq ivy-count-format "")
+;;   ;; no regexp by default
+;;   (setq ivy-initial-inputs-alist nil)
+;;   ;; configure regexp engine.
+;;   (setq ivy-re-builders-alist
+;; 	;; allow input not in order
+;;         '((t   . ivy--regex-ignore-order))))
+
+
 (global-set-key (kbd "C-x C-m") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
 
