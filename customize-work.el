@@ -71,7 +71,7 @@
  '(org-todo-keywords (quote ((sequence "TODO(t)" "DONE(d)"))))
  '(package-selected-packages
    (quote
-    (treemacs-projectile ace-window diff-hl git-gutter+ git-gutter-fringe cider projectile-ripgrep nav neotree haskell-mode paredit-everywhere autopair aggressive-indent jsx-mode smooth-scrolling diminish magit use-package undo-tree counsel which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
+    (treemacs-projectile ace-window diff-hl git-gutter+ git-gutter-fringe cider projectile-ripgrep nav neotree haskell-mode paredit-everywhere autopair aggressive-indent jsx-mode smooth-scrolling diminish magit use-package undo-tree which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode js2-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(projectile-indexing-method (quote alien))

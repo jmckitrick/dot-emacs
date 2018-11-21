@@ -99,4 +99,6 @@
 ;;             (define-key git-gutter+-mode-map (kbd "C-x U") 'git-gutter+-unstage-whole-buffer))
 ;;   :diminish (git-gutter+-mode . "gg"))
 
+(global-set-key (kbd "M-o") 'ace-window)
+
 (provide 'init-work)
