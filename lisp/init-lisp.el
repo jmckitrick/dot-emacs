@@ -47,7 +47,10 @@
   "Set up slime load paths."
   ;;(add-to-list 'load-path (expand-file-name "~/loc/slime/"))
   ;;(add-to-list 'load-path (expand-file-name "~/loc/slime/contrib/"))
-  (add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/slime-2.14"))
+  ;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/slime-2.14"))
+  (load (expand-file-name "~/quicklisp/slime-helper.el"))
+  ;; Replace "sbcl" with the path to your implementation
+  ;;(setq inferior-lisp-program "sbcl")
   (require 'slime-autoloads))
 
 (defun jcm-setup-slime-options ()
@@ -131,8 +134,8 @@
 
 (add-hook 'lisp-mode-hook
           (lambda ()
-            (eldoc-mode 1)
-            (my-lisp-setup)))
+            (my-lisp-setup)
+            (eldoc-mode 1)))
 
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
@@ -141,8 +144,8 @@
 
 (add-hook 'slime-repl-mode-hook
           (lambda ()
-            (eldoc-mode 1)
-            (my-lisp-setup)))
+            (my-lisp-setup)
+            (eldoc-mode -1)))
 
 (add-hook 'clojure-mode-hook
           (lambda ()

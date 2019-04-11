@@ -42,9 +42,9 @@
 (setq scroll-step 1
       scroll-margin 1
       scroll-conservatively 0
-      scroll-preserve-screen-position t)
-(setq-default scroll-up-aggressively 0.5
-              scroll-down-aggressively 0.5)
+      scroll-preserve-screen-position nil)
+(setq-default scroll-up-aggressively 0.0
+              scroll-down-aggressively 0.0)
 
 ;; Try this out.
 (setq save-interprogram-paste-before-kill t)
@@ -106,14 +106,14 @@ eyes   = one pane, max height for Pro, large font"
           (eyes (set-dims width-eyes height-tall left-eyes top))
           (retina (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-    (set-default-font "menlo 12"))
+    (set-default-font jcm-font))
 
   (when window-system
     ;;(setq mac-option-modifier 'super)
     ;;(setq ns-command-modifier 'meta)
     (jcm-set-carbon-prefs jcm-mac-window-size))
 
-  (add-to-list 'default-frame-alist '(font . "menlo 12"))
+  ;;(add-to-list 'default-frame-alist '(font . jcm-font))
 
   (setq shell-file-name "/bin/zsh")
   (set-exec-path-from-shell-PATH)
