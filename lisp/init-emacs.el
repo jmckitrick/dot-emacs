@@ -33,6 +33,7 @@
 (setq dired-recursive-deletes 'top)
 (setq find-grep-options "-q -i")
 (setq dired-use-ls-dired nil)
+(setq dired-dwim-target t)
 
 ;; Other settings.
 (fset 'yes-or-no-p 'y-or-n-p)
