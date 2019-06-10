@@ -114,4 +114,6 @@
 
 (global-set-key (kbd "M-o") 'ace-window)
 
+(global-git-gutter-mode +1)
+
 (provide 'init-work)

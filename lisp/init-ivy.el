@@ -1,5 +1,5 @@
 (ivy-mode)
-(setq magit-completing-read-function 'ivy-completing-read)
+;;(setq magit-completing-read-function 'ivy-completing-read)
 (setq projectile-completion-system 'ivy)
 
 ;;(setq ivy-use-virtual-buffers t)
