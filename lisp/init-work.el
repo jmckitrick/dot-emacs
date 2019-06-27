@@ -28,8 +28,8 @@
 
 ;; Should these be *-foo-mode-hook instead?
 (add-to-list 'auto-mode-alist '("\\.js\\'" . setup-react))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . setup-react))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . setup-react))
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . setup-react))
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . setup-react))
 
 ;; (defadvice web-mode-highlight-part (around tweak-jsx-activate)
 ;;   (if (equal web-mode-content-type "jsx")
@@ -112,8 +112,10 @@
 ;;             (define-key git-gutter+-mode-map (kbd "C-x U") 'git-gutter+-unstage-whole-buffer))
 ;;   :diminish (git-gutter+-mode . "gg"))
 
-(global-set-key (kbd "M-o") 'ace-window)
+(use-package git-gutter-fringe
+  ;;:init (global-git-gutter-mode +1)
+  )
 
-(global-git-gutter-mode +1)
+(global-set-key (kbd "M-o") 'ace-window)
 
 (provide 'init-work)

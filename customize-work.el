@@ -20,15 +20,7 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(ensime-default-java-flags
    (quote
-    ("-XX:+UseG1GC"
-     ;;"-XX:+CMSClassUnloadingEnabled"
-     "-Xms1G"
-     "-Xmx4G"
-     "-Xss2M"
-     "-XX:+UseCodeCacheFlushing"
-     "-XX:ReservedCodeCacheSize=512m"
-     ;;"-XX:ReservedCodeCacheSize=256m"
-     "-XX:MaxDirectMemorySize=16384m")))
+    ("-XX:+UseG1GC" "-Xms1G" "-Xmx4G" "-Xss2M" "-XX:+UseCodeCacheFlushing" "-XX:ReservedCodeCacheSize=512m" "-XX:MaxDirectMemorySize=16384m")))
  '(ensime-eldoc-hints nil)
  '(ensime-graphical-tooltips t)
  '(ensime-implicit-gutter-icons nil)
@@ -79,7 +71,7 @@
  '(org-todo-keywords (quote ((sequence "TODO(t)" "DONE(d)"))))
  '(package-selected-packages
    (quote
-    (flycheck-pycheckers jedi elpy js2-highlight-vars tide counsel treemacs-projectile ace-window diff-hl git-gutter+ git-gutter-fringe cider projectile-ripgrep nav neotree haskell-mode paredit-everywhere autopair aggressive-indent smooth-scrolling diminish magit use-package undo-tree which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
+    (restclient flycheck-pycheckers jedi elpy js2-highlight-vars tide counsel treemacs-projectile ace-window diff-hl git-gutter+ git-gutter-fringe cider projectile-ripgrep nav neotree haskell-mode paredit-everywhere autopair aggressive-indent smooth-scrolling diminish magit use-package undo-tree which-key avy ivy solarized-theme esup swiper ecb dockerfile-mode rjsx-mode react-snippets nav-flash rainbow-delimiters guide-key groovy-mode clojure-mode-extra-font-locking scala-mode yaml-mode wgrep-ag web-mode smex projectile paredit maker-mode macrostep less-css-mode ido-vertical-mode ido-ubiquitous ggtags flx-ido etags-select ensime company-quickhelp color-theme-solarized ag)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(projectile-indexing-method (quote alien))
