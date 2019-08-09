@@ -6,7 +6,7 @@
  (require 'use-package))
 
 (defvar jcm-mac-window-size 'wide)     ;wider, widest, chunky, tj
-(defvar jcm-font "menlo 14")
+(defvar jcm-font "menlo 16")
 (defvar jcm-theme-name 'solarized-dark)
 (defvar jcm-elisp-dir (concat user-emacs-directory "lisp"))
 
