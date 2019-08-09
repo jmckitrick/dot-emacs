@@ -32,13 +32,13 @@
   (load custom-file)
   (require 'init-package)
   (require 'init-consult)
-  (message "Ready for fun!"))
+  (message "Home machine"))
 
 (when (is-work-machine)
   (setq custom-file (concat user-emacs-directory "customize-work.el"))
   (load custom-file)
   (require 'init-package-work)
   (require 'init-work)
-  (message "Ready for work!"))
+  (message "Work machine"))
 
 (setq gc-cons-threshold (* 2 1024 1024))
