@@ -126,8 +126,7 @@ eyes   = one pane, max height for Pro, large font"
 (when (and jcm-theme-name window-system)
   (load-theme jcm-theme-name t)
   (setq solarized-use-less-bold t)
-  (setq solarized-use-more-italic nil)
-  )
+  (setq solarized-use-more-italic nil))
 
 (use-package smex)
 
