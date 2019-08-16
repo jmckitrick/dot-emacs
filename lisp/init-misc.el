@@ -1,8 +1,6 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(add-to-list 'vc-handled-backends 'GIT)
-
-(add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
+;(add-to-list 'vc-handled-backends 'GIT)
 
 (use-package projectile
   :config
@@ -13,6 +11,7 @@
 (use-package js2-mode)
 
 (use-package web-mode)
+;; XXX Move these to work, consult, etc?
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
@@ -33,31 +32,44 @@
 
 (use-package etags-select)
 
+;;;; WAS BEING EVALUATED BUT IS NOW DISABLED
+;;;; AND SLATED FOR REMOVAL IF NOT NEEDED.
+
+;; (autoload 'kill-ring-search "kill-ring-search"
+;;   "Search the kill ring in the minibuffer."
+;;   (interactive))
+
+;; (global-set-key "\M-\C-y" 'kill-ring-search)
+
+;; (use-package wgrep)
+
+;; (use-package undo-tree
+;;   :config
+;;   (global-undo-tree-mode)
+;;   :diminish
+;;   undo-tree-mode)
+
+;; (defun toggle-comment-on-line ()
+;;   "comment or uncomment current line"
+;;   (interactive)
+;;     (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+
+;; (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
+
+;(global-visual-line-mode)
+;(diminish 'visual-line-mode)
+
+;(global-subword-mode -1)
+;(diminish 'subword-mode)
+
+;(use-package aggressive-indent)
+;(global-aggressive-indent-mode -1)
+
+;; What does this do?
+;;(global-unset-key (kbd "C-z"))
+
 ;;;; EVERYTHING BELOW THIS LINE IS BEING EVALUATED
 ;;;; AND SHOULD EVENTUALLY BE MOVED TO THE APPROPRIATE MODULE.
-
-(autoload 'kill-ring-search "kill-ring-search"
-  "Search the kill ring in the minibuffer."
-  (interactive))
-
-(global-set-key "\M-\C-y" 'kill-ring-search)
-
-(use-package wgrep)
-
-(use-package undo-tree
-  :config
-  (global-undo-tree-mode)
-  :diminish
-  undo-tree-mode)
-
-(defun toggle-comment-on-line ()
-  "comment or uncomment current line"
-  (interactive)
-    (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
-
-(global-set-key (kbd "C-c /") 'toggle-comment-on-line)
-
-(global-unset-key (kbd "C-z"))
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -68,20 +80,11 @@
 
 (setq-default indicate-empty-lines t)
 
-;(global-visual-line-mode)
-;(diminish 'visual-line-mode)
-
-;(global-subword-mode -1)
-;(diminish 'subword-mode)
-
 (use-package smooth-scrolling)
 
 (which-key-mode)
 (diminish 'which-key-mode)
 
 (diminish 'auto-revert-mode)
-
-;(use-package aggressive-indent)
-;(global-aggressive-indent-mode -1)
 
 (provide 'init-misc)

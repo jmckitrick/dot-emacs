@@ -179,7 +179,7 @@
   (require 'etags-select)
   (global-set-key "\M-." 'etags-select-find-tag-at-point)
   (global-set-key (kbd "M-,") 'pop-tag-mark)
-  
+
   ;;(define-key ac-complete-mode-map "\t" 'ac-complete)
   ;;(define-key ac-complete-mode-map "\r" nil)
   ;;(add-to-list 'completion-at-point-functions 'semantic-com)
@@ -191,6 +191,8 @@
   ;;(define-key global-map (kbd "C-<f16>") 'javascript-mode)
   ;(define-key sgml-mode-map (kbd "C-<f16>") 'javascript-mode)
   )
+
+(add-to-list 'auto-mode-alist '("\\.\\(cls\\|trigger\\)" . java-mode))
 
 (add-hook 'java-mode-hook
           (lambda ()

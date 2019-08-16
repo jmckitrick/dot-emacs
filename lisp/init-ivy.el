@@ -3,9 +3,6 @@
 ;;   (setq ivy-use-virtual-buffers t
 ;;         ivy-count-format "(%d/%d) "))
 
-;;(setq ivy-use-virtual-buffers t)
-;;(setq ivy-count-format "(%d/%d) ")
-
 ;; https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/
 (use-package ivy :ensure t
   :diminish (ivy-mode . "")
@@ -28,7 +25,10 @@
 	;; allow input not in order
         '((t   . ivy--regex-ignore-order))))
 
-;(ivy-mode)
+(ivy-mode)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+
 ;;(setq magit-completing-read-function 'ivy-completing-read)
 (setq projectile-completion-system 'ivy)
 
