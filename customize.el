@@ -10,7 +10,7 @@
  '(magit-visit-ref-behavior (quote (checkout-branch)))
  '(package-selected-packages
    (quote
-    (yasnippet projectile-ripgrep js2-mode coffee-mode robe haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit nav-flash paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts)))
+    (php-mode yasnippet projectile-ripgrep js2-mode coffee-mode robe haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit nav-flash paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts)))
  '(solarized-italic nil)
  '(tooltip-mode nil)
  '(visible-bell t))
