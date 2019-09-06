@@ -87,4 +87,7 @@
 
 (diminish 'auto-revert-mode)
 
+;; TEMP FIX
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (provide 'init-misc)

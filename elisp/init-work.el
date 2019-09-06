@@ -43,8 +43,10 @@
 
 ;(enable-paredit-mode)
 
-(use-package autopair)
-(add-hook 'scala-mode-hook 'autopair-mode)
+(use-package autopair
+  :diminish pair
+  :hook scala-mode-hook)
+;;(add-hook 'scala-mode-hook 'autopair-mode)
 ;;(add-hook 'scala-mode-hook 'enable-paredit-mode)
 
 ;(add-hook 'js2-jsx-mode-hook #'company-mode)

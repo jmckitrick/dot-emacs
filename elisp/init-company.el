@@ -16,6 +16,6 @@
   ;;(company-quickhelp-mode -1)
   (global-company-mode 1)
   :diminish
-  company-mode)
+  company)
 
 (provide 'init-company)
