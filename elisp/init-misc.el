@@ -28,10 +28,10 @@
 (use-package magit)
 ;;(setq magit-last-seen-setup-instructions "1.4.0")
 
-(use-package linum
-  :config
-  (global-linum-mode))
-
+;; (use-package linum
+;;   :config
+;;   (global-linum-mode))
+(global-display-line-numbers-mode)
 
 ;;;; WAS BEING EVALUATED BUT IS NOW DISABLED
 ;;;; AND SLATED FOR REMOVAL IF NOT NEEDED.
