@@ -2,6 +2,8 @@
 
 ;(add-to-list 'vc-handled-backends 'GIT)
 
+(use-package smex)
+
 (use-package projectile
   :config
   (projectile-global-mode)
@@ -30,10 +32,10 @@
   :config
   (global-linum-mode))
 
-(use-package etags-select)
 
 ;;;; WAS BEING EVALUATED BUT IS NOW DISABLED
 ;;;; AND SLATED FOR REMOVAL IF NOT NEEDED.
+;;(use-package etags-select)
 
 ;; (autoload 'kill-ring-search "kill-ring-search"
 ;;   "Search the kill ring in the minibuffer."

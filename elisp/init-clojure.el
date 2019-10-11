@@ -3,7 +3,9 @@
 ;(autoload 'cider-jack-in-clojurescript "cider" t)
 ;(autoload 'cider-jack-in "cider" t)
 
-(use-package cider)
+(use-package cider
+  :config
+  (define-key global-map (kbd "C-<f5>") 'cider-jack-in))
 
 (defun my-cider-mode-hook ()
   ;;(use-package yesql-ghosts)

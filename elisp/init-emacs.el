@@ -128,8 +128,6 @@ eyes   = one pane, max height for Pro, large font"
   (setq solarized-use-less-bold t)
   (setq solarized-use-more-italic nil))
 
-(use-package smex)
-
 (recentf-mode t)
 (save-place-mode)
 

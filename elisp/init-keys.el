@@ -46,8 +46,6 @@
 
 (global-set-key [(control tab)] 'bury-buffer)
 
-(define-key global-map (kbd "C-<f5>") 'cider-jack-in)
-
 (avy-setup-default)
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-,") 'avy-goto-char)
