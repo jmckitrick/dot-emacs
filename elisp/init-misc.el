@@ -2,8 +2,6 @@
 
 ;(add-to-list 'vc-handled-backends 'GIT)
 
-(use-package smex)
-
 (use-package projectile
   :config
   (projectile-global-mode)
@@ -28,10 +26,10 @@
 (use-package magit)
 ;;(setq magit-last-seen-setup-instructions "1.4.0")
 
-;; (use-package linum
-;;   :config
-;;   (global-linum-mode))
-(global-display-line-numbers-mode)
+(use-package linum
+  :config
+  (global-linum-mode))
+;;(global-display-line-numbers-mode)
 
 ;;;; WAS BEING EVALUATED BUT IS NOW DISABLED
 ;;;; AND SLATED FOR REMOVAL IF NOT NEEDED.
@@ -91,5 +89,6 @@
 
 ;; TEMP FIX
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(use-package smex)
 
 (provide 'init-misc)

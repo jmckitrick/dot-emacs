@@ -8,11 +8,12 @@
 
 (defun setup-react ()
   (rjsx-mode)
-  (tide-setup)
   (flycheck-mode)
   (eldoc-mode)
-  (tide-hl-identifier-mode +1)
-  (message "Ready to React!"))
+  ;(tide-setup)
+  ;(tide-hl-identifier-mode +1)
+  ;(message "Ready to React!")
+  )
 
 (use-package ensime
   :bind (:map ensime-mode-map ("M-." . ensime-edit-definition)))

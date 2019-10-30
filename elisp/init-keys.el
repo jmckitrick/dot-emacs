@@ -41,8 +41,8 @@
 (global-set-key [\C-f6] 'tags-loop-continue)
 
 (global-set-key [f14] 'pop-tag-mark)
-(global-set-key [f15] 'etags-select-find-tag-at-point)
-(global-set-key [\C-f15] 'etags-select-find-tag)
+;;(global-set-key [f15] 'etags-select-find-tag-at-point)
+;;(global-set-key [\C-f15] 'etags-select-find-tag)
 
 (global-set-key [(control tab)] 'bury-buffer)
 
