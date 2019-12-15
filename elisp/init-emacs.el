@@ -86,26 +86,27 @@ eyes   = one pane, max height for Pro, large font"
             (height-tall '(height . 73))
             (left-full '(left . 0))
             (left-pad '(left . 4))
-            (left-out '(left . 130))
             (left-over '(left . 60))
+            (left-out '(left . 130))
             (left-less '(left . 280))   ; 240
             (left-one '(left . 320))
-            (left-two '(left . 640))
             (left-eyes '(left . 400))
             (left-test '(left . 600))
+            (left-two '(left . 640))
             (top '(top . 24)))          ; 16? 24?
         (cl-case config
-          (small (set-dims width-one height-small left-less top))
-          (fat (set-dims width-two height-small left-full top))
-          (chunky (set-dims width-eyes height-small left-over top))
-          (pairs (set-dims width-two height-small left-full top))
-          (tall (set-dims width-one height-tall left-two top))
-          (wide (set-dims width-two height-tall left-full top))
-          (wider (set-dims width-three height-tall left-out top))
-          (widest (set-dims width-full height-tall left-full top))
-          (pro (set-dims width-full height-tall left-pad top))
-          (eyes (set-dims width-eyes height-tall left-eyes top))
-          (retina (set-dims '(width . 120) height-small left-eyes top))
+          (small  (set-dims width-one   height-small left-less top))
+          (fat    (set-dims width-two   height-small left-full top))
+          (chunky (set-dims width-eyes  height-small left-over top))
+          (pairs  (set-dims width-two   height-small left-full top))
+          (tall   (set-dims width-one   height-tall  left-two  top))
+          (wide   (set-dims width-two   height-tall  left-full top))
+          (wider  (set-dims width-three height-tall  left-out  top))
+          (widest (set-dims width-full  height-tall  left-full top))
+          (pro    (set-dims width-full  height-tall  left-pad  top))
+          (eyes   (set-dims width-eyes  height-tall  left-eyes top))
+
+          (retina    (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
     (set-default-font jcm-font))
 
@@ -124,9 +125,9 @@ eyes   = one pane, max height for Pro, large font"
 
 ;; Themes
 (when (and jcm-theme-name window-system)
-  (load-theme jcm-theme-name t)
   (setq solarized-use-less-bold t)
-  (setq solarized-use-more-italic nil))
+  (setq solarized-use-more-italic nil)
+  (load-theme jcm-theme-name t))
 
 (recentf-mode t)
 (save-place-mode)
