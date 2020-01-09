@@ -1,7 +1,7 @@
-;(autoload 'clojure-mode-hook "clojure-mode" t)
-;(autoload 'clojure-mode "clojure-mode" t)
-;(autoload 'cider-jack-in-clojurescript "cider" t)
-;(autoload 'cider-jack-in "cider" t)
+(autoload 'clojure-mode-hook "clojure-mode" t)
+(autoload 'clojure-mode "clojure-mode" t)
+(autoload 'cider-jack-in-clojurescript "cider" t)
+(autoload 'cider-jack-in "cider" t)
 
 (use-package cider
   :config

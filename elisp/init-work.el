@@ -98,7 +98,7 @@
 ;;   (kill-buffer)
 ;;   (jump-to-register :magit-fullscreen))
 
-;; (server-start)
+(server-start)
 
 ;; (use-package git-gutter+
 ;;   :ensure t
