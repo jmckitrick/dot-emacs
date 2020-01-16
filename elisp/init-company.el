@@ -1,4 +1,6 @@
-(use-package company)
+(use-package company
+  :diminish company-mode)
+
 (use-package company-quickhelp
   :init
   (setq company-idle-delay 0.01

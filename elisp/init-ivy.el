@@ -1,4 +1,5 @@
-(use-package ivy :ensure)
+(use-package ivy :ensure t
+  :diminish (ivy-mode . ""))
 
 ;; (use-package ivy :ensure
 ;;   :config
