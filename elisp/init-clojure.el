@@ -44,13 +44,14 @@
 
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
-(setq nrepl-log-messages t
-      nrepl-hide-special-buffers t
-      cider-repl-pop-to-buffer-on-connect nil
-      cider-popup-stacktraces t
-      cider-repl-use-pretty-printing t
-      cider-auto-select-error-buffer t
-      cider-repl-display-in-current-window t
-      cider-prompt-save-file-on-load nil)
+(setq
+ nrepl-log-messages t
+ nrepl-hide-special-buffers nil
+ cider-repl-pop-to-buffer-on-connect nil
+ cider-popup-stacktraces t
+ cider-repl-use-pretty-printing t
+ cider-auto-select-error-buffer t
+ cider-repl-display-in-current-window t
+ cider-prompt-save-file-on-load nil)
 
 (provide 'init-clojure)
