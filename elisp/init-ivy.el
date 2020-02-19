@@ -30,7 +30,7 @@
 ;;   )
 
 (ivy-mode)
-(setq ivy-use-virtual-buffers t)
+(setq ivy-use-virtual-buffers nil)
 (setq ivy-count-format "(%d/%d) ")
 
 ;;(setq magit-completing-read-function 'ivy-completing-read)

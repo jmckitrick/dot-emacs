@@ -7,7 +7,8 @@
   (projectile-global-mode)
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  :diminish (projectile-mode . "Proj"))
+  ;;:diminish (projectile-mode . "Proj")
+  )
 
 (use-package js2-mode)
 
@@ -23,7 +24,6 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
 
-;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/magit/lisp"))
 (use-package magit)
 ;;(setq magit-last-seen-setup-instructions "1.4.0")
 
@@ -91,5 +91,10 @@
 ;; TEMP FIX
 ;;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (use-package smex)
+
+(diminish 'paredit-mode)
+(diminish 'eldoc-mode)
+(diminish 'yas-minor-mode)
+;;(diminish-undo 'projectile-mode)
 
 (provide 'init-misc)

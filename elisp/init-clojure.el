@@ -3,9 +3,12 @@
 (autoload 'cider-jack-in-clojurescript "cider" t)
 (autoload 'cider-jack-in "cider" t)
 
+(require 'cider)
+
 (use-package cider
-  :config
-  (define-key global-map (kbd "C-<f5>") 'cider-jack-in))
+  ;;:config
+  ;;(define-key global-map (kbd "C-<f5>") 'cider-jack-in)
+  )
 
 (defun my-cider-mode-hook ()
   ;;(use-package yesql-ghosts)
@@ -46,7 +49,7 @@
 
 (setq
  nrepl-log-messages t
- nrepl-hide-special-buffers nil
+ nrepl-hide-special-buffers t
  cider-repl-pop-to-buffer-on-connect nil
  cider-popup-stacktraces t
  cider-repl-use-pretty-printing t

@@ -40,9 +40,9 @@
 (setq enable-local-variables :safe)
 
 ;; Scrolling settings
-(setq scroll-step 1
+(setq scroll-step 10
       scroll-margin 1
-      scroll-conservatively 1
+      scroll-conservatively 1000
       scroll-preserve-screen-position nil)
 (setq-default scroll-up-aggressively 0.0
               scroll-down-aggressively 0.0)
@@ -108,7 +108,8 @@ eyes   = one pane, max height for Pro, large font"
 
           (retina    (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-    (set-default-font jcm-font))
+    (set-default-font jcm-font)
+    (setq-default line-spacing 1))
 
   (when window-system
     ;;(setq mac-option-modifier 'super)
