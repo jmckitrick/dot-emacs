@@ -1,11 +1,13 @@
-(autoload 'clojure-mode-hook "clojure-mode" t)
-(autoload 'clojure-mode "clojure-mode" t)
-(autoload 'cider-jack-in-clojurescript "cider" t)
-(autoload 'cider-jack-in "cider" t)
+;(autoload 'clojure-mode-hook "clojure-mode" t)
+;(autoload 'clojure-mode "clojure-mode" t)
+;(autoload 'cider-jack-in-clojurescript "cider" t)
+;(autoload 'cider-jack-in-clj "cider" t)
+;(autoload 'cider-jack-in-cljs "cider" t)
 
-(require 'cider)
+;;(require 'cider)
 
 (use-package cider
+  :ensure t
   ;;:config
   ;;(define-key global-map (kbd "C-<f5>") 'cider-jack-in)
   )
@@ -43,18 +45,20 @@
     (PATCH 2)
     (rfn 2)
     (let-routes 1)
-    (context 2)))
+    (context 2))
+  )
 
 (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
 (setq
  nrepl-log-messages t
  nrepl-hide-special-buffers t
- cider-repl-pop-to-buffer-on-connect nil
+ cider-repl-pop-to-buffer-on-connect t
  cider-popup-stacktraces t
  cider-repl-use-pretty-printing t
  cider-auto-select-error-buffer t
- cider-repl-display-in-current-window t
- cider-prompt-save-file-on-load nil)
+ cider-repl-display-in-current-window nil
+ cider-prompt-save-file-on-load nil
+ cider-repl-display-help-banner nil)
 
 (provide 'init-clojure)

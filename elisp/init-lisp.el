@@ -15,6 +15,8 @@
 
   (enable-paredit-mode)
 
+  (rainbow-delimiters-mode-enable)
+
   (local-set-key (kbd "C-n") 'forward-sexp)
   (local-set-key (kbd "C-h") 'backward-sexp)
   (local-set-key (kbd "C-t") 'transpose-sexps)

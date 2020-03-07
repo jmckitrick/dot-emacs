@@ -51,4 +51,6 @@
 (global-set-key (kbd "s-,") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
 
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
+
 (provide 'init-keys)
