@@ -9,7 +9,7 @@
 (defvar jcm-font "JetBrains Mono 19")
 (defvar jcm-theme-name 'solarized-dark-high-contrast)
 (defvar jcm-elisp-dir (concat user-emacs-directory "elisp"))
-(defvar enable-extras nil)
+(defvar jcm-extras nil "`elisp' or `consult'")
 
 (push jcm-elisp-dir load-path)
 
@@ -23,7 +23,7 @@
 (require 'init-keys)
 
 (require 'init-lisp)
-(when (member 'elisp enable-extras)
+(when (member 'elisp jcm-extras)
   (require 'init-elisp))
 
 (require 'init-clojure)
@@ -33,7 +33,7 @@
   (setq custom-file (concat user-emacs-directory "customize.el"))
   (load custom-file)
   (require 'init-package)
-  (when (member 'consult enable-extras)
+  (when (member 'consult jcm-extras)
     (require 'init-consult))
   (message "Home machine"))
 

@@ -1,64 +1,15 @@
-;(autoload 'clojure-mode-hook "clojure-mode" t)
-;(autoload 'clojure-mode "clojure-mode" t)
-;(autoload 'cider-jack-in-clojurescript "cider" t)
-;(autoload 'cider-jack-in-clj "cider" t)
-;(autoload 'cider-jack-in-cljs "cider" t)
-
-;;(require 'cider)
-
 (use-package cider
   :ensure t
-  ;;:config
-  ;;(define-key global-map (kbd "C-<f5>") 'cider-jack-in)
-  )
-
-(defun my-cider-mode-hook ()
-  ;;(use-package yesql-ghosts)
-  (eldoc-mode 1))
-
-(defun my-cider-repl-mode-hook ()
-  (company-mode 1)
-  (cider-eldoc-setup)
-  (use-package init-lisp)
-  (my-lisp-setup))
-
-(add-hook 'cider-mode-hook #'my-cider-mode-hook)
-(add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
-
-(defun my-clojure-mode-hook ()
-  ;;(require 'clj-refactor)
-  ;(clj-refactor-mode 1)
-  ;(cljr-add-keybindings-with-prefix "C-c C-m")
-  (yas-minor-mode 1)
-  ;;(require 'yesql-ghosts)
-  (cider-mode 1)
-  (my-lisp-setup)
-  (define-clojure-indent
-    (defroutes 'defun)
-    (GET 2)
-    (POST 2)
-    (PUT 2)
-    (DELETE 2)
-    (HEAD 2)
-    (ANY 2)
-    (OPTIONS 2)
-    (PATCH 2)
-    (rfn 2)
-    (let-routes 1)
-    (context 2))
-  )
-
-(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
-
-(setq
- nrepl-log-messages t
- nrepl-hide-special-buffers t
- cider-repl-pop-to-buffer-on-connect t
- cider-popup-stacktraces t
- cider-repl-use-pretty-printing t
- cider-auto-select-error-buffer t
- cider-repl-display-in-current-window nil
- cider-prompt-save-file-on-load nil
- cider-repl-display-help-banner nil)
+  :config
+  (setq
+   nrepl-log-messages t
+   nrepl-hide-special-buffers t
+   cider-repl-pop-to-buffer-on-connect t
+   cider-popup-stacktraces t
+   cider-repl-use-pretty-printing t
+   cider-auto-select-error-buffer t
+   cider-repl-display-in-current-window nil
+   cider-prompt-save-file-on-load nil
+   cider-repl-display-help-banner nil))
 
 (provide 'init-clojure)

@@ -85,25 +85,6 @@
     (define-key emacs-lisp-mode-map key val)
     (define-key lisp-interaction-mode-map key val)))
 
-;; DEPRECATED unless I find a use for it.
-;; (defun jump-to-form ()
-;;   (interactive)
-;;   (if (featurep 'xemacs)
-;;       (progn
-;; 	    (forward-char 1)
-;; 	    (let ((name (symbol-atpt))
-;;               (file (progn (search-forward "\"" nil t 1)
-;;                            (thing-at-point 'filename))))
-;; 	      (forward-char 1)
-;; 	      (help-find-source-or-scroll-up (point))
-;; 	      (switch-to-buffer (current-buffer))
-;; 	      (kill-new name)
-;; 	      (search-forward name)))
-;;     (other-window 1)
-;;     (forward-button 1)
-;;     ;; (find-file (filename-atpt))
-;;     (push-button)))
-
 (global-set-key (kbd "C-c C-f") 'find-function-at-point)
 
 (provide 'init-elisp)

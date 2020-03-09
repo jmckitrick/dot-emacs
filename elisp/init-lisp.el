@@ -151,7 +151,7 @@
 
 (add-hook 'clojure-mode-hook
           (lambda ()
-            (eldoc-mode 1)
+            ;;(eldoc-mode 1)
             (my-lisp-setup)))
 
 (provide 'init-lisp)

@@ -1,16 +1,10 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-;(add-to-list 'vc-handled-backends 'GIT)
-
 (use-package projectile
   :config
   (projectile-global-mode)
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  ;;:diminish (projectile-mode . "Proj")
-  )
-
-(use-package js2-mode)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 (use-package web-mode)
 ;; XXX Move these to work, consult, etc?
@@ -25,37 +19,10 @@
 (setq web-mode-markup-indent-offset 2)
 
 (use-package magit)
-;;(setq magit-last-seen-setup-instructions "1.4.0")
-
-(use-package linum
-  :config
-  (global-linum-mode))
-;;(global-display-line-numbers-mode)
-
-;;;; WAS BEING EVALUATED BUT IS NOW DISABLED
-;;;; AND SLATED FOR REMOVAL IF NOT NEEDED.
-;;(use-package etags-select)
-
-;; (autoload 'kill-ring-search "kill-ring-search"
-;;   "Search the kill ring in the minibuffer."
-;;   (interactive))
-
-;; (global-set-key "\M-\C-y" 'kill-ring-search)
-
-;; (use-package wgrep)
-
-;; (use-package undo-tree
+;; (use-package linum
 ;;   :config
-;;   (global-undo-tree-mode)
-;;   :diminish
-;;   undo-tree-mode)
-
-;; (defun toggle-comment-on-line ()
-;;   "comment or uncomment current line"
-;;   (interactive)
-;;     (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
-
-;; (global-set-key (kbd "C-c /") 'toggle-comment-on-line)
+;;   (global-linum-mode))
+;;(global-display-line-numbers-mode)
 
 ;(global-visual-line-mode)
 ;(diminish 'visual-line-mode)
@@ -88,13 +55,21 @@
 
 (diminish 'auto-revert-mode)
 
-;; TEMP FIX
-;;(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (use-package smex)
 
 (diminish 'paredit-mode)
 (diminish 'eldoc-mode)
 (diminish 'yas-minor-mode)
-;;(diminish-undo 'projectile-mode)
+
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
+
+(defun goto-line-with-feedback ()
+  "Show line numbers temporarily, while prompting for the line number input"
+  (interactive)
+  (unwind-protect
+      (progn
+        (linum-mode 1)
+        (goto-line (read-number "Goto line: ")))
+    (linum-mode -1)))
 
 (provide 'init-misc)
