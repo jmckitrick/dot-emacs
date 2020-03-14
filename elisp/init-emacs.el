@@ -1,3 +1,5 @@
+;;; -*- mode: emacs-lisp; -*-
+
 ;; ENABLE
 (setq ring-bell-function 'ignore)
 (setq kill-whole-line t)

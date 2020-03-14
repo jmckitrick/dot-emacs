@@ -1,3 +1,5 @@
+;;; -*- mode: emacs-lisp; -*-
+
 (use-package company
   :diminish company-mode
   :init

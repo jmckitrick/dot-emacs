@@ -1,3 +1,5 @@
+;;; -*- mode: emacs-lisp; -*-
+
 (use-package ivy :ensure t
   :diminish ivy-mode)
 

@@ -16,6 +16,7 @@
  '(package-selected-packages
    (quote
     (rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode yasnippet projectile-ripgrep js2-mode coffee-mode robe haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit nav-flash paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts)))
+ '(recentf-auto-cleanup (quote never))
  '(solarized-high-contrast-mode-line t)
  '(solarized-italic nil)
  '(tooltip-mode nil)

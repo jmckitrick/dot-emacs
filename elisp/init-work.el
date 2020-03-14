@@ -1,3 +1,5 @@
+;;; -*- mode: emacs-lisp; -*-
+
 (require 'init-util)
 
 ;(require 'jcm-web)

@@ -1,3 +1,5 @@
+;;; -*- mode: emacs-lisp; -*-
+
 (use-package cl-lib)
 
 (defun report-init-results (errors)

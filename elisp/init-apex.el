@@ -1,3 +1,5 @@
+;;; -*- mode: emacs-lisp; -*-
+
 (defun jcm-setup-apex-settings ()
   (interactive)
   ;(require 'jcm-web)
