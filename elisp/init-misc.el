@@ -72,4 +72,6 @@
         (goto-line (read-number "Goto line: ")))
     (linum-mode -1)))
 
+(windmove-default-keybindings)
+
 (provide 'init-misc)
