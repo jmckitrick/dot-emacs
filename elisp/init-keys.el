@@ -1,5 +1,13 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;;; 2020 reminders
+;;; Switch buffers with shift-arrow.
+;;; No more shift-arrow for select. Use marks.
+;;; Projectile p to select project
+;;; CIDER inspector
+;;; exuberant ctags
+
+
 ;;; Quick tips/Reminders:
 ;;; C-c w - copy sexp
 ;;; C-M-q - reindent defun
@@ -41,8 +49,6 @@
 (global-set-key [\C-f6] 'tags-loop-continue)
 
 (global-set-key [f14] 'pop-tag-mark)
-;;(global-set-key [f15] 'etags-select-find-tag-at-point)
-;;(global-set-key [\C-f15] 'etags-select-find-tag)
 
 (global-set-key [(control tab)] 'bury-buffer)
 
