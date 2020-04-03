@@ -6,7 +6,7 @@
 ;;; Projectile p to select project
 ;;; CIDER inspector
 ;;; exuberant ctags
-
+;;; M-; comment-dwim
 
 ;;; Quick tips/Reminders:
 ;;; C-c w - copy sexp
