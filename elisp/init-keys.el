@@ -3,6 +3,7 @@
 ;;; 2020 reminders
 ;;; Switch buffers with shift-arrow.
 ;;; No more shift-arrow for select. Use marks.
+;;; C-v M-v (like fn-up fn-dn)
 ;;; Projectile p to select project
 ;;; CIDER inspector
 ;;; exuberant ctags
