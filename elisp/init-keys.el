@@ -8,6 +8,8 @@
 ;;; CIDER inspector
 ;;; exuberant ctags
 ;;; M-; comment-dwim
+;;; C-SPC C-SPC to set transient mode
+;;; In tags xref mode, TAB to jump and close
 
 ;;; Quick tips/Reminders:
 ;;; C-c w - copy sexp
