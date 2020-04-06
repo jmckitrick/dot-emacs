@@ -74,4 +74,9 @@
 
 (windmove-default-keybindings)
 
+(use-package frog-jump-buffer
+  :ensure t
+  :config
+  (global-set-key (kbd "s-b") 'frog-jump-buffer))
+
 (provide 'init-misc)

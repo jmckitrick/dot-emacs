@@ -1,15 +1,15 @@
 ;;; -*- mode: emacs-lisp; -*-
 
 ;;; 2020 reminders
+;;; C-v M-v (like fn-up fn-dn)
 ;;; Switch buffers with shift-arrow.
 ;;; No more shift-arrow for select. Use marks.
-;;; C-v M-v (like fn-up fn-dn)
+;;; C-SPC C-SPC to set transient mode
+;;; M-; comment-dwim
+;;; exuberant ctags
+;;; In tags xref mode, TAB to jump and close
 ;;; Projectile p to select project
 ;;; CIDER inspector
-;;; exuberant ctags
-;;; M-; comment-dwim
-;;; C-SPC C-SPC to set transient mode
-;;; In tags xref mode, TAB to jump and close
 
 ;;; Quick tips/Reminders:
 ;;; C-c w - copy sexp
