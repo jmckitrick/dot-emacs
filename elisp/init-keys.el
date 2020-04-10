@@ -1,9 +1,16 @@
 ;;; -*- mode: emacs-lisp; -*-
 
 ;;; 2020 reminders
-;;; C-v M-v (like fn-up fn-dn)
+;;; C-v page down, M-v page up
 ;;; Switch buffers with shift-arrow.
 ;;; No more shift-arrow for select. Use marks.
+;;; M-o ace jump window
+;;; s-. jump to word first letter
+;;; s-left/right next frame
+;;; Projectile p to select project
+;;; CIDER inspector
+;;; exuberant ctags
+;;; M-; comment-dwim
 ;;; C-SPC C-SPC to set transient mode
 ;;; M-; comment-dwim
 ;;; exuberant ctags
@@ -12,7 +19,7 @@
 ;;; CIDER inspector
 
 ;;; Quick tips/Reminders:
-;;; C-c w - copy sexp
+;;; C-c w - copy sexp/word
 ;;; C-M-q - reindent defun
 ;;; C-M-space - mark sexp
 ;;; C-' - splice
