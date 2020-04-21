@@ -17,6 +17,7 @@
 ;;; In tags xref mode, TAB to jump and close
 ;;; Projectile p to select project
 ;;; CIDER inspector
+;;; C-u C-x show info about a character
 
 ;;; Quick tips/Reminders:
 ;;; C-c w - copy sexp/word
@@ -49,7 +50,7 @@
 (define-key global-map (kbd "C-c w") 'copy-word)
 (fset 'copy-sexp [?\C-\M-\ ?\M-w])      ; keyboard macro
 
-(define-key global-map (kbd "<f2>") 'jcm-edit-startup-file)
+(define-key global-map (kbd "s-<f2>") 'jcm-edit-startup-file)
 (define-key global-map (kbd "M-<f2>") 'jcm-dired-elisp)
 
 (global-set-key [\M-f13] 'tags-search)

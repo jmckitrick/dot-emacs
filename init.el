@@ -26,6 +26,7 @@
 
 (require 'init-clojure)
 (require 'init-misc)
+(require 'init-org)
 
 (when (is-home-machine)
   (setq custom-file (concat user-emacs-directory "customize.el"))
