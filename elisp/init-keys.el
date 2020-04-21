@@ -2,21 +2,17 @@
 
 ;;; 2020 reminders
 ;;; C-v page down, M-v page up
-;;; Switch buffers with shift-arrow.
 ;;; No more shift-arrow for select. Use marks.
+;;; Switch buffers with shift-arrow (?)
 ;;; M-o ace jump window
 ;;; s-. jump to word first letter
 ;;; s-left/right next frame
 ;;; Projectile p to select project
 ;;; CIDER inspector
-;;; exuberant ctags
-;;; M-; comment-dwim
 ;;; C-SPC C-SPC to set transient mode
 ;;; M-; comment-dwim
 ;;; exuberant ctags
 ;;; In tags xref mode, TAB to jump and close
-;;; Projectile p to select project
-;;; CIDER inspector
 ;;; C-u C-x show info about a character
 
 ;;; Quick tips/Reminders:
@@ -48,7 +44,7 @@
 (define-key global-map (kbd "C-c C-g") 'goto-line)
 
 (define-key global-map (kbd "C-c w") 'copy-word)
-(fset 'copy-sexp [?\C-\M-\ ?\M-w])      ; keyboard macro
+;;(fset 'copy-sexp [?\C-\M-\ ?\M-w])      ; keyboard macro
 
 (define-key global-map (kbd "s-<f2>") 'jcm-edit-startup-file)
 (define-key global-map (kbd "M-<f2>") 'jcm-dired-elisp)
