@@ -72,7 +72,8 @@
         (goto-line (read-number "Goto line: ")))
     (linum-mode -1)))
 
-(windmove-default-keybindings)
+(windmove-default-keybindings)          ;conflicts with org mode?
+(global-set-key (kbd "M-o") 'ace-window)
 
 (use-package frog-jump-buffer
   :ensure t
