@@ -10,14 +10,14 @@
 ;; a archive
 ;; C-c C-c context dependent
 
-(global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c b") 'org-switchb)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c l") 'org-store-link)
 
 (setq org-directory "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org")
 (setq org-default-notes-file (concat org-directory "/notes.org"))
-(setq org-agenda-files org-directory)
+(setq org-agenda-files `(,org-directory))
 (setq org-refile-targets '((nil . (:maxlevel . 3))
                            (org-agenda-files . (:maxlevel . 3))))
 (setq org-refile-use-outline-path t)
