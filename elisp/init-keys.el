@@ -46,11 +46,11 @@
 (define-key global-map (kbd "C-c w") 'copy-word)
 ;;(fset 'copy-sexp [?\C-\M-\ ?\M-w])      ; keyboard macro
 
-(define-key global-map (kbd "s-<f2>") 'jcm-edit-startup-file)
-(define-key global-map (kbd "M-<f2>") 'jcm-dired-elisp)
+(define-key global-map (kbd "s-<f2>") 'jcm/edit-startup-file)
+(define-key global-map (kbd "M-<f2>") 'jcm/dired-elisp)
 
 (global-set-key [\M-f13] 'tags-search)
-(global-set-key [\C-f13] 'jcm-tags-search-at-point)
+(global-set-key [\C-f13] 'jcm/tags-search-at-point)
 (global-set-key [f13] 'tags-loop-continue)
 (global-set-key [f6] 'tags-loop-continue)
 (global-set-key [\C-f6] 'tags-loop-continue)

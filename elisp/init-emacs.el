@@ -9,6 +9,7 @@
 (show-paren-mode t)
 (global-hl-line-mode 1)
 (column-number-mode t)
+(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 1))
 
 ;; DISABLE
 (setq tooltip-mode nil)
@@ -16,13 +17,13 @@
 (setq auto-save-default nil)
 (setq inhibit-startup-message t)
 (setq inhibit-splash-screen t)
-(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
 
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
 (setq-default indent-tabs-mode nil)
+(setq-default cursor-type 'bar)
 (setq fill-column 80)
 (setq c-default-style "bsd"
       c-basic-offset 4
@@ -61,7 +62,7 @@
 
 ;; OSX settings
 (when (string-match "apple" system-configuration)
-  (defun jcm-set-carbon-prefs (config)
+  (defun jcm/set-carbon-prefs (config)
     "Set up emacs for carbon.
 Possible CONFIG values:
 small  = skinny, max height for MacBook
@@ -76,14 +77,20 @@ pro    = three panes, max height for Pro
 eyes   = one pane, max height for Pro, large font"
     (interactive)
     (cl-flet ((set-dims (width height left top)
-                        (set-frame-position (selected-frame) (cdr left) (cdr top))
-                        (set-frame-size (selected-frame) (cdr width) (cdr height))))
-      (let ((width-one '(width . 96))   ; 88
+                        (set-frame-position (selected-frame)
+                                            (cdr left)
+                                            (cdr top))
+                        (set-frame-size (selected-frame)
+                                        (cdr width)
+                                        (cdr height))))
+      (let ((width-tiny '(width . 80))
+            (width-one '(width . 96))   ; 88
 	    (width-one-one '(width . 110))
             (width-two '(width . 176))
             (width-three '(width . 210))
             (width-full '(width . 270))
             (width-eyes '(width . 160))
+            (height-tiny '(height . 35))
             (height-small '(height . 49)) ; 47
             (height-tall '(height . 73))
             (left-full '(left . 0))
@@ -95,8 +102,10 @@ eyes   = one pane, max height for Pro, large font"
             (left-eyes '(left . 400))
             (left-test '(left . 600))
             (left-two '(left . 640))
+            (left-tiny '(left . 270))
             (top '(top . 24)))          ; 16? 24?
         (cl-case config
+          (tiny   (set-dims width-tiny  height-tiny  left-tiny top))
           (small  (set-dims width-one   height-small left-less top))
           (fat    (set-dims width-two   height-small left-full top))
           (chunky (set-dims width-eyes  height-small left-over top))
@@ -110,15 +119,15 @@ eyes   = one pane, max height for Pro, large font"
 
           (retina    (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-    (set-default-font jcm-font)
+    (set-default-font jcm/font)
     (setq-default line-spacing 1))
 
   (when window-system
     ;;(setq mac-option-modifier 'super)
     ;;(setq ns-command-modifier 'meta)
-    (jcm-set-carbon-prefs jcm-mac-window-size))
+    (jcm/set-carbon-prefs jcm/mac-window-size))
 
-  ;;(add-to-list 'default-frame-alist '(font . jcm-font))
+  ;;(add-to-list 'default-frame-alist '(font . jcm/font))
 
   (setq shell-file-name "/bin/zsh")
   (set-exec-path-from-shell-PATH)
@@ -127,10 +136,10 @@ eyes   = one pane, max height for Pro, large font"
   (global-set-key (kbd "<kp-delete>") 'delete-char))
 
 ;; Themes
-(when (and jcm-theme-name window-system)
+(when (and jcm/theme-name window-system)
   (setq solarized-use-less-bold t)
   (setq solarized-use-more-italic nil)
-  (load-theme jcm-theme-name t))
+  (load-theme jcm/theme-name t))
 
 (recentf-mode t)
 (save-place-mode)

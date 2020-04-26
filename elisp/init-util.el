@@ -76,24 +76,24 @@ REGEXP defaults to ^init-.*\.el$"
     (backward-word 1)
     (message "Copied word.")))
 
-(defun jcm-edit-startup-file ()
+(defun jcm/edit-startup-file ()
   "Edit the startup file for emacs."
   (interactive)
   (find-file (expand-file-name "~/.emacs.d/init.el")))
 
-(defun jcm-dired-elisp ()
+(defun jcm/dired-elisp ()
   "Open the elisp directory in dired."
   (interactive)
-  (find-file jcm-elisp-dir))
+  (find-file jcm/elisp-dir))
 
-;; (defun jcm-tags-search-at-point ()
+;; (defun jcm/tags-search-at-point ()
 ;;   "Search tags file for symbol under point."
 ;;   (interactive)
 ;;   (let ((tag (find-tag-default)))
 ;;     (when tag
 ;;       (tags-search tag))))
 
-(defun jcm-irc ()
+(defun jcm/irc ()
   "Start IRC for a freenode session."
   (interactive)
   (erc-select :server "irc.freenode.net"

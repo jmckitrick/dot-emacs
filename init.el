@@ -1,15 +1,17 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(defvar jcm-mac-window-size 'wide "`wider', `widest', `chunky', `tj'")
-(defvar jcm-font "JetBrains Mono 19")
-(defvar jcm-theme-name 'solarized-dark-high-contrast)
-(defvar jcm-elisp-dir (concat user-emacs-directory "elisp"))
-(defvar jcm-extras nil "`elisp' or `consult'")
+(defvar jcm/theme-name 'solarized-light-high-contrast)
+(defvar jcm/font "JetBrains Mono 19")
+(defvar jcm/mac-window-size 'tiny
+  "`small' `wide', `wider', `widest', `chunky', `tj'")
+
+(defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
+(defvar jcm/extras nil "`elisp' or `consult'")
 
 (package-initialize)
 (eval-when-compile
  (require 'use-package))
-(push jcm-elisp-dir load-path)
+(push jcm/elisp-dir load-path)
 
 (setq gc-cons-threshold (* 50 1024 1024))
 
@@ -21,7 +23,7 @@
 (require 'init-keys)
 
 (require 'init-lisp)
-(when (member 'elisp jcm-extras)
+(when (member 'elisp jcm/extras)
   (require 'init-elisp))
 
 (require 'init-clojure)
@@ -32,7 +34,7 @@
   (setq custom-file (concat user-emacs-directory "customize.el"))
   (load custom-file)
   (require 'init-package)
-  (when (member 'consult jcm-extras)
+  (when (member 'consult jcm/extras)
     (require 'init-consult))
   (message "Home machine"))
 
