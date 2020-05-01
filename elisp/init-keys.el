@@ -28,11 +28,6 @@
 ;;; C-x-C-e - eval elisp
 ;;; C-c C-y - copy this function into REPL
 
-;(keyboard-translate ?\( ?\[)
-;(keyboard-translate ?\) ?\])
-;(keyboard-translate ?\[ ?\()
-;(keyboard-translate ?\] ?\))
-
 ;;; From GNU Emacs Extensions book.
 ;;(global-set-key (kbd "C-x C-m") 'smex) ; C-m = RET
 ;;(global-set-key (kbd "C-c C-m") 'execute-extended-command) ; C-m = RET
@@ -44,7 +39,6 @@
 (define-key global-map (kbd "C-c C-g") 'goto-line)
 
 (define-key global-map (kbd "C-c w") 'copy-word)
-;;(fset 'copy-sexp [?\C-\M-\ ?\M-w])      ; keyboard macro
 
 (define-key global-map (kbd "s-<f2>") 'jcm/edit-startup-file)
 (define-key global-map (kbd "M-<f2>") 'jcm/dired-elisp)

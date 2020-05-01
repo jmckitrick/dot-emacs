@@ -42,10 +42,10 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(use-package yasnippet
-  :config
-  (yas-initialize)
-  (yas-global-mode 1))
+;; (use-package yasnippet
+;;   :config
+;;   (yas-initialize)
+;;   (yas-global-mode 1))
 
 (setq-default indicate-empty-lines t)
 

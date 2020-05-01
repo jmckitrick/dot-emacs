@@ -29,7 +29,6 @@
       c-basic-offset 4
       track-eol t)
 (c-set-offset 'case-label '+)
-(setq js-indent-level 2)
 
 ;; Dired settings.
 (put 'dired-find-alternate-file 'disabled nil)
