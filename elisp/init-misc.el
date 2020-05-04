@@ -81,4 +81,7 @@
   :config
   (global-set-key (kbd "s-b") 'frog-jump-buffer))
 
+(set-fontset-font
+ t 'symbol (font-spec :family "Apple Color Emoji") nil 'prepend)
+
 (provide 'init-misc)

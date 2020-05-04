@@ -118,7 +118,7 @@ eyes   = one pane, max height for Pro, large font"
 
           (retina    (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-    (set-default-font jcm/font)
+    (set-frame-font jcm/font)
     (setq-default line-spacing 1))
 
   (when window-system
