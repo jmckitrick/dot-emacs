@@ -89,9 +89,11 @@ eyes   = one pane, max height for Pro, large font"
             (width-three '(width . 210))
             (width-full '(width . 270))
             (width-eyes '(width . 160))
+            (width-max '(width . 129))
             (height-tiny '(height . 35))
             (height-small '(height . 49)) ; 47
             (height-tall '(height . 73))
+            (height-max '(height . 35))
             (left-full '(left . 0))
             (left-pad '(left . 4))
             (left-over '(left . 60))
@@ -115,6 +117,7 @@ eyes   = one pane, max height for Pro, large font"
           (widest (set-dims width-full  height-tall  left-full top))
           (pro    (set-dims width-full  height-tall  left-pad  top))
           (eyes   (set-dims width-eyes  height-tall  left-eyes top))
+          (max    (set-dims width-max   height-max   left-full  top))
 
           (retina    (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))

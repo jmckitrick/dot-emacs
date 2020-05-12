@@ -81,6 +81,7 @@
   :config
   (global-set-key (kbd "s-b") 'frog-jump-buffer))
 
+;; Enable emoji! 💩
 (set-fontset-font
  t 'symbol (font-spec :family "Apple Color Emoji") nil 'prepend)
 
