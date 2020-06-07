@@ -9,7 +9,7 @@
 ;; C-c C-w refile
 ;; a archive
 ;; C-c C-c context dependent
-;; C-c C-x C-s save to archive
+;; C-c C-x C-s or C-c $ save to archive
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-switchb)
