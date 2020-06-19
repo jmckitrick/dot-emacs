@@ -7,6 +7,7 @@
 ;; q/x
 ;; C-c C-s schedule
 ;; C-c C-w refile
+;; C-c b switchb
 ;; a archive
 ;; C-c C-c context dependent
 ;; C-c C-x C-s or C-c $ save to archive

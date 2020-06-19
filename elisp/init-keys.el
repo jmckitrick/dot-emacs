@@ -60,4 +60,6 @@
 
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
+(global-set-key [remap comment-dwim] #'comment-line)
+
 (provide 'init-keys)
