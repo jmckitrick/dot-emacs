@@ -2,10 +2,10 @@
 
 (defvar jcm/mac-window-size 'max ;; 129x35
   "`small' `wide', `wider', `widest', `chunky', `tj'")
-(defvar jcm/font "JetBrains Mono 19")
+(defvar jcm/font "JetBrains Mono 14")
 (defvar jcm/theme-name
-  (if (and (>= (string-to-number (format-time-string "%H")) 8)
-           (<= (string-to-number (format-time-string "%H")) 20))
+  (if (and (> (string-to-number (format-time-string "%H")) 6)
+           (< (string-to-number (format-time-string "%H")) 20))
       'solarized-light 'solarized-dark))
 
 (defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
