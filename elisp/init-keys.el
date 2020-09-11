@@ -36,7 +36,7 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
 (define-key global-map (kbd "M-g") 'goto-line)
-(define-key global-map (kbd "C-c C-g") 'goto-line)
+;;(define-key global-map (kbd "C-c C-g") 'goto-line)
 
 (define-key global-map (kbd "C-c w") 'copy-word)
 

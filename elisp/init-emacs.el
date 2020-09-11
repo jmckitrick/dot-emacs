@@ -9,7 +9,7 @@
 (show-paren-mode t)
 (global-hl-line-mode 1)
 (column-number-mode t)
-(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 1))
+(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 
 ;; DISABLE
 (setq tooltip-mode nil)
@@ -23,7 +23,7 @@
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
 (setq-default indent-tabs-mode nil)
-(setq-default cursor-type 'bar)
+(setq-default cursor-type '(bar . 3))
 (setq fill-column 80)
 (setq c-default-style "bsd"
       c-basic-offset 4
@@ -144,6 +144,6 @@ eyes   = one pane, max height for Pro, large font"
   (load-theme jcm/theme-name t))
 
 (recentf-mode t)
-(save-place-mode)
+(save-place-mode 1)
 
 (provide 'init-emacs)
