@@ -8,6 +8,7 @@
  '(cider-prompt-for-symbol nil)
  '(cider-repl-display-in-current-window nil)
  '(cider-repl-pop-to-buffer-on-connect 'display-only)
+ '(clojure-indent-style 'align-arguments)
  '(custom-safe-themes
    '("7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" default))
  '(kill-whole-line t)
