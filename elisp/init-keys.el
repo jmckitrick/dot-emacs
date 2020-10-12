@@ -13,7 +13,8 @@
 ;;; M-; comment-dwim
 ;;; exuberant ctags
 ;;; In tags xref mode, TAB to jump and close
-;;; C-u C-x show info about a character
+;;; C-u C-x = show info about a character
+;;; M-x add-dir-local-v
 
 ;;; Quick tips/Reminders:
 ;;; C-c w - copy sexp/word
@@ -58,7 +59,7 @@
 (global-set-key (kbd "s-,") 'avy-goto-char)
 (global-set-key (kbd "C-'") 'avy-goto-char-2)
 
-(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
+;;(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
 (global-set-key [remap comment-dwim] #'comment-line)
 
