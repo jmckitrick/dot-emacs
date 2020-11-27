@@ -29,7 +29,7 @@ REGEXP defaults to ^init-.*\.el$"
 
 (defun match-system-name (target-name)
   (interactive)
-  (let ((result (string-match target-name system-name)))
+  (let ((result (string-match target-name (downcase (system-name)))))
     (and (cl-typep result 'integer)
          (>= result 0))))
 
@@ -44,8 +44,7 @@ REGEXP defaults to ^init-.*\.el$"
   (or force
       (match-system-name "jcm-mac")
       (match-system-name "jcm-mac.local")
-      (match-system-name "jcm-macbook")
-      (match-system-name "jonathons-mbp")))
+      (match-system-name "jcm-macbook")))
 
 (cl-defun is-work-machine (&optional force)
   (interactive)
@@ -53,7 +52,8 @@ REGEXP defaults to ^init-.*\.el$"
       (match-system-name "jmckitrick-mbp")
       (match-system-name "devmbp42")
       (match-system-name "MacBook-Pro")
-      (match-system-name "ec2.internal")))
+      (match-system-name "ec2.internal")
+      (match-system-name "jonathons-mbp")))
 
 (defun nuke-all-buffers ()
   "Kill all emacs buffers."
