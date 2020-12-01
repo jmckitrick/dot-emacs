@@ -9,10 +9,13 @@
  '(cider-known-endpoints
    '(("dtd-clj" "localhost" "62909")
      ("dtd-cljs" "localhost" "9000")))
+ '(cider-offer-to-open-cljs-app-in-browser nil)
  '(cider-prompt-for-symbol nil)
  '(cider-repl-display-in-current-window nil)
  '(cider-repl-pop-to-buffer-on-connect nil)
  '(clojure-indent-style 'align-arguments)
+ '(custom-safe-themes
+   '("7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" default))
  '(kill-whole-line t)
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
  '(magit-visit-ref-behavior '(checkout-branch))

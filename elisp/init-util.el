@@ -79,7 +79,7 @@ REGEXP defaults to ^init-.*\.el$"
 (defun jcm/edit-startup-file ()
   "Edit the startup file for emacs."
   (interactive)
-  (find-file-other-window user-init-file))
+  (find-file user-init-file))
 
 (defun jcm/dired-elisp ()
   "Open the elisp directory in dired."
