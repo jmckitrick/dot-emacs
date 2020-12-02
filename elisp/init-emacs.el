@@ -23,7 +23,7 @@
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
 (setq-default indent-tabs-mode nil)
-(setq-default cursor-type '(bar . 3))
+(setq-default cursor-type t)
 (setq fill-column 80)
 (setq c-default-style "bsd"
       c-basic-offset 4
