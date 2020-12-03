@@ -9,7 +9,7 @@
   (eval-after-load 'paredit
     '(progn
        ;(define-key paredit-mode-map (kbd "<kp-delete>") 'paredit-kill)
-       (define-key paredit-mode-map (kbd "C-c w") 'copy-sexp)
+       (define-key paredit-mode-map (kbd "C-c C-w") 'paredit-copy-as-kill)
        (define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
        (define-key paredit-mode-map (kbd "C-M-k") 'paredit-kill)))
 
