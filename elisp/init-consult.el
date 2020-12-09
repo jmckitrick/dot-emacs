@@ -16,6 +16,4 @@
 ;; php
 (add-to-list 'auto-mode-alist '("\\.php" . php-mode))
 
-(server-start)
-
 (provide 'init-consult)
