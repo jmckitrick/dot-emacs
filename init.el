@@ -1,11 +1,11 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(defvar jcm/mac-window-size 'max ;; 129x35
+(defvar jcm/mac-window-size 'small ;; 129x35
   "`small' `wide', `wider', `widest', `chunky', `tj'")
-(defvar jcm/font "JetBrains Mono 18")
+(defvar jcm/font "JetBrains Mono 24")
 (defvar jcm/theme-name 'solarized-dark-high-contrast)
 (defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
-(defvar jcm/extras nil "`elisp' or `consult'")
+(defvar jcm/extras '() "`elisp' and/or `consult'")
 
 (package-initialize)
 (eval-when-compile

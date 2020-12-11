@@ -145,6 +145,6 @@ eyes   = one pane, max height for Pro, large font"
 
 (recentf-mode t)
 (save-place-mode 1)
-(server-start)
+;;(server-start)
 
 (provide 'init-emacs)
