@@ -1,7 +1,7 @@
 ;;; -*- mode: emacs-lisp; -*-
 
 (defvar jcm/mac-window-size 'small ;; 129x35
-  "`small' `wide', `wider', `widest', `chunky', `tj'")
+  "`small' `wide', `wider', `widest', `chunky'")
 (defvar jcm/font "JetBrains Mono 24")
 (defvar jcm/theme-name 'solarized-dark-high-contrast)
 (defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
@@ -42,6 +42,6 @@
   (load custom-file)
   (require 'init-package-work)
   (require 'init-work)
-  (message "Work machine"))
+  (message "Work machine (DTD)"))
 
 (setq gc-cons-threshold (* 2 1024 1024))

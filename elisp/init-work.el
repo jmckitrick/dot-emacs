@@ -2,32 +2,15 @@
 
 (require 'init-util)
 
-;(require 'jcm-web)
+;;(require 'jcm-web)
 ;;(jcm-setup-web-settings)
 
-;; This has been working
-(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
-
-(defun setup-react ()
-  (rjsx-mode)
-  (flycheck-mode)
-  (eldoc-mode)
-  ;(tide-setup)
-  ;(tide-hl-identifier-mode +1)
-  ;(message "Ready to React!")
-  )
-
-(add-hook 'scala-mode-hook 'rainbow-delimiters-mode)
-
 ;; Should these be *-foo-mode-hook instead?
-(add-to-list 'auto-mode-alist '("\\.js\\'" . setup-react))
+(add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.mjml" . sgml-mode))
 
-(autoload 'enable-paredit-mode "paredit" "..." t)
-
-(use-package autopair
-  :diminish pair
-  :hook scala-mode-hook)
-
+;; ----------------------------------------
+;; Move all these to common?
 (setq
  create-lockfiles nil
  make-backup-files nil
@@ -39,8 +22,6 @@
 (use-package nav-flash
   :config
   (nav-flash-show))
-
-(server-start)
 
 (global-set-key (kbd "M-o") 'ace-window)
 
