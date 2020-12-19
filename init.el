@@ -2,7 +2,7 @@
 
 (defvar jcm/mac-window-size 'small ;; 129x35
   "`small' `wide', `wider', `widest', `chunky'")
-(defvar jcm/font "JetBrains Mono 24")
+(defvar jcm/font "JetBrains Mono 18")
 (defvar jcm/theme-name 'solarized-dark-high-contrast)
 (defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
 (defvar jcm/extras '() "`elisp' and/or `consult'")
