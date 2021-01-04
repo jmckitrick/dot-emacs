@@ -19,10 +19,6 @@
  use-package-always-ensure t
  sentence-end-double-space nil)
 
-(use-package nav-flash
-  :config
-  (nav-flash-show))
-
 (global-set-key (kbd "M-o") 'ace-window)
 
 (provide 'init-work)

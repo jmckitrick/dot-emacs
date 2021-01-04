@@ -85,4 +85,8 @@
 (set-fontset-font
  t 'symbol (font-spec :family "Apple Color Emoji") nil 'prepend)
 
+;; (use-package nav-flash
+;;   :config
+;;   (nav-flash-show))
+
 (provide 'init-misc)

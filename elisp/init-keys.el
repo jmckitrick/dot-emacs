@@ -1,5 +1,9 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;;; 2021 reminders
+;;; C-w backward kill word
+;;; C-x C-k kill region
+
 ;;; 2020 reminders
 ;;; C-v page down, M-v page up
 ;;; No more shift-arrow for select. Use marks.
@@ -62,5 +66,11 @@
 ;;(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
 (global-set-key [remap comment-dwim] #'comment-line)
+
+;; experimental
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+;(global-set-key "\C-c\C-k" 'kill-region)
+
 
 (provide 'init-keys)
