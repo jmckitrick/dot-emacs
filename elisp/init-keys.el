@@ -43,7 +43,7 @@
 (define-key global-map (kbd "M-g") 'goto-line)
 ;;(define-key global-map (kbd "C-c C-g") 'goto-line)
 
-(define-key global-map (kbd "C-c w") 'copy-word)
+;;(define-key global-map (kbd "C-c w") 'copy-word)
 
 (define-key global-map (kbd "s-<f2>") 'jcm/edit-startup-file)
 (define-key global-map (kbd "M-<f2>") 'jcm/dired-elisp)
@@ -68,9 +68,8 @@
 (global-set-key [remap comment-dwim] #'comment-line)
 
 ;; experimental
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
+;(global-set-key "\C-w" 'backward-kill-word)
+;(global-set-key "\C-x\C-k" 'kill-region)
 ;(global-set-key "\C-c\C-k" 'kill-region)
-
 
 (provide 'init-keys)

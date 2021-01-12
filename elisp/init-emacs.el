@@ -4,7 +4,6 @@
 (setq ring-bell-function 'ignore)
 (setq kill-whole-line t)
 (setq visible-bell t)
-(transient-mark-mode -1)
 (delete-selection-mode t)
 (show-paren-mode t)
 (global-hl-line-mode 1)
@@ -19,6 +18,7 @@
 (setq inhibit-splash-screen t)
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
+;;(transient-mark-mode -1)
 
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
