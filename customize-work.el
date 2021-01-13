@@ -20,7 +20,7 @@
  '(magit-visit-ref-behavior '(checkout-branch))
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(org js2-mode yasnippet-snippets yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit nav-flash markdown-mode magit frog-jump-buffer diminish counsel company-quickhelp cider browse-at-remote ag ace-window))
+   '(diff-hl easy-kill org js2-mode yasnippet-snippets yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit nav-flash markdown-mode magit frog-jump-buffer diminish counsel company-quickhelp cider browse-at-remote ag ace-window))
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
  '(recentf-max-saved-items nil)
