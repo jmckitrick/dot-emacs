@@ -1,16 +1,12 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-;;; 2021 reminders
-;;; C-w backward kill word
-;;; C-x C-k kill region
-
 ;;; 2020 reminders
-;;; C-v page down, M-v page up
+;;; C-v page down, M-v page up (for broken cursor key)
 ;;; No more shift-arrow for select. Use marks.
 ;;; Switch buffers with shift-arrow (?)
 ;;; M-o ace jump window
 ;;; s-. jump to word first letter
-;;; s-left/right next frame
+;;; s-left/right/up/down next frame
 ;;; Projectile p to select project
 ;;; CIDER inspector
 ;;; C-SPC C-SPC to set transient mode
