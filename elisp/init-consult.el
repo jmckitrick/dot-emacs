@@ -23,6 +23,6 @@
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 
 ;; php
-(add-to-list 'auto-mode-alist '("\\.php" . php-mode))
+;;(add-to-list 'auto-mode-alist '("\\.php" . php-mode))
 
 (provide 'init-consult)
