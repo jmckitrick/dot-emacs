@@ -146,4 +146,34 @@ eyes   = one pane, max height for Pro, large font"
 (save-place-mode 1)
 ;;(server-start)
 
+;; Calculate startup time.
+;; (add-hook 'emacs-startup-hook
+;;           (lambda ()
+;;             (message "Emacs ready in %s with %d garbage collections."
+;;                      (format "%.2f seconds"
+;;                              (float-time
+;;                               (time-subtract after-init-time before-init-time)))
+;;                      gcs-done)))
+
+;; (use-package solarized-theme
+;;   :config
+;;   (load-theme 'solarized-light t)
+;;   (let ((line (face-attribute 'mode-line :underline)))
+;;     (set-face-attribute 'mode-line          nil :overline   line)
+;;     (set-face-attribute 'mode-line-inactive nil :overline   line)
+;;     (set-face-attribute 'mode-line-inactive nil :underline  line)
+;;     (set-face-attribute 'mode-line          nil :box        nil)
+;;     (set-face-attribute 'mode-line-inactive nil :box        nil)
+;;     (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
+
+;; (use-package moody
+;;   :config
+;;   (setq x-underline-at-descent-line t)
+;;   (moody-replace-mode-line-buffer-identification)
+;;   (moody-replace-vc-mode))
+
+;; (use-package minions
+;;   :config
+;;   (minions-mode 1))
+
 (provide 'init-emacs)

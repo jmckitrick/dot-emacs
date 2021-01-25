@@ -23,7 +23,7 @@
  '(magit-visit-ref-behavior '(checkout-branch))
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(lsp-ivy flycheck lsp-mode lsp-ui browse-at-remote smartparens go-mode ace-window frog-jump-buffer yasnippet-snippets rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode yasnippet projectile-ripgrep js2-mode coffee-mode robe haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit nav-flash paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
+   '(diff-hl easy-kill minions moody lsp-ivy flycheck lsp-mode lsp-ui browse-at-remote smartparens go-mode ace-window frog-jump-buffer rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode projectile-ripgrep js2-mode coffee-mode robe haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit nav-flash paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
  '(recentf-max-saved-items nil)
@@ -37,7 +37,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-
  '(frog-menu-action-keybinding-face ((t (:inherit default :height 1.4))))
  '(frog-menu-actions-face ((t (:inherit default :height 1.4))))
  '(frog-menu-border ((t (:background "white" :height 1.4))))
