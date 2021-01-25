@@ -1,15 +1,18 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;;; 2021 reminders
+;;; M-w for easy-kill (w, s, l)
+
 ;;; 2020 reminders
 ;;; C-v page down, M-v page up (for broken cursor key)
 ;;; No more shift-arrow for select. Use marks.
-;;; Switch buffers with shift-arrow (?)
+;;; Switch buffers with shift-arrow
 ;;; M-o ace jump window
 ;;; s-. jump to word first letter
 ;;; s-left/right/up/down next frame
 ;;; Projectile p to select project
 ;;; CIDER inspector
-;;; C-SPC C-SPC to set transient mode
+;;; C-SPC to set transient mode
 ;;; M-; comment-dwim
 ;;; exuberant ctags
 ;;; In tags xref mode, TAB to jump and close
@@ -17,7 +20,6 @@
 ;;; M-x add-dir-local-v
 
 ;;; Quick tips/Reminders:
-;;; C-c w - copy sexp/word
 ;;; C-M-q - reindent defun
 ;;; C-M-space - mark sexp
 ;;; C-' - splice
@@ -62,10 +64,5 @@
 ;;(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
 (global-set-key [remap comment-dwim] #'comment-line)
-
-;; experimental
-;(global-set-key "\C-w" 'backward-kill-word)
-;(global-set-key "\C-x\C-k" 'kill-region)
-;(global-set-key "\C-c\C-k" 'kill-region)
 
 (provide 'init-keys)
