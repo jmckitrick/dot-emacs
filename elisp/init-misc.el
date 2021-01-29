@@ -20,32 +20,11 @@
 (setq web-mode-markup-indent-offset 2)
 
 (use-package magit)
-;; (use-package linum
-;;   :config
-;;   (global-linum-mode))
-;;(global-display-line-numbers-mode)
 
-;(global-visual-line-mode)
-;(diminish 'visual-line-mode)
-
-;(global-subword-mode -1)
-;(diminish 'subword-mode)
-
-;(use-package aggressive-indent)
-;(global-aggressive-indent-mode -1)
-
-;; What does this do?
-;;(global-unset-key (kbd "C-z"))
-
-;;;; EVERYTHING BELOW THIS LINE IS BEING EVALUATED
-;;;; AND SHOULD EVENTUALLY BE MOVED TO THE APPROPRIATE MODULE.
+;;;; Everything below this line is being evaluated
+;;;; and should eventually be moved to the appropriate module.
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;; (use-package yasnippet
-;;   :config
-;;   (yas-initialize)
-;;   (yas-global-mode 1))
 
 (setq-default indicate-empty-lines t)
 
@@ -89,8 +68,6 @@
 ;;   :config
 ;;   (nav-flash-show))
 
-;; experimental: try these out
-
 (setq
  create-lockfiles nil
  make-backup-files nil
@@ -108,7 +85,5 @@
 (global-diff-hl-mode)
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-
-;; try expand-region ?
 
 (provide 'init-misc)
