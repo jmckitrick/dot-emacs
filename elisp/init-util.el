@@ -62,20 +62,6 @@ REGEXP defaults to ^init-.*\.el$"
 		  (buffer-list))
   (delete-other-windows))
 
-(defun copy-word (&optional arg)
-  "Copy word at point into kill-ring."
-  (interactive "P")
-  (let ((beg (progn
-               (if (looking-back "[a-zA-Z0-9]" 1)
-                   (backward-word 1))
-               (point)))
-        (end (progn
-               (forward-word arg)
-               (point))))
-    (copy-region-as-kill beg end)
-    (backward-word 1)
-    (message "Copied word.")))
-
 (defun jcm/edit-startup-file ()
   "Edit the startup file for emacs."
   (interactive)

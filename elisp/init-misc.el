@@ -9,13 +9,13 @@
 
 (use-package web-mode)
 ;; XXX Move these to work, consult, etc?
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
 
@@ -39,7 +39,6 @@
 
 (diminish 'paredit-mode)
 (diminish 'eldoc-mode)
-(diminish 'yas-minor-mode)
 
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
 
@@ -54,11 +53,6 @@
 
 (windmove-default-keybindings)          ;conflicts with org mode?
 (global-set-key (kbd "M-o") 'ace-window)
-
-(use-package frog-jump-buffer
-  :ensure t
-  :config
-  (global-set-key (kbd "s-b") 'frog-jump-buffer))
 
 ;; Enable emoji! 💩
 (set-fontset-font

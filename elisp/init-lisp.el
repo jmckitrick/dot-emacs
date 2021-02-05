@@ -28,7 +28,7 @@
 
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
-            (eldoc-mode 1)
+            ;;(eldoc-mode 1)
             (my-lisp-setup)))
 
 (add-hook 'clojure-mode-hook

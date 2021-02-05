@@ -120,23 +120,19 @@ eyes   = one pane, max height for Pro, large font"
           (max    (set-dims width-max   height-tiny  left-full  top))
           (retina    (set-dims '(width . 120) height-small left-eyes top))
           (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-    (set-frame-font jcm/font)
-    (setq-default line-spacing 1))
+    (set-frame-font jcm/font nil t))
 
   (when window-system
     (jcm/set-carbon-prefs jcm/mac-window-size))
 
-  ;;(add-to-list 'default-frame-alist '(font . jcm/font))
-
-  (setq shell-file-name "/bin/zsh")
-  (set-exec-path-from-shell-PATH)
-
-  ;; Bind Mac external keyboard delete key to delete rather than backspace.
-  (global-set-key (kbd "<kp-delete>") 'delete-char))
+  ;; Do we still need these?
+  ;;(setq shell-file-name "/bin/zsh")
+  ;;(set-exec-path-from-shell-PATH)
+  )
 
 ;; Themes
 (when (and jcm/theme-name window-system)
-  (setq solarized-use-less-bold t)
+  ;;(setq solarized-use-less-bold t)
   (setq solarized-use-more-italic nil)
   (load-theme jcm/theme-name t))
 
