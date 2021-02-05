@@ -1,5 +1,16 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;; Work reminders:
+;; To connect to DTD backend
+;; - open a .clj file
+;; - C-c M-c
+;; - select clj backend
+;;
+;; To connect to DTD frontend
+;; - connect to backend as above
+;; - C-c M-C (NB: capital C)
+;; - select cljs backend
+
 (require 'init-util)
 
 ;;(require 'jcm-web)
