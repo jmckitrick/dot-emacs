@@ -59,7 +59,7 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
-;; OSX settings
+;; macos settings
 (when (string-match "apple" system-configuration)
   (defun jcm/set-carbon-prefs (config)
     "Set up emacs for carbon.
@@ -124,8 +124,6 @@ eyes   = one pane, max height for Pro, large font"
     (setq-default line-spacing 1))
 
   (when window-system
-    ;;(setq mac-option-modifier 'super)
-    ;;(setq ns-command-modifier 'meta)
     (jcm/set-carbon-prefs jcm/mac-window-size))
 
   ;;(add-to-list 'default-frame-alist '(font . jcm/font))
@@ -144,27 +142,6 @@ eyes   = one pane, max height for Pro, large font"
 
 (recentf-mode t)
 (save-place-mode 1)
-;;(server-start)
-
-;; Calculate startup time.
-;; (add-hook 'emacs-startup-hook
-;;           (lambda ()
-;;             (message "Emacs ready in %s with %d garbage collections."
-;;                      (format "%.2f seconds"
-;;                              (float-time
-;;                               (time-subtract after-init-time before-init-time)))
-;;                      gcs-done)))
-
-;; (use-package solarized-theme
-;;   :config
-;;   (load-theme 'solarized-light t)
-;;   (let ((line (face-attribute 'mode-line :underline)))
-;;     (set-face-attribute 'mode-line          nil :overline   line)
-;;     (set-face-attribute 'mode-line-inactive nil :overline   line)
-;;     (set-face-attribute 'mode-line-inactive nil :underline  line)
-;;     (set-face-attribute 'mode-line          nil :box        nil)
-;;     (set-face-attribute 'mode-line-inactive nil :box        nil)
-;;     (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
 
 ;; (use-package moody
 ;;   :config

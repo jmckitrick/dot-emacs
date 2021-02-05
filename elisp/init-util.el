@@ -86,13 +86,6 @@ REGEXP defaults to ^init-.*\.el$"
   (interactive)
   (find-file jcm/elisp-dir))
 
-;; (defun jcm/tags-search-at-point ()
-;;   "Search tags file for symbol under point."
-;;   (interactive)
-;;   (let ((tag (find-tag-default)))
-;;     (when tag
-;;       (tags-search tag))))
-
 (defun jcm/irc ()
   "Start IRC for a freenode session."
   (interactive)
