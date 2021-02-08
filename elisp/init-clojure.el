@@ -15,7 +15,6 @@
    cider-repl-display-help-banner nil))
 
 (defun my-cider-mode-hook ()
-  ;;(company-mode 1)
   (eldoc-mode 1)
   (cider-eldoc-setup)
   (company-mode)
@@ -23,7 +22,6 @@
   (my-lisp-setup))
 
 (defun my-cider-repl-mode-hook ()
-  ;;(company-mode 1)
   (eldoc-mode 1)
   (cider-eldoc-setup)
   (company-mode)
