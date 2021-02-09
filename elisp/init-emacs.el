@@ -125,10 +125,8 @@ eyes   = one pane, max height for Pro, large font"
   (when window-system
     (jcm/set-carbon-prefs jcm/mac-window-size))
 
-  ;; Do we still need these?
-  ;;(setq shell-file-name "/bin/zsh")
-  ;;(set-exec-path-from-shell-PATH)
-  )
+  (setq shell-file-name "/bin/zsh")
+  (set-exec-path-from-shell-PATH))
 
 ;; Themes
 (when (and jcm/theme-name window-system)
