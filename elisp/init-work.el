@@ -18,6 +18,6 @@
 
 ;; Should these be *-foo-mode-hook instead?
 (add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.mjml" . sgml-mode))
+(add-to-list 'auto-mode-alist '("\\.mjml" . web-mode))
 
 (provide 'init-work)
