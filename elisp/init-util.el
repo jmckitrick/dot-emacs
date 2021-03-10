@@ -72,12 +72,12 @@ REGEXP defaults to ^init-.*\.el$"
   (interactive)
   (find-file jcm/elisp-dir))
 
-(defun jcm/irc ()
-  "Start IRC for a freenode session."
-  (interactive)
-  (erc-select :server "irc.freenode.net"
-              :port 6667
-              :nick "jmckitrick"
-              :full-name "Jonathon McKitrick"))
+;; (defun jcm/irc ()
+;;   "Start IRC for a freenode session."
+;;   (interactive)
+;;   (erc-select :server "irc.freenode.net"
+;;               :port 6667
+;;               :nick "jmckitrick"
+;;               :full-name "Jonathon McKitrick"))
 
 (provide 'init-util)
