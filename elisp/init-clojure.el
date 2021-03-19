@@ -1,5 +1,7 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;; NB: Options can also be set in Directory Local Variables.
+
 (use-package cider
   :ensure t
   :config
