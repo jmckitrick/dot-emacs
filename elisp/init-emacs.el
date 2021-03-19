@@ -134,7 +134,7 @@ eyes   = one pane, max height for Pro, large font"
   (setq solarized-use-more-italic nil)
   (load-theme jcm/theme-name t))
 
-(recentf-mode t)
+(recentf-mode 1)
 (save-place-mode 1)
 
 ;; (use-package moody
