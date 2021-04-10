@@ -43,16 +43,15 @@ REGEXP defaults to ^init-.*\.el$"
   (interactive)
   (or force
       (match-system-name "jcm-mac")
-      (match-system-name "jcm-mac.local")
+      ;;(match-system-name "jcm-mac.local")
       (match-system-name "jcm-macbook")))
 
 (cl-defun is-work-machine (&optional force)
   (interactive)
   (or force
       (match-system-name "jmckitrick-mbp")
-      (match-system-name "devmbp42")
       (match-system-name "MacBook-Pro")
-      (match-system-name "ec2.internal")
+      ;;(match-system-name "ec2.internal")
       (match-system-name "jonathons-mbp")))
 
 (defun nuke-all-buffers ()
