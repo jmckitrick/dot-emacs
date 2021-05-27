@@ -20,4 +20,6 @@
 (add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.mjml" . web-mode))
 
+(add-hook 'before-save-hook 'cider-format-buffer t t)
+
 (provide 'init-work)

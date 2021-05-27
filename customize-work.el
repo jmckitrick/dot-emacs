@@ -17,10 +17,11 @@
    '("00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" default))
  '(kill-whole-line t)
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+ '(magit-prefer-remote-upstream t)
  '(magit-visit-ref-behavior '(checkout-branch))
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit nav-flash markdown-mode magit diminish counsel company-quickhelp cider browse-at-remote ag ace-window))
+   '(browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit nav-flash markdown-mode magit diminish counsel company-quickhelp cider browse-at-remote ag ace-window))
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
  '(recentf-max-saved-items nil)
