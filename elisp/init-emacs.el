@@ -137,6 +137,24 @@ eyes   = one pane, max height for Pro, large font"
 (recentf-mode 1)
 (save-place-mode 1)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(setq-default indicate-empty-lines t)
+
+(use-package smooth-scrolling)
+
+(which-key-mode)
+(diminish 'which-key-mode)
+
+(diminish 'auto-revert-mode)
+
+(use-package smex)
+
+(diminish 'paredit-mode)
+;;(diminish 'eldoc-mode)
+
+
+
 ;; (use-package moody
 ;;   :config
 ;;   (setq x-underline-at-descent-line t)

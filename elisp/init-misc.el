@@ -24,22 +24,6 @@
 ;;;; Everything below this line is being evaluated
 ;;;; and should eventually be moved to the appropriate module.
 
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(setq-default indicate-empty-lines t)
-
-(use-package smooth-scrolling)
-
-(which-key-mode)
-(diminish 'which-key-mode)
-
-(diminish 'auto-revert-mode)
-
-(use-package smex)
-
-(diminish 'paredit-mode)
-(diminish 'eldoc-mode)
-
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
 
 (defun goto-line-with-feedback ()
@@ -75,5 +59,11 @@
 (global-diff-hl-mode)
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+
+(use-package browse-kill-ring
+  :ensure t
+  ;:config
+  ;(browse-kill-ring-default-keybindings)
+  )
 
 (provide 'init-misc)
