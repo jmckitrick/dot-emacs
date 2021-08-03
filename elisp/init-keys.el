@@ -16,7 +16,7 @@
 ;;; M-; comment-dwim
 ;;; exuberant ctags
 ;;; In tags xref mode, TAB to jump and close
-;;; C-u C-x = show info about a character
+;;; C-u C-x = to show info about a character
 ;;; M-x add-dir-local-v
 
 ;;; Quick tips/Reminders:
