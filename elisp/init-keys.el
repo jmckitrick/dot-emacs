@@ -1,5 +1,10 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;;; Clojure refactor
+;;; C-c C-r -
+;;; C-c C-r _
+;;; C-c C-r n s
+
 ;;; 2021 reminders
 ;;; M-w for easy-kill (w, s, l)
 
