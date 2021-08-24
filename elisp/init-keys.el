@@ -3,6 +3,8 @@
 ;;; CIDER
 ;;; C-c C-p eval in popup buffer
 ;;; eval with context
+;;; C-:
+;;; M-q
 
 ;;; Clojure refactor
 ;;; C-c C-r -
