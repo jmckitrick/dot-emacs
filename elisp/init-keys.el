@@ -1,5 +1,9 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;;; CIDER
+;;; C-c C-p eval in popup buffer
+;;; eval with context
+
 ;;; Clojure refactor
 ;;; C-c C-r -
 ;;; C-c C-r _
