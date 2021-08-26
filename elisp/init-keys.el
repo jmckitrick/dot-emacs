@@ -3,13 +3,13 @@
 ;;; CIDER
 ;;; C-c C-p eval in popup buffer
 ;;; eval with context
-;;; C-:
-;;; M-q
+;;; C-: rotate keyword/string
+;;; M-q indent sexp
 
 ;;; Clojure refactor
-;;; C-c C-r -
-;;; C-c C-r _
-;;; C-c C-r n s
+;;; C-c C-r - toggle ignore
+;;; C-c C-r _ toggle ignore surrounding
+;;; C-c C-r n s sort namespace
 
 ;;; 2021 reminders
 ;;; M-w for easy-kill (w, s, l)
