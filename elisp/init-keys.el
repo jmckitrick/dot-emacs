@@ -2,17 +2,20 @@
 
 ;;; CIDER
 ;;; C-c C-p eval in popup buffer
-;;; eval with context
-;;; C-: rotate keyword/string
-;;; M-q indent sexp
+;;; C-c C-v C-b/C-c eval with context
 
 ;;; Clojure refactor
 ;;; C-c C-r - toggle ignore
 ;;; C-c C-r _ toggle ignore surrounding
 ;;; C-c C-r n s sort namespace
 
+;;; Clojure
+;;; C-: rotate keyword/string
+;;; M-q indent sexp
+
 ;;; 2021 reminders
-;;; M-w for easy-kill (w, s, l)
+;;; M-w for easy-kill (then w, s, l)
+;;; C-M-SPC easy-mark
 
 ;;; 2020 reminders
 ;;; C-v page down, M-v page up (for broken cursor key)
