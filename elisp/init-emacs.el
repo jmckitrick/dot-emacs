@@ -163,7 +163,8 @@ eyes   = one pane, max height for Pro, large font"
       ;;(global-unset-key (kbd (format "C-%d" n)))
       (global-unset-key (kbd (format "M-%d" n))))
     (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
-    (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)))
+    (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
+    (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)))
 
 ;;(desktop-save-mode 1)
 

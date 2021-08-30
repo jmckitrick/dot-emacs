@@ -21,7 +21,7 @@
  '(magit-visit-ref-behavior '(checkout-branch))
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit nav-flash markdown-mode magit diminish counsel company-quickhelp cider browse-at-remote ag ace-window))
+   '(eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit nav-flash markdown-mode magit diminish counsel company-quickhelp cider browse-at-remote ag ace-window))
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
  '(recentf-max-saved-items nil)

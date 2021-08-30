@@ -8,8 +8,9 @@
   (autoload 'enable-paredit-mode "paredit" "..." t)
   (eval-after-load 'paredit
     '(progn
-       (define-key paredit-mode-map (kbd "C-c C-w") 'paredit-copy-as-kill)
-       (define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
+       ;; TODO revisit this binding
+       ;;(define-key paredit-mode-map (kbd "C-c C-w") 'paredit-copy-as-kill)
+       ;;!(define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
        (define-key paredit-mode-map (kbd "C-M-k") 'paredit-kill)))
 
   (enable-paredit-mode)
