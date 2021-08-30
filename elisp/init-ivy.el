@@ -1,7 +1,8 @@
 ;;; -*- mode: emacs-lisp; -*-
 
 (use-package ivy :ensure t
-  :diminish ivy-mode)
+  ;;:diminish ivy-mode
+  )
 
 (ivy-mode)
 (setq ivy-use-virtual-buffers nil)

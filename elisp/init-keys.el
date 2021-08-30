@@ -1,5 +1,7 @@
 ;;; -*- mode: emacs-lisp; -*-
 
+;;; MOVE THESE TO ORG MODE
+
 ;;; CIDER
 ;;; C-c C-p eval in popup buffer
 ;;; C-c C-v C-b/C-c eval with context
