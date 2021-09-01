@@ -10,7 +10,7 @@
     '(progn
        ;; TODO revisit this binding
        ;;(define-key paredit-mode-map (kbd "C-c C-w") 'paredit-copy-as-kill)
-       ;;!(define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
+       (define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
        (define-key paredit-mode-map (kbd "C-M-k") 'paredit-kill)))
 
   (enable-paredit-mode)

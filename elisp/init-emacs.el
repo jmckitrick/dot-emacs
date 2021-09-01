@@ -166,7 +166,7 @@ eyes   = one pane, max height for Pro, large font"
     (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
     (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)))
 
-;;(desktop-save-mode 1)
+(desktop-save-mode 1)
 
 (use-package moody
   :ensure t
