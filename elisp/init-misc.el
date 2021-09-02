@@ -19,8 +19,11 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
 
-(use-package magit)
+(use-package magit
+  :ensure t
+  :bind (("C-c g" . magit-file-dispatch)))
 
+;;;; XXX TODO clean this up
 ;;;; Everything below this line is being evaluated
 ;;;; and should eventually be moved to the appropriate module.
 

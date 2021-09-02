@@ -16,7 +16,7 @@
  '(custom-safe-themes
    '("00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" default))
  '(kill-whole-line t)
- '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+ '(magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
  '(magit-prefer-remote-upstream t)
  '(magit-visit-ref-behavior '(checkout-branch))
  '(org-agenda-span 'day)
@@ -28,6 +28,7 @@
  '(solarized-high-contrast-mode-line t)
  '(solarized-italic nil)
  '(tooltip-mode nil)
+ '(transient-mark-mode nil)
  '(visible-bell t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
