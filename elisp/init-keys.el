@@ -1,7 +1,5 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-;;; MOVE THESE TO ORG MODE
-
 ;;; CIDER
 ;;; C-c C-p eval in popup buffer
 ;;; C-c C-v C-b/C-c eval with context
@@ -57,15 +55,15 @@
 (define-key global-map (kbd "s-<f2>") 'jcm/edit-startup-file)
 (define-key global-map (kbd "M-<f2>") 'jcm/dired-elisp)
 
-(global-set-key [\M-f13] 'tags-search)
-(global-set-key [\C-f13] 'jcm/tags-search-at-point)
-(global-set-key [f13] 'tags-loop-continue)
-(global-set-key [f6] 'tags-loop-continue)
-(global-set-key [\C-f6] 'tags-loop-continue)
+;; (global-set-key [\M-f13] 'tags-search)
+;; (global-set-key [\C-f13] 'jcm/tags-search-at-point)
+;; (global-set-key [f13] 'tags-loop-continue)
+;; (global-set-key [f6] 'tags-loop-continue)
+;; (global-set-key [\C-f6] 'tags-loop-continue)
 
-(global-set-key [f14] 'pop-tag-mark)
+;;(global-set-key [f14] 'pop-tag-mark)
 
-(global-set-key [(control tab)] 'bury-buffer)
+;;(global-set-key [(control tab)] 'bury-buffer)
 
 (avy-setup-default)
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)

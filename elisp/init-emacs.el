@@ -6,7 +6,7 @@
 (setq visible-bell t)
 (delete-selection-mode t)
 (show-paren-mode t)
-(global-hl-line-mode 1)
+(global-hl-line-mode -1)
 (column-number-mode t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 
@@ -18,7 +18,7 @@
 (setq inhibit-splash-screen t)
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
-;;(transient-mark-mode -1)
+(transient-mark-mode -1)
 
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
