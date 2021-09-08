@@ -16,6 +16,7 @@
  '(clojure-indent-style 'align-arguments)
  '(custom-safe-themes
    '("00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" default))
+ '(ediff-split-window-function 'split-window-horizontally)
  '(kill-whole-line t)
  '(lsp-solargraph-use-bundler t)
  '(lsp-sorbet-use-bundler t)
@@ -23,7 +24,7 @@
  '(magit-visit-ref-behavior '(checkout-branch))
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(clj-refactor eyebrowse browse-kill-ring cmake-mode diff-hl easy-kill minions moody lsp-ivy flycheck lsp-mode lsp-ui browse-at-remote smartparens go-mode ace-window frog-jump-buffer rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode projectile-ripgrep js2-mode coffee-mode haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
+   '(clj-refactor eyebrowse browse-kill-ring cmake-mode diff-hl easy-kill minions moody flycheck browse-at-remote smartparens go-mode ace-window frog-jump-buffer rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode projectile-ripgrep js2-mode coffee-mode haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
  '(recentf-max-saved-items nil)

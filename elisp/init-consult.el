@@ -14,6 +14,7 @@
 ;;   '(push 'company-robe company-backends))
 
 (use-package lsp-mode
+  :ensure t
   :hook (
          (ruby-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
