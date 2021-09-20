@@ -20,6 +20,7 @@
  '(kill-whole-line t)
  '(lsp-solargraph-use-bundler t)
  '(lsp-sorbet-use-bundler t)
+ '(magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
  '(org-agenda-span 'day)
  '(package-selected-packages
    '(clj-refactor eyebrowse browse-kill-ring cmake-mode diff-hl easy-kill minions moody flycheck browse-at-remote smartparens go-mode ace-window frog-jump-buffer rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode projectile-ripgrep js2-mode coffee-mode haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit paredit projectile smex smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
