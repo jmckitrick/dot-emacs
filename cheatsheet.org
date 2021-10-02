@@ -3,6 +3,7 @@ Key binding reminders
 * TODO verify/update all bindings
 * TODO clarify easy-kill/mark
 * TODO clarify paredit/indent
+- M-k paredit-copy-as-kill is back! <--
 - C-k smaller kill sexp
 - C-M-k bigger kill sexp
 - C-M-\ indent region
@@ -11,7 +12,7 @@ Key binding reminders
 
 * Priority reminders
 - C-c g magit-file-dispatch
-- M-w/C-M-SPC easy-kill/easy-mark
+- M-w/C-M-SPC easy-kill/easy-mark <--
 - C-SPC-SPC set-transient-mode
 - M-; (also on region) comment-dwim
 - C-SPC/C-u C-SPC set-mark/pop-mark
