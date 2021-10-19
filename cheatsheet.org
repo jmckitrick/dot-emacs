@@ -4,8 +4,8 @@ Key binding reminders
 * TODO clarify easy-kill/mark
 * TODO clarify paredit/indent
 - M-k paredit-copy-as-kill is back! <--
-- C-k smaller kill sexp
-- C-M-k bigger kill sexp
+- C-k kill sexp (smaller)
+- C-M-k kill sexp (bigger - paredit)
 - C-M-\ indent region
 - C-M-q prog indent sexp
 - M-q paredit reindent defun
