@@ -42,12 +42,12 @@
 (setq enable-local-variables :safe)
 
 ;; Scrolling settings
-(setq scroll-step 10
-      scroll-margin 1
-      scroll-conservatively 1000
-      scroll-preserve-screen-position nil)
-(setq-default scroll-up-aggressively 0.0
-              scroll-down-aggressively 0.0)
+(setq ;;scroll-step 10
+      scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
+;; (setq-default scroll-up-aggressively 0.0
+;;               scroll-down-aggressively 0.0)
 
 ;; Try this out.
 (setq save-interprogram-paste-before-kill t)
@@ -130,9 +130,20 @@ eyes   = one pane, max height for Pro, large font"
 
 ;; Themes
 (when (and jcm/theme-name window-system)
+  ;(use-package solarized-theme :ensure t)
   ;;(setq solarized-use-less-bold t)
-  (setq solarized-use-more-italic nil)
-  (load-theme jcm/theme-name t))
+  ;(setq solarized-use-more-italic nil)
+  ;(setq solarized-high-contrast-mode-line t)
+  ;(setq solarized-italic nil)
+
+                                        ;(load-theme jcm/theme-name t)
+  (use-package modus-themes
+    :ensure t
+    :config
+    (modus-themes-load-themes)
+    ;;(modus-themes-load-vivendi)
+    (modus-themes-load-operandi))
+  )
 
 (recentf-mode 1)
 (save-place-mode 1)

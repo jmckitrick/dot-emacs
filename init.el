@@ -3,7 +3,13 @@
 (defvar jcm/mac-window-size 'small ;; 129x35
   "`small' `wide', `wider', `widest', `chunky'")
 (defvar jcm/font "JetBrains Mono 18")
-(defvar jcm/theme-name 'solarized-dark-high-contrast)
+(defvar jcm/theme-name 'anti-zenburn)
+;;(defvar jcm/theme-name 'zenburn)
+;;(defvar jcm/theme-name 'solarized-zenburn)
+;;(defvar jcm/theme-name 'solarized-light)
+;;(defvar jcm/theme-name 'material-light)
+;;(defvar jcm/theme-name 'doneburn)
+;;(defvar jcm/theme-name 'solarized-selenized-white)
 (defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
 (defvar jcm/extras '() "`elisp' and/or `consult'")
 
