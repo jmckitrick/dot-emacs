@@ -43,7 +43,7 @@
 
 ;; Enable emoji! 💩
 (set-fontset-font
- t 'symbol (font-spec :family "Apple Color Emoji") nil 'prepend)
+ t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend)
 
 (setq
  create-lockfiles nil
