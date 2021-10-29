@@ -3,6 +3,7 @@ Key binding reminders
 * TODO verify/update all bindings
 * TODO clarify easy-kill/mark
 * TODO clarify paredit/indent
+- C-x v [ and ] prev/next diff
 - M-k paredit-copy-as-kill is back! <--
 - C-k kill sexp (smaller)
 - C-M-k kill sexp (bigger - paredit)
@@ -65,5 +66,6 @@ Key binding reminders
 - s-p m commander mode
 
 * Other
-- browse-kill-ring
 - exuberant-ctags - in xref mode, TAB to jump and close
+- browse-kill-ring
+- browse-at-remote
