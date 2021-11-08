@@ -8,7 +8,7 @@
 (show-paren-mode t)
 (global-hl-line-mode -1)
 (column-number-mode t)
-(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
+(if (fboundp 'blink-cursor-mode) (blink-cursor-mode t))
 
 ;; DISABLE
 (setq tooltip-mode nil)
@@ -23,7 +23,7 @@
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
 (setq-default indent-tabs-mode nil)
-(setq-default cursor-type t)
+(setq-default cursor-type 'bar)
 (setq fill-column 80)
 (setq c-default-style "bsd"
       c-basic-offset 4
