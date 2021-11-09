@@ -6,7 +6,7 @@
 (setq visible-bell t)
 (delete-selection-mode t)
 (show-paren-mode t)
-(global-hl-line-mode -1)
+(global-hl-line-mode t)
 (column-number-mode t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode t))
 
@@ -155,14 +155,14 @@ eyes   = one pane, max height for Pro, large font"
 (use-package smooth-scrolling)
 
 (which-key-mode)
-;;(diminish 'which-key-mode)
+(diminish 'which-key-mode)
 
-;;(diminish 'auto-revert-mode)
+(diminish 'auto-revert-mode)
 
 (use-package smex)
 
-;;(diminish 'paredit-mode)
-;;(diminish 'eldoc-mode)
+(diminish 'paredit-mode)
+(diminish 'eldoc-mode)
 
 ;; check out eyebrowse
 (use-package eyebrowse

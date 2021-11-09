@@ -1,7 +1,7 @@
 ;;; -*- mode: emacs-lisp; -*-
 
 (use-package company
-  ;;:diminish company-mode
+  :diminish company-mode
   ;:init
   ;(global-company-mode 1)
   )
