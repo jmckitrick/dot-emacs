@@ -130,19 +130,35 @@ eyes   = one pane, max height for Pro, large font"
 
 ;; Themes
 (when (and jcm/theme-name window-system)
-  ;(use-package solarized-theme :ensure t)
+  (use-package solarized-theme :ensure t)
   ;;(setq solarized-use-less-bold t)
   ;(setq solarized-use-more-italic nil)
   ;(setq solarized-high-contrast-mode-line t)
   ;(setq solarized-italic nil)
+  ;(load-theme jcm/theme-name t)
 
-                                        ;(load-theme jcm/theme-name t)
   (use-package modus-themes
     :ensure t
     :config
     (modus-themes-load-themes)
     ;;(modus-themes-load-vivendi)
-    (modus-themes-load-operandi))
+    (modus-themes-load-operandi)
+    (load-theme 'solarized-light t)
+    (let (;;(line (face-attribute 'mode-line :underline))
+          (line nil))
+      (set-face-attribute 'mode-line          nil :overline   line)
+      (set-face-attribute 'mode-line          nil :underline  line)
+      (set-face-attribute 'mode-line-inactive nil :overline   line)
+      (set-face-attribute 'mode-line-inactive nil :underline  line)
+      ;; (set-face-attribute 'mode-line          nil :overline   "red")
+      ;; (set-face-attribute 'mode-line          nil :underline  "red")
+      ;; (set-face-attribute 'mode-line-inactive nil :overline   "red")
+      ;; (set-face-attribute 'mode-line-inactive nil :underline  "red")
+      ;(set-face-attribute 'mode-line          nil :box        nil)
+      ;(set-face-attribute 'mode-line-inactive nil :box        nil)
+      ;;(set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")
+      )
+    )
   )
 
 (recentf-mode 1)
@@ -178,14 +194,15 @@ eyes   = one pane, max height for Pro, large font"
     ;; (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
     ))
 
-(desktop-save-mode 1)
+(desktop-save-mode t)
 
 (use-package moody
   :ensure t
   :config
   (setq x-underline-at-descent-line t)
   (moody-replace-mode-line-buffer-identification)
-  (moody-replace-vc-mode))
+  (moody-replace-vc-mode)
+  (moody-replace-eldoc-minibuffer-message-function))
 
 (use-package minions
   :ensure t
