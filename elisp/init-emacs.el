@@ -130,20 +130,12 @@ eyes   = one pane, max height for Pro, large font"
 
 ;; Themes
 (when (and jcm/theme-name window-system)
-  (use-package solarized-theme :ensure t)
-  ;;(setq solarized-use-less-bold t)
-  ;(setq solarized-use-more-italic nil)
-  ;(setq solarized-high-contrast-mode-line t)
-  ;(setq solarized-italic nil)
-  ;(load-theme jcm/theme-name t)
-
   (use-package modus-themes
     :ensure t
     :config
     (modus-themes-load-themes)
     ;;(modus-themes-load-vivendi)
     (modus-themes-load-operandi)
-    (load-theme 'solarized-light t)
     (let (;;(line (face-attribute 'mode-line :underline))
           (line nil))
       (set-face-attribute 'mode-line          nil :overline   line)
