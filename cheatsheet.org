@@ -69,3 +69,10 @@ Key binding reminders
 - exuberant-ctags - in xref mode, TAB to jump and close
 - browse-kill-ring
 - browse-at-remote
+
+* Themes
+- (anti-)zenburn
+- solarized(-zenburn/-light)
+- material-light
+- doneburn
+- solarized-selenized-*
