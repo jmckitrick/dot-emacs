@@ -24,6 +24,7 @@ Key binding reminders
 - C-c C-e eval last
 - C-c C-p eval in popup buffer
 - C-c C-v C-b/C-c eval current/last with context
+- C-c C-j C-e copy to REPL
 - inspector
 
 * Clojure
