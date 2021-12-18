@@ -33,16 +33,11 @@ REGEXP defaults to ^init-.*\.el$"
     (and (cl-typep result 'integer)
          (>= result 0))))
 
-(defun match-system-configuration (target-configuration)
-  (interactive)
-  (let ((result (string-match target-configuration system-configuration)))
-    (and (cl-typep result 'integer)
-         (>= result 0))))
-
 (cl-defun is-home-machine (&optional force)
   (interactive)
   (or force
       (match-system-name "jcm-mac")
+      (match-system-name "jcm-mbp")
       ;;(match-system-name "jcm-mac.local")
       (match-system-name "jcm-macbook")))
 

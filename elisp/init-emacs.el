@@ -61,75 +61,12 @@
 
 ;; macos settings
 (when (string-match "apple" system-configuration)
-  (defun jcm/set-carbon-prefs (config)
-    "Set up emacs for carbon.
-Possible CONFIG values:
-small  = skinny, max height for MacBook
-fat    = short and fat for MacBook
-chunky = short and wider
-pairs  = short and fat for MacBook
-tall   = centered, max height for Cinema
-wide   = two panes, max height for Cinema
-wider  = two panes, max height for Pro
-widest = three panes, max height for Cinema
-pro    = three panes, max height for Pro
-eyes   = one pane, max height for Pro, large font"
-    (interactive)
-    (cl-flet ((set-dims (width height left top)
-                        (set-frame-position (selected-frame)
-                                            (cdr left)
-                                            (cdr top))
-                        (set-frame-size (selected-frame)
-                                        (cdr width)
-                                        (cdr height))))
-      (let ((width-tiny '(width . 80))
-            (width-one '(width . 96))   ; 88
-	    (width-one-one '(width . 110))
-            (width-max '(width . 129))
-            (width-eyes '(width . 160))
-            (width-two '(width . 176))
-            (width-three '(width . 210))
-            (width-full '(width . 270))
-            (height-tiny '(height . 35))
-            (height-small '(height . 49)) ; 47
-            (height-tall '(height . 73))
-            (left-full '(left . 0))
-            (left-pad '(left . 4))
-            (left-over '(left . 60))
-            (left-out '(left . 130))
-            (left-med '(left . 200))
-            (left-tiny '(left . 240))
-            (left-less '(left . 280))   ; 240
-            (left-one '(left . 320))
-            (left-eyes '(left . 400))
-            (left-test '(left . 600))
-            (left-two '(left . 640))
-            (top '(top . 24)))          ; 16? 24?
-        (cl-case config
-          (tiny   (set-dims width-tiny  height-tiny  left-tiny top))
-          (small  (set-dims width-one   height-small left-med top))
-          (fat    (set-dims width-two   height-small left-full top))
-          (chunky (set-dims width-eyes  height-small left-over top))
-          (pairs  (set-dims width-two   height-small left-full top))
-          (tall   (set-dims width-one   height-tall  left-two  top))
-          (wide   (set-dims width-two   height-tall  left-full top))
-          (wider  (set-dims width-three height-tall  left-out  top))
-          (widest (set-dims width-full  height-tall  left-full top))
-          (pro    (set-dims width-full  height-tall  left-pad  top))
-          (eyes   (set-dims width-eyes  height-tall  left-eyes top))
-          (max    (set-dims width-max   height-tiny  left-full  top))
-          (retina    (set-dims '(width . 120) height-small left-eyes top))
-          (tj-medium (set-dims width-one-one '(height . 48) left-test top)))))
-    (set-frame-font jcm/font nil t))
-
-  (when window-system
-    (jcm/set-carbon-prefs jcm/mac-window-size))
-
+  (set-frame-font jcm/font nil t)
   (setq shell-file-name "/bin/zsh")
   (set-exec-path-from-shell-PATH))
 
 ;; Themes
-(when (and jcm/theme-name window-system)
+(when window-system
   (use-package modus-themes
     :ensure t
     :config
