@@ -8,7 +8,7 @@
 (show-paren-mode t)
 (global-hl-line-mode t)
 (column-number-mode t)
-(if (fboundp 'blink-cursor-mode) (blink-cursor-mode t))
+(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 
 ;; DISABLE
 (setq tooltip-mode nil)
@@ -48,6 +48,8 @@
       scroll-preserve-screen-position 1)
 ;; (setq-default scroll-up-aggressively 0.0
 ;;               scroll-down-aggressively 0.0)
+(when (fboundp 'pixel-scroll-precision-mode)
+  (pixel-scroll-precision-mode t))
 
 ;; Try this out.
 (setq save-interprogram-paste-before-kill t)
@@ -88,6 +90,8 @@
       ;;(set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")
       )
     )
+
+  (add-to-list 'initial-frame-alist '(fullscreen . maximized))
   )
 
 (recentf-mode 1)
@@ -106,7 +110,7 @@
 
 (use-package smex)
 
-(diminish 'paredit-mode)
+(diminish 'paredit-mode "()")
 (diminish 'eldoc-mode)
 
 ;; check out eyebrowse

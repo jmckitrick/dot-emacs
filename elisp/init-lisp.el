@@ -17,6 +17,8 @@
 
   (rainbow-delimiters-mode-enable)
 
+  (subword-mode)
+
   (local-set-key (kbd "C-n") 'forward-sexp)
   (local-set-key (kbd "C-h") 'backward-sexp)
   (local-set-key (kbd "C-t") 'transpose-sexps)

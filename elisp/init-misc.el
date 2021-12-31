@@ -69,4 +69,26 @@
   ;(browse-kill-ring-default-keybindings)
   )
 
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
+
+(global-set-key (kbd "C-x C-b") #'ibuffer)
+
+(define-key 'help-command (kbd "C-i") #'info-display-manual)
+
+(setq tab-always-indent 'complete)
+
+(use-package volatile-highlights
+  :ensure t
+  :config
+  (volatile-highlights-mode +1)
+  ;;(diminish 'volatile-highlights-mode)
+  )
+
+;; move-text?
+;; selectrum?
+;; consult?
+
 (provide 'init-misc)

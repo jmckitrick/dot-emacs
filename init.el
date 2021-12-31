@@ -36,4 +36,4 @@
   (require 'init-package-work)
   (require 'init-work))
 
-(setq gc-cons-threshold (* 2 1024 1024))
+;;(setq gc-cons-threshold (* 2 1024 1024))
