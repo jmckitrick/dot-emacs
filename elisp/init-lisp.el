@@ -14,10 +14,12 @@
        (define-key paredit-mode-map (kbd "C-M-k") 'paredit-kill)))
 
   (enable-paredit-mode)
+  (diminish 'paredit-mode "()")
 
   (rainbow-delimiters-mode-enable)
 
   (subword-mode)
+  (diminish 'subword-mode)
 
   (local-set-key (kbd "C-n") 'forward-sexp)
   (local-set-key (kbd "C-h") 'backward-sexp)

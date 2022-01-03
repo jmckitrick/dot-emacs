@@ -84,8 +84,7 @@
   :ensure t
   :config
   (volatile-highlights-mode +1)
-  ;;(diminish 'volatile-highlights-mode)
-  )
+  (diminish 'volatile-highlights-mode))
 
 ;; move-text?
 ;; selectrum?

@@ -110,7 +110,6 @@
 
 (use-package smex)
 
-(diminish 'paredit-mode "()")
 (diminish 'eldoc-mode)
 
 ;; check out eyebrowse
