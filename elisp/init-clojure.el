@@ -30,7 +30,12 @@
   (use-package init-lisp)
   (my-lisp-setup))
 
+(defun my-clojure-mode-hook ()
+  (clj-refactor-mode 1)
+  (cljr-add-keybindings-with-prefix "C-c C-m"))
+
 (add-hook 'cider-mode-hook #'my-cider-mode-hook)
 (add-hook 'cider-repl-mode-hook #'my-cider-repl-mode-hook)
+;;(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
 (provide 'init-clojure)

@@ -23,7 +23,7 @@
  '(nav-flash-delay 4)
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(cider modus-themes nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit markdown-mode magit diminish counsel company-quickhelp browse-at-remote ag ace-window))
+   '(volatile-highlights cider modus-themes nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep paredit markdown-mode magit diminish counsel company-quickhelp browse-at-remote ag ace-window))
  '(projectile-mode-line-prefix " Prj")
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
