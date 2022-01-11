@@ -71,6 +71,9 @@ Key binding reminders
 - browse-kill-ring
 - browse-at-remote
 
+* Magit
+- C-j when entering author name - ivy-immediate-done
+
 * Themes
 - (anti-)zenburn
 - solarized(-zenburn/-light)
