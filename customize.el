@@ -23,7 +23,7 @@
  '(minions-prominent-modes '(projectile))
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(volatile-highlights selectrum-prescient selectrum company modus-themes gruvbox-theme hydandata-light-theme flatui-dark-theme color-theme-sanityinc-tomorrow monokai-theme immaterial-theme material-theme smex anti-zenburn-theme doneburn-theme dream-theme zenburn-theme clj-refactor eyebrowse browse-kill-ring cmake-mode diff-hl easy-kill minions moody flycheck browse-at-remote smartparens go-mode ace-window frog-jump-buffer rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode projectile-ripgrep js2-mode coffee-mode haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit paredit projectile smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
+   '(volatile-highlights company modus-themes gruvbox-theme hydandata-light-theme flatui-dark-theme color-theme-sanityinc-tomorrow monokai-theme immaterial-theme material-theme smex anti-zenburn-theme doneburn-theme dream-theme zenburn-theme clj-refactor eyebrowse browse-kill-ring cmake-mode diff-hl easy-kill minions moody flycheck browse-at-remote smartparens go-mode ace-window frog-jump-buffer rainbow-delimiters yaml-mode restclient markdown-mode rust-mode realgud realgud-lldb php-mode projectile-ripgrep js2-mode coffee-mode haml-mode solarized-theme ag avy cider company-quickhelp counsel diminish etags-select macrostep magit paredit projectile smooth-scrolling undo-tree use-package web-mode wgrep-ag which-key yesql-ghosts))
  '(projectile-mode-line-prefix " Proj")
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
