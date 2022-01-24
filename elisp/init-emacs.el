@@ -70,29 +70,21 @@
 ;; Themes
 (when window-system
   (use-package modus-themes
-    :ensure t
-    :config
+    :ensure
+    :init
+    (setq modus-themes-bold-constructs nil
+          modus-themes-mode-line '(moody)
+          modus-themes-completions 'opinionated
+          modus-themes-hl-line '(accented)
+          modus-themes-paren-match '(bold)
+          modus-themes-region nil)
     (modus-themes-load-themes)
+    :config
     ;;(modus-themes-load-vivendi)
     (modus-themes-load-operandi)
-    (let (;;(line (face-attribute 'mode-line :underline))
-          (line nil))
-      (set-face-attribute 'mode-line          nil :overline   line)
-      (set-face-attribute 'mode-line          nil :underline  line)
-      (set-face-attribute 'mode-line-inactive nil :overline   line)
-      (set-face-attribute 'mode-line-inactive nil :underline  line)
-      ;; (set-face-attribute 'mode-line          nil :overline   "red")
-      ;; (set-face-attribute 'mode-line          nil :underline  "red")
-      ;; (set-face-attribute 'mode-line-inactive nil :overline   "red")
-      ;; (set-face-attribute 'mode-line-inactive nil :underline  "red")
-      ;(set-face-attribute 'mode-line          nil :box        nil)
-      ;(set-face-attribute 'mode-line-inactive nil :box        nil)
-      ;;(set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")
-      )
-    )
+    :bind ("<f5>" . modus-themes-toggle))
 
-  (add-to-list 'initial-frame-alist '(fullscreen . maximized))
-  )
+  (add-to-list 'initial-frame-alist '(fullscreen . maximized)))
 
 (recentf-mode 1)
 (save-place-mode 1)
