@@ -18,7 +18,7 @@
 (setq inhibit-splash-screen t)
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
-(transient-mark-mode -1)
+;;(transient-mark-mode -1)
 
 ;; Editing settings.
 (setq tab-width 4)            ;could be 4 or 8?
