@@ -10,7 +10,7 @@ Tips and tricks
 - C-M-q prog indent sexp
 - M-q paredit reindent defun
 
-* new reminders
+* new reminders 2022-01
 - describe-bindings (f1-b)
 - info (f1-i)
 - occur
@@ -21,11 +21,11 @@ Tips and tricks
 - C-c g magit-file-dispatch
 - C-x v [ and ] prev/next diff
 - M-w/C-M-SPC easy-kill/easy-mark <--
-- C-SPC-SPC set-transient-mode
+- C-SPC set-transient-mode
 - M-; (also on region) comment-dwim
-- C-SPC/C-u C-SPC set-mark/pop-mark
-- C-x C-x exchange-point-and-mark
-- C-u C-x C-x temp-enable-transient-mode
+- C-SPC-SPC/C-u C-SPC, C-SPC set-mark/pop-mark
+- C-u C-x C-x exchange-point-and-mark
+- C-u C-x C-x temp-enable-transient-mode (no?)
 
 * CIDER
 - C-c C-e eval last
