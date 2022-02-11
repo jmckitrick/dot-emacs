@@ -75,7 +75,7 @@
     (setq modus-themes-bold-constructs nil
           modus-themes-mode-line '(moody)
           modus-themes-completions 'opinionated
-          modus-themes-hl-line '(accented)
+          modus-themes-hl-line '(accented intense) ; underline
           modus-themes-paren-match '(bold)
           modus-themes-region nil)
     (modus-themes-load-themes)

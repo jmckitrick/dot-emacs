@@ -11,10 +11,10 @@ Tips and tricks
 - M-q paredit reindent defun
 
 * new reminders 2022-01
-- describe-bindings (f1-b)
-- info (f1-i)
+- f1-b describe-bindings
+- f1-i info
 - occur
-- hi-lock mode
+- C-x w h/r hi-lock mode
 - C-x left C-x right buffer switching
 
 * Priority reminders
