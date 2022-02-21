@@ -3,7 +3,7 @@ Tips and tricks
 * TODO verify/update all bindings
 * TODO clarify easy-kill/mark
 * TODO clarify paredit/indent
-- M-k paredit-copy-as-kill is back! <--
+- M-k paredit-copy-as-kill
 - C-k kill sexp (smaller)
 - C-M-k kill sexp (bigger - paredit)
 - C-M-\ indent region
@@ -11,11 +11,11 @@ Tips and tricks
 - M-q paredit reindent defun
 
 * new reminders 2022-01
-- f1-b describe-bindings
-- f1-i info
-- occur
-- C-x w h/r hi-lock mode
+- describe-bindings (f1-b)
+- info (f1-i)
 - C-x left C-x right buffer switching
+- C-x w h/r hi-lock mode
+- occur
 
 * Priority reminders
 - C-c g magit-file-dispatch
@@ -32,7 +32,8 @@ Tips and tricks
 - C-c C-p eval in popup buffer
 - C-c C-v C-b/C-c eval current/last with context
 - C-c C-j C-e copy to REPL
-- inspector
+- C-c M-i inspector
+- C-c M-e eval to REPL
 
 * Clojure
 - C-: rotate keyword/string
