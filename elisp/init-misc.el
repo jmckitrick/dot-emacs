@@ -78,7 +78,7 @@
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
-(define-key 'help-command (kbd "C-i") #'info-display-manual)
+;;(define-key 'help-command (kbd "C-i") #'info-display-manual)
 
 (setq tab-always-indent 'complete)
 
