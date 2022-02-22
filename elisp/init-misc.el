@@ -17,8 +17,9 @@
 ;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . emmet-mode))
 (setq web-mode-markup-indent-offset 2)
+
+(add-hook 'sgml-mode-hook 'emmet-mode)
 
 (use-package magit
   :ensure t
