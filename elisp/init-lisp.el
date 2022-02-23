@@ -13,7 +13,7 @@
        (define-key paredit-mode-map (kbd "C-k") 'kill-sexp)
        (define-key paredit-mode-map (kbd "C-M-k") 'paredit-kill)))
 
-;  (require 'paredit-menu)
+  (require 'paredit-menu)
   (enable-paredit-mode)
   ;;(diminish 'paredit-mode "()")
   ;;(smartparens-global-strict-mode)
