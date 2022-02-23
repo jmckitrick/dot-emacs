@@ -72,12 +72,14 @@
   (use-package modus-themes
     :ensure
     :init
-    (setq modus-themes-bold-constructs nil
+    (setq modus-themes-bold-constructs t
           modus-themes-mode-line '(moody)
-          modus-themes-completions 'opinionated
+          modus-themes-completions '((matches background)
+                                     (selection accented)
+                                     (popup accented))
           modus-themes-hl-line '(accented) ; intense underline
-          modus-themes-paren-match '(bold)
-          modus-themes-region nil)
+          ;;modus-themes-region '(bg-only)
+          modus-themes-paren-match '(bold))
     (modus-themes-load-themes)
     :config
     ;;(modus-themes-load-vivendi)
