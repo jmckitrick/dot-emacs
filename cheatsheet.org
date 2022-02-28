@@ -10,7 +10,8 @@ Tips and tricks
 - C-M-q prog indent sexp
 - M-q paredit reindent defun
 
-* new reminders 2022-01
+* reminders 2022
+- C-c s swiper-thing-at-point
 - describe-bindings (f1-b)
 - info (f1-i)
 - C-x left C-x right buffer switching
