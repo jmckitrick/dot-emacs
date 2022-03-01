@@ -8,17 +8,8 @@
   (setq projectile-switch-project-action #'projectile-dired))
 
 (use-package web-mode)
-;; XXX Move these to work, consult, etc?
-;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
-
 (add-hook 'sgml-mode-hook 'emmet-mode)
 
 (use-package magit
@@ -67,9 +58,8 @@
 
 (use-package browse-kill-ring
   :ensure t
-  ;:config
-  ;(browse-kill-ring-default-keybindings)
-  )
+  :config
+  (browse-kill-ring-default-keybindings))
 
 (setq frame-title-format
       '((:eval (if (buffer-file-name)
@@ -77,8 +67,6 @@
                  "%b"))))
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
-
-;;(define-key 'help-command (kbd "C-i") #'info-display-manual)
 
 (setq tab-always-indent 'complete)
 
