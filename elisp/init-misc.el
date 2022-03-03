@@ -76,8 +76,24 @@
   (volatile-highlights-mode +1)
   (diminish 'volatile-highlights-mode))
 
+(setq
+ initial-scratch-message nil
+ initial-major-mode 'fundamental-mode
+ )
+
+;(require 'which-func)
+;;(add-to-list 'which-func-modes 'org-mode)
+;(which-func-mode 1)
+
 ;; move-text?
 ;; selectrum?
+
 ;; consult?
+;; vertico?
+;; (consult-customize
+;;     consult-ripgrep consult-git-grep consult-grep
+;;     consult-bookmark consult-xref
+;;     consult--source-bookmark
+;;     :preview-key '(:debounce 0.25 any))
 
 (provide 'init-misc)
