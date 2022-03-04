@@ -9,7 +9,7 @@
  (require 'use-package))
 (push jcm/elisp-dir load-path)
 
-;(setq gc-cons-threshold (* 50 1024 1024))
+(setq gc-cons-threshold (* 50 1024 1024))
 
 (let ((gc-cons-threshold most-positive-fixnum))
 

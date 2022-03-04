@@ -88,8 +88,14 @@
 ;; move-text?
 ;; selectrum?
 
-;; consult?
-;; vertico?
+;; replace ivy/swiper/counsel
+;; with
+;; vertico
+;; consult
+;; embark
+;; orderless
+;; marginalia
+;; corfu
 ;; (consult-customize
 ;;     consult-ripgrep consult-git-grep consult-grep
 ;;     consult-bookmark consult-xref
