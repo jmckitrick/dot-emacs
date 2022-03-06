@@ -121,7 +121,7 @@
     ;; (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
     ))
 
-(desktop-save-mode t)
+;;(desktop-save-mode -1)
 
 (use-package moody
   :ensure t
