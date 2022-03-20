@@ -10,6 +10,9 @@ Tips and tricks
 - C-M-q prog indent sexp
 - M-q paredit reindent defun
 
+* revised reminders 2022
+-
+
 * reminders 2022
 - C-c s swiper-thing-at-point
 - describe-bindings (f1-b)

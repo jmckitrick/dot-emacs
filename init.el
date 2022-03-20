@@ -15,9 +15,9 @@
 
   (require 'init-util)
   (require 'init-emacs)
-  (require 'init-company)
-  (require 'init-ivy)
-  ;;(require 'init-vertigo)
+  ;;(require 'init-company)
+  ;;(require 'init-ivy)
+  (require 'init-vertigo)
   (require 'init-keys)
   (require 'init-lisp)
   (require 'init-clojure)

@@ -19,14 +19,14 @@
 (defun my-cider-mode-hook ()
   (eldoc-mode 1)
   (cider-eldoc-setup)
-  (company-mode)
+  ;(company-mode)
   (use-package init-lisp)
   (my-lisp-setup))
 
 (defun my-cider-repl-mode-hook ()
   (eldoc-mode 1)
   (cider-eldoc-setup)
-  (company-mode)
+  ;(company-mode)
   (use-package init-lisp)
   (my-lisp-setup))
 
