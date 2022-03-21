@@ -102,4 +102,8 @@
 ;;     consult--source-bookmark
 ;;     :preview-key '(:debounce 0.25 any))
 
+(use-package restclient
+  :ensure t
+  :mode (("\\.http$" . restclient-mode)))
+
 (provide 'init-misc)

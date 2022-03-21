@@ -15,7 +15,7 @@
 
   (require 'init-util)
   (require 'init-emacs)
-  ;;(require 'init-company)
+  ;;(require 'init-company) ; XXX remember cider mode hooks
   ;;(require 'init-ivy)
   (require 'init-vertigo)
   (require 'init-keys)

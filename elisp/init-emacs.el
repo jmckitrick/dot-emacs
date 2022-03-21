@@ -82,8 +82,8 @@
           modus-themes-paren-match '(bold))
     (modus-themes-load-themes)
     :config
-    ;;(modus-themes-load-vivendi)
-    (modus-themes-load-operandi)
+    (modus-themes-load-vivendi)
+    ;;(modus-themes-load-operandi)
     :bind ("<f5>" . modus-themes-toggle))
 
   ;;(add-to-list 'initial-frame-alist '(undecorated . t))

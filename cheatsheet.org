@@ -11,7 +11,8 @@ Tips and tricks
 - M-q paredit reindent defun
 
 * revised reminders 2022
--
+- check for clojure namespaced completion
+- check for thorough completion features
 
 * reminders 2022
 - C-c s swiper-thing-at-point
