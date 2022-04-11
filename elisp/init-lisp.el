@@ -20,8 +20,8 @@
 
   (rainbow-delimiters-mode-enable)
 
-  (subword-mode)
-  (diminish 'subword-mode)
+  ;;(subword-mode)
+  ;;(diminish 'subword-mode)
 
   (local-set-key (kbd "C-n") 'forward-sexp)
   (local-set-key (kbd "C-h") 'backward-sexp)

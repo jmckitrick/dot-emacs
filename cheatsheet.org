@@ -1,5 +1,4 @@
 Tips and tricks
-
 * TODO verify/update all bindings
 * TODO clarify easy-kill/mark
 * TODO clarify paredit/indent
@@ -10,16 +9,22 @@ Tips and tricks
 - C-M-q prog indent sexp
 - M-q paredit reindent defun
 
-* revised reminders 2022
+* reminders 2022 - VCE
+- C-c C-w isearch word
 - check for clojure namespaced completion
 - check for thorough completion features
 
-* reminders 2022
+* reminders OLD
 - C-c s swiper-thing-at-point
+- C-SPC-SPC/C-u C-SPC, C-SPC set-mark/pop-mark
+- C-u C-x C-x exchange-point-and-mark
+- C-u C-x C-x temp-enable-transient-mode (no?)
+
+* reminders 2022
 - describe-bindings (f1-b)
 - info (f1-i)
 - C-x left C-x right buffer switching
-- C-x w h/r hi-lock mode
+- C-x w h/r (hi-lock mode first)
 - occur
 
 * Priority reminders
@@ -28,9 +33,6 @@ Tips and tricks
 - M-w/C-M-SPC easy-kill/easy-mark <--
 - C-SPC set-transient-mode
 - M-; (also on region) comment-dwim
-- C-SPC-SPC/C-u C-SPC, C-SPC set-mark/pop-mark
-- C-u C-x C-x exchange-point-and-mark
-- C-u C-x C-x temp-enable-transient-mode (no?)
 
 * CIDER
 - C-c C-e eval last

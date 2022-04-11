@@ -9,9 +9,10 @@
               (lambda (&rest _)
                 (setq-local completion-auto-help nil
                             completion-show-inline-help nil)))
-  :bind ((:map minibuffer-local-map
-               ("C-c C-o" . embark-export)
-               ("C-l" . embark-act))))
+  ;; :bind ((:map minibuffer-local-map
+  ;;              ("C-c C-o" . embark-export)
+  ;;              ("C-c C-l" . embark-act)))
+  )
 
 (use-package orderless
   :ensure t
@@ -40,12 +41,10 @@
         '(read-only t cursor-intangible t face minibuffer-prompt))
   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
 
-  ;; Enable recursive minibuffers
   (setq enable-recursive-minibuffers t
         completion-cycle-threshold 3
         ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
-        read-extended-command-predicate
-        #'command-completion-default-include-p
+        read-extended-command-predicate #'command-completion-default-include-p
         ;; Enable indentation+completion using the TAB key.
         ;; `completion-at-point' is often bound to M-TAB.
         tab-always-indent 'complete))
@@ -69,9 +68,11 @@
 
   :bind (("C-x t" . consult-line)       ; jcm mod
          ("M-g M-g" . consult-goto-line)
-         ("C-x C-SPC" . consult-global-mark)
          ("C-c C-SPC" . consult-mark)
-         ("C-x C-g" . consult-git-grep)))
+         ("C-x C-SPC" . consult-global-mark)
+         ("C-x C-g" . consult-git-grep)
+         :map isearch-mode-map
+         ("C-x t" . consult-line)))
 
 (use-package embark
   :config
@@ -203,5 +204,15 @@
   :hook
   (cider-mode . (lambda () (setq-local completion-styles '(basic))))
   (cider-repl-mode . (lambda () (setq-local completion-styles '(basic)))))
+
+;; (use-package emojify
+;;   :config
+;;   (setq emojify-display-style 'unicode)
+;;   ;; only replace unicode and github, no ascii)
+;;   (setq emojify-emoji-styles '(unicode github))
+;;   ;; echo the actual underlying character to the minibuffer when point
+;;   ;; is over them so we don't mess with the displayed buffer itself
+;;   (setq emojify-point-entered-behaviour 'echo)
+;;   (global-emojify-mode 1))
 
 (provide 'init-vertigo)
