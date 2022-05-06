@@ -36,6 +36,7 @@ REGEXP defaults to ^init-.*\.el$"
 (cl-defun is-home-machine (&optional force)
   (interactive)
   (or force
+      (match-system-name "jcm-m1")
       (match-system-name "jcm-mac")
       (match-system-name "jcm-mbp")
       ;;(match-system-name "jcm-mac.local")
