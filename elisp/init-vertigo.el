@@ -67,6 +67,7 @@
             (car (project-roots project)))))
 
   :bind (("C-x t" . consult-line)       ; jcm mod
+         ("C-x C-y" . consult-yank-from-kill-ring)
          ("M-g M-g" . consult-goto-line)
          ("C-c C-SPC" . consult-mark)
          ("C-x C-SPC" . consult-global-mark)

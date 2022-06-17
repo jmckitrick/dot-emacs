@@ -26,6 +26,7 @@
   (when (member 'elisp jcm/extras)
     (require 'init-elisp))
 
+  (message "Configuring %s" (system-name))
   (when (is-home-machine)
     (setq custom-file (concat user-emacs-directory "customize.el"))
     (load custom-file)

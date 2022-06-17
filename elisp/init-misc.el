@@ -52,14 +52,14 @@
   (global-set-key [remap kill-ring-save] #'easy-kill)
   (global-set-key [remap mark-sexp] #'easy-mark))
 
-(global-diff-hl-mode -1)
+(global-diff-hl-mode 1)
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
-(use-package browse-kill-ring
-  :ensure t
-  :config
-  (browse-kill-ring-default-keybindings))
+;; (use-package browse-kill-ring
+;;   :ensure t
+;;   :config
+;;   (browse-kill-ring-default-keybindings))
 
 (setq frame-title-format
       '((:eval (if (buffer-file-name)
