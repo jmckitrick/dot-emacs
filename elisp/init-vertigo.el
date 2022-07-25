@@ -68,10 +68,14 @@
 
   :bind (("C-x t" . consult-line)       ; jcm mod
          ("C-x C-y" . consult-yank-from-kill-ring)
+         ("M-y" . consult-yank-pop)
          ("M-g M-g" . consult-goto-line)
          ("C-c C-SPC" . consult-mark)
+         ("M-g m" . consult-mark)
          ("C-x C-SPC" . consult-global-mark)
          ("C-x C-g" . consult-git-grep)
+         ("C-x b" . consult-buffer)
+         ("C-x r b" . consult-bookmark)
          :map isearch-mode-map
          ("C-x t" . consult-line)))
 
