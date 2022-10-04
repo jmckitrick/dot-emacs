@@ -17,7 +17,7 @@
 ;;(jcm-setup-web-settings)
 
 ;; Should these be *-foo-mode-hook instead?
-(add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
+;;(add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.mjml" . web-mode))
 
 (defun setup-tide-mode ()

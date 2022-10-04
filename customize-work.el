@@ -21,11 +21,11 @@
  '(magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1)
  '(magit-prefer-remote-upstream nil)
  '(magit-visit-ref-behavior nil)
- '(modus-themes-hl-line '(accented intense))
+ '(modus-themes-hl-line '(accented))
  '(nav-flash-delay 4)
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(avy avy-jump ace-jump-mode embark-consult projectile corfu consult embark marginalia orderless vertico modus-themes emmet-mode paredit paredit-menu crux volatile-highlights cider nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep markdown-mode magit diminish counsel company-quickhelp browse-at-remote ag ace-window))
+   '(magit avy avy-jump ace-jump-mode embark-consult projectile corfu consult embark marginalia orderless vertico modus-themes emmet-mode paredit paredit-menu crux volatile-highlights cider nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep markdown-mode diminish counsel company-quickhelp browse-at-remote ag ace-window))
  '(projectile-mode-line-prefix " Prj")
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)
