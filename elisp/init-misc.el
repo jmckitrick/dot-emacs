@@ -32,7 +32,6 @@
     (linum-mode -1)))
 
 (windmove-default-keybindings)          ;conflicts with org mode?
-(global-set-key (kbd "M-o") 'ace-window)
 
 ;; Enable emoji! 💩
 (set-fontset-font
