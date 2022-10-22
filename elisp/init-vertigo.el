@@ -12,6 +12,8 @@
   ;; :bind ((:map minibuffer-local-map
   ;;              ("C-c C-o" . embark-export)
   ;;              ("C-c C-l" . embark-act)))
+  :bind (("C-c o" . embark-export)
+         ("C-c e" . embark-act))
   )
 
 (use-package orderless

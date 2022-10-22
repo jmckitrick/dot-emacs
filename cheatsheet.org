@@ -10,6 +10,7 @@ Tips and tricks
 - M-q paredit reindent defun
 
 * reminders 2022 - VCE
+- C-c e for embark
 - C-x for transient
 - C-c C-w isearch word
 - check for clojure namespaced completion
