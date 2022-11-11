@@ -12,7 +12,7 @@ Tips and tricks
 * reminders 2022 - VCE
 - C-c e for embark
 - C-x for transient
-- C-c C-w isearch word
+- C-c C-w isearch word - obsolete?
 - check for clojure namespaced completion
 - check for thorough completion features
 
