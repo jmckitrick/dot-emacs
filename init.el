@@ -1,6 +1,6 @@
 ;;; -*- mode: emacs-lisp; -*-
 
-(defvar jcm/font "JetBrains Mono 18")
+(defvar jcm/font "JetBrains Mono 16")
 (defvar jcm/extras '() "`elisp' and/or `consult'")
 (defvar jcm/elisp-dir (concat user-emacs-directory "elisp"))
 
