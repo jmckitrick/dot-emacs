@@ -55,11 +55,6 @@
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
-;; (use-package browse-kill-ring
-;;   :ensure t
-;;   :config
-;;   (browse-kill-ring-default-keybindings))
-
 (setq frame-title-format
       '((:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name))
@@ -79,27 +74,6 @@
  initial-scratch-message nil
  initial-major-mode 'fundamental-mode
  )
-
-;(require 'which-func)
-;;(add-to-list 'which-func-modes 'org-mode)
-;(which-func-mode 1)
-
-;; move-text?
-;; selectrum?
-
-;; replace ivy/swiper/counsel
-;; with
-;; vertico
-;; consult
-;; embark
-;; orderless
-;; marginalia
-;; corfu
-;; (consult-customize
-;;     consult-ripgrep consult-git-grep consult-grep
-;;     consult-bookmark consult-xref
-;;     consult--source-bookmark
-;;     :preview-key '(:debounce 0.25 any))
 
 (use-package restclient
   :ensure t

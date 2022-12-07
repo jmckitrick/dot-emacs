@@ -112,14 +112,7 @@
   :ensure t
   :config
   (progn
-    (eyebrowse-mode t)
-    ;; (dotimes (n 10)
-    ;;   ;;(global-unset-key (kbd (format "C-%d" n)))
-    ;;   (global-unset-key (kbd (format "M-%d" n))))
-    ;; (define-key eyebrowse-mode-map (kbd "M-1") 'eyebrowse-switch-to-window-config-1)
-    ;; (define-key eyebrowse-mode-map (kbd "M-2") 'eyebrowse-switch-to-window-config-2)
-    ;; (define-key eyebrowse-mode-map (kbd "M-3") 'eyebrowse-switch-to-window-config-3)
-    ))
+    (eyebrowse-mode t)))
 
 (desktop-save-mode 1)
 

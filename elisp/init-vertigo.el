@@ -9,12 +9,8 @@
               (lambda (&rest _)
                 (setq-local completion-auto-help nil
                             completion-show-inline-help nil)))
-  ;; :bind ((:map minibuffer-local-map
-  ;;              ("C-c C-o" . embark-export)
-  ;;              ("C-c C-l" . embark-act)))
   :bind (("C-c o" . embark-export)
-         ("C-c e" . embark-act))
-  )
+         ("C-c e" . embark-act)))
 
 (use-package orderless
   :ensure t
@@ -133,77 +129,6 @@
   :init
   (global-corfu-mode))
 
-;; mpenet config
-
-;; (use-package cider
-;;   :diminish
-;;   :config
-;;   (setq nrepl-log-messages t
-;;         cider-font-lock-dynamically nil ; use lsp semantic tokens
-;;         cider-eldoc-display-for-symbol-at-point nil ; use lsp
-;;         cider-prompt-for-symbol nil)
-;;   (add-hook 'cider-repl-mode-hook #'paredit-mode)
-;;   ;; use lsp
-;;   (add-hook 'cider-mode-hook (lambda () (remove-hook 'completion-at-point-functions #'cider-complete-at-point))))
-
-;; (use-package lsp-mode
-;;   :custom
-;;   (lsp-completion-provider :none) ;; we use Corfu!
-
-;;   :init
-;;   (setq lsp-keymap-prefix "M-l")
-;;   (defun mpenet/lsp-mode-setup-completion ()
-;;     (setf (alist-get 'styles (alist-get 'lsp-capf completion-category-defaults))
-;;           '(flex))) ;; Configure flex
-
-;;   :hook
-;;   ((clojure-mode . lsp)
-;;    (clojurec-mode . lsp)
-;;    (clojurescript-mode . lsp)
-;;    (lsp-completion-mode . mpenet/lsp-mode-setup-completion)
-;;    (before-save . lsp-format-buffer))
-
-;;   :bind (:map lsp-mode-map
-;;               ("M-l M-l" . lsp-execute-code-action)
-;;               ("M-j d" . lsp-find-definition)
-;;               ("M-j M-d" . lsp-find-definition)
-;;               ("M-j r" . lsp-find-references)
-;;               ("M-j M-r" . lsp-find-references))
-
-;;   :config
-;;   (dolist (m '(clojure-mode
-;;                clojurec-mode
-;;                clojurescript-mode
-;;                clojurex-mode))
-;;     (add-to-list 'lsp-language-id-configuration `(,m . "clojure")))
-;;   (setq cljr-add-ns-to-blank-clj-files nil
-;;         lsp-enable-indentation nil
-;;         lsp-headerline-breadcrumb-enable nil
-;;         lsp-signature-auto-activate nil
-;;         lsp-semantic-tokens-enable t
-;;         ;; after last buffer closed, kill workspace
-;;         lsp-keep-workspace-alive nil)
-
-;;   :custom-face
-;;   (lsp-face-semhl-namespace  ((t :inherit font-lock-type-face :weight normal)))
-;;   (lsp-face-semhl-definition  ((t :inherit font-lock-function-name-face :weight normal))))
-
-;; (use-package lsp-ui
-;;   :after lsp-mode
-;;   :commands lsp-ui-mode
-;;   :config
-;;   (setq lsp-ui-peek-list-width 60
-;;         lsp-ui-doc-max-width 60
-;;         lsp-ui-doc-enable nil
-;;         lsp-ui-peek-fontify 'always
-;;         lsp-ui-sideline-show-code-actions nil))
-
-;; (use-package lsp-treemacs
-;;   :config
-;;   (setq lsp-treemacs-error-list-current-project-only t))
-
-;; (use-package consult-lsp)
-
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-x m") 'execute-extended-command)
 
@@ -211,15 +136,5 @@
   :hook
   (cider-mode . (lambda () (setq-local completion-styles '(basic))))
   (cider-repl-mode . (lambda () (setq-local completion-styles '(basic)))))
-
-;; (use-package emojify
-;;   :config
-;;   (setq emojify-display-style 'unicode)
-;;   ;; only replace unicode and github, no ascii)
-;;   (setq emojify-emoji-styles '(unicode github))
-;;   ;; echo the actual underlying character to the minibuffer when point
-;;   ;; is over them so we don't mess with the displayed buffer itself
-;;   (setq emojify-point-entered-behaviour 'echo)
-;;   (global-emojify-mode 1))
 
 (provide 'init-vertigo)
