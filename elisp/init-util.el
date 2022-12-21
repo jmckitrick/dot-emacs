@@ -48,7 +48,8 @@ REGEXP defaults to ^init-.*\.el$"
       (match-system-name "jmckitrick-mbp")
       (match-system-name "MacBook-Pro")
       ;;(match-system-name "ec2.internal")
-      (match-system-name "jonathons-mbp")))
+      (match-system-name "jonathons-mbp")
+      (match-system-name "jonathonsDTDMBP")))
 
 (defun nuke-all-buffers ()
   "Kill all emacs buffers."

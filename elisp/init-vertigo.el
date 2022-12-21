@@ -8,9 +8,7 @@
   (advice-add #'vertico--setup :after
               (lambda (&rest _)
                 (setq-local completion-auto-help nil
-                            completion-show-inline-help nil)))
-  :bind (("C-c o" . embark-export)
-         ("C-c e" . embark-act)))
+                            completion-show-inline-help nil))))
 
 (use-package orderless
   :ensure t
@@ -64,18 +62,20 @@
           (when-let (project (project-current))
             (car (project-roots project)))))
 
-  :bind (("C-x t" . consult-line)       ; jcm mod
-         ("C-x C-y" . consult-yank-from-kill-ring)
+  :bind (;("C-c t" . consult-line)       ; jcm mod
+         ;("C-c r" . consult-ripgrep)
+         ("C-c y" . consult-yank-from-kill-ring)
          ("M-y" . consult-yank-pop)
          ("M-g M-g" . consult-goto-line)
          ("C-c C-SPC" . consult-mark)
-         ("M-g m" . consult-mark)
-         ("C-x C-SPC" . consult-global-mark)
+         ;("M-g m" . consult-mark)
+         ;("C-x C-SPC" . consult-global-mark)
          ("C-x C-g" . consult-git-grep)
          ("C-x b" . consult-buffer)
          ("C-x r b" . consult-bookmark)
-         :map isearch-mode-map
-         ("C-x t" . consult-line)))
+         ;:map isearch-mode-map
+         ;("C-c t" . consult-line)
+         ))
 
 (use-package embark
   :config
@@ -84,7 +84,9 @@
             (defun resize-embark-collect-window (&rest _)
               (when (memq embark-collect--kind '(:live :completions))
                 (fit-window-to-buffer (get-buffer-window)
-                                      (floor (frame-height) 2) 1)))))
+                                      (floor (frame-height) 2) 1))))
+  :bind (("C-c e" . embark-act)
+         ("C-c o" . embark-export)))
 
 (use-package embark-consult
   :after (embark consult)
@@ -92,7 +94,7 @@
   ;; if you want to have consult previews as you move around an
   ;; auto-updating embark collect buffer
   :hook
-  (embark-collect-mode . embark-consult-preview-minor-mode))
+  (embark-collect-mode-hook . consult-preview-at-point-mode))
 
 ;; Enable richer annotations using the Marginalia package
 (use-package marginalia
