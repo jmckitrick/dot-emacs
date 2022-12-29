@@ -77,13 +77,14 @@
           modus-themes-completions '((matches background)
                                      (selection accented)
                                      (popup accented))
-          modus-themes-hl-line '(accented) ; intense underline
+          ;;modus-themes-hl-line '(accented) ; intense underline
           ;;modus-themes-region '(bg-only)
           modus-themes-paren-match '(bold))
-    (modus-themes-load-themes)
+    ;;(modus-themes-load-themes)
     :config
     ;;(modus-themes-load-vivendi)
-    (modus-themes-load-operandi)
+    ;;(modus-themes-load-operandi)
+    (load-theme 'modus-operandi-tinted :no-confirm)
     :bind ("<f5>" . modus-themes-toggle))
 
   ;;(add-to-list 'initial-frame-alist '(undecorated . t))
