@@ -44,8 +44,8 @@
 ;; Scrolling settings
 (setq ;;scroll-step 10
       scroll-margin 0
-      scroll-conservatively 100000
-      scroll-preserve-screen-position 1)
+      scroll-conservatively 0
+      scroll-preserve-screen-position t)
 ;; (setq-default scroll-up-aggressively 0.0
 ;;               scroll-down-aggressively 0.0)
 (when (fboundp 'pixel-scroll-precision-mode)
@@ -53,6 +53,8 @@
 
 ;; Try this out.
 (setq save-interprogram-paste-before-kill t)
+;;(server-start)
+(setq use-dialog-box nil)
 
 ;; Fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
