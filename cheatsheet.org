@@ -14,7 +14,7 @@ Tips and tricks
 - C-c e for embark
 
 * reminders 2022 - VCE
-- C-x for transient?
+- C-x for magit transient?
 - C-c C-w isearch word - obsolete?
 - check for clojure namespaced completion
 - check for thorough completion features
