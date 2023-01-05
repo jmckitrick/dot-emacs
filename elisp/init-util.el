@@ -29,13 +29,14 @@ REGEXP defaults to ^init-.*\.el$"
 
 (defun match-system-name (target-name)
   (interactive)
-  (let ((result (string-match target-name (downcase (system-name)))))
+  (let ((result (string-match target-name (system-name))))
     (and (cl-typep result 'integer)
          (>= result 0))))
 
 (cl-defun is-home-machine (&optional force)
   (interactive)
   (or force
+      (match-system-name "jcm")
       (match-system-name "jcm-m1")
       (match-system-name "jcm-mac")
       (match-system-name "jcm-mbp")
@@ -45,9 +46,8 @@ REGEXP defaults to ^init-.*\.el$"
 (cl-defun is-work-machine (&optional force)
   (interactive)
   (or force
+      (match-system-name "dtd")
       (match-system-name "jmckitrick-mbp")
-      (match-system-name "MacBook-Pro")
-      ;;(match-system-name "ec2.internal")
       (match-system-name "jonathons-mbp")
       (match-system-name "jonathonsDTDMBP")))
 
