@@ -74,15 +74,8 @@
   (require 'modus-themes)
   (use-package modus-themes
     :ensure
-    :init
-    (setq modus-themes-bold-constructs t
-          modus-themes-mode-line '(moody)
-          modus-themes-completions '((matches background)
-                                     (selection accented)
-                                     (popup accented))
-          modus-themes-paren-match '(bold))
     :config
-    (load-theme 'modus-operandi-tinted :no-confirm)
+    (load-theme 'modus-operandi :no-confirm)
     :bind ("<f5>" . modus-themes-toggle))
 
   ;;(add-to-list 'initial-frame-alist '(undecorated . t))
