@@ -6,7 +6,7 @@
 
 (package-initialize)
 (eval-when-compile
- (require 'use-package))
+  (require 'use-package))
 (push jcm/elisp-dir load-path)
 
 (require 'init-util)

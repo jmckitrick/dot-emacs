@@ -33,9 +33,10 @@
 
 (windmove-default-keybindings)          ;conflicts with org mode?
 
-;; Enable emoji! 💩
-(set-fontset-font
- t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend)
+(when window-system
+  ;; Enable emoji! 💩
+  (set-fontset-font
+   t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend))
 
 (setq
  create-lockfiles nil
