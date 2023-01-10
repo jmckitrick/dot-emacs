@@ -77,24 +77,24 @@
          ;("C-c t" . consult-line)
          ))
 
-(use-package embark
-  :config
-  (add-hook 'embark-post-action-hook #'embark-collect--update-linked)
-  (add-hook 'embark-collect-post-revert-hook
-            (defun resize-embark-collect-window (&rest _)
-              (when (memq embark-collect--kind '(:live :completions))
-                (fit-window-to-buffer (get-buffer-window)
-                                      (floor (frame-height) 2) 1))))
-  :bind (("C-c e" . embark-act)
-         ("C-c o" . embark-export)))
+;; (use-package embark
+;;   :config
+;;   (add-hook 'embark-post-action-hook #'embark-collect--update-linked)
+;;   (add-hook 'embark-collect-post-revert-hook
+;;             (defun resize-embark-collect-window (&rest _)
+;;               (when (memq embark-collect--kind '(:live :completions))
+;;                 (fit-window-to-buffer (get-buffer-window)
+;;                                       (floor (frame-height) 2) 1))))
+;;   :bind (("C-c e" . embark-act)
+;;          ("C-c o" . embark-export)))
 
-(use-package embark-consult
-  :after (embark consult)
-  :demand t ; only necessary if you have the hook below
-  ;; if you want to have consult previews as you move around an
-  ;; auto-updating embark collect buffer
-  :hook
-  (embark-collect-mode-hook . consult-preview-at-point-mode))
+;; (use-package embark-consult
+;;   :after (embark consult)
+;;   :demand t ; only necessary if you have the hook below
+;;   ;; if you want to have consult previews as you move around an
+;;   ;; auto-updating embark collect buffer
+;;   :hook
+;;   (embark-collect-mode-hook . consult-preview-at-point-mode))
 
 ;; Enable richer annotations using the Marginalia package
 (use-package marginalia
