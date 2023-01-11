@@ -33,7 +33,7 @@
 
 (windmove-default-keybindings)          ;conflicts with org mode?
 
-(when window-system
+(when (display-graphic-p)
   ;; Enable emoji! 💩
   (set-fontset-font
    t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend))

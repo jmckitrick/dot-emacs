@@ -70,7 +70,7 @@
   (set-exec-path-from-shell-PATH))
 
 ;; Themes
-(when window-system
+(when (display-graphic-p)
   (require 'modus-themes)
   (use-package modus-themes
     :ensure
@@ -108,7 +108,7 @@
 
 (desktop-save-mode 1)
 
-(when window-system
+(when (display-graphic-p)
   (use-package moody
     :ensure t
     :config
