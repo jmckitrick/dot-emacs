@@ -20,23 +20,17 @@
 ;;;; Everything below this line is being evaluated
 ;;;; and should eventually be moved to the appropriate module.
 
-(global-set-key [remap goto-line] 'goto-line-with-feedback)
-
-(defun goto-line-with-feedback ()
-  "Show line numbers temporarily, while prompting for the line number input"
-  (interactive)
-  (unwind-protect
-      (progn
-        (linum-mode 1)
-        (goto-line (read-number "Goto line: ")))
-    (linum-mode -1)))
-
-(windmove-default-keybindings)          ;conflicts with org mode?
+(windmove-default-keybindings)          ; conflicts with org mode?
 
 (when (display-graphic-p)
   ;; Enable emoji! 💩
   (set-fontset-font
-   t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend))
+   t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend)
+  ;; other stuff for window mode
+  (setq frame-title-format
+        '((:eval (if (buffer-file-name)
+                     (abbreviate-file-name (buffer-file-name))
+                   "%b")))))
 
 (setq
  create-lockfiles nil
@@ -44,7 +38,9 @@
  scroll-error-top-bottom t
  show-paren-delay 0.5
  use-package-always-ensure t
- sentence-end-double-space nil)
+ sentence-end-double-space nil
+ initial-scratch-message nil
+ initial-major-mode 'fundamental-mode)
 
 (use-package easy-kill
   :ensure t
@@ -56,25 +52,15 @@
 (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
-(setq frame-title-format
-      '((:eval (if (buffer-file-name)
-                   (abbreviate-file-name (buffer-file-name))
-                 "%b"))))
-
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
-(setq tab-always-indent 'complete)
+;;(setq tab-always-indent 'complete)
 
 (use-package volatile-highlights
   :ensure t
   :config
-  (volatile-highlights-mode +1)
+  (volatile-highlights-mode 1)
   (diminish 'volatile-highlights-mode))
-
-(setq
- initial-scratch-message nil
- initial-major-mode 'fundamental-mode
- )
 
 (use-package restclient
   :ensure t
