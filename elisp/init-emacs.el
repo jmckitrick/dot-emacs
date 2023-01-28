@@ -75,7 +75,7 @@
   (use-package modus-themes
     :ensure
     :config
-    (load-theme 'modus-operandi :no-confirm)
+    (load-theme 'modus-operandi-tinted :no-confirm)
     :bind ("<f5>" . modus-themes-toggle))
 
   ;;(add-to-list 'initial-frame-alist '(undecorated . t))
@@ -114,7 +114,9 @@
     :config
     (setq x-underline-at-descent-line t)
     (moody-replace-mode-line-buffer-identification)
-    (moody-replace-vc-mode)
+    ;;(moody-replace-vc-mode)
+    (setq-default mode-line-format
+                  (delete '(vc-mode vc-mode) mode-line-format))
     (moody-replace-eldoc-minibuffer-message-function)))
 
 (use-package minions

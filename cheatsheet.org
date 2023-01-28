@@ -11,6 +11,11 @@ Tips and tricks
 - C-c SPC clojure align
 
 * reminders 2023
+- C-c C-f - web mode fold
+- C-c C-e k - web mode kill element
+- C-c C-e i - web mode insert element
+- C-c C-e a - select all element content
+- C-c C-e v - vanish element, retaining content
 - C-c e for embark
 
 * reminders 2022 - VCE

@@ -33,13 +33,17 @@
   (company-mode +1))
 
 ;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
+;(setq company-tooltip-align-annotations t)
 
 ;; formats the buffer before saving
-(add-hook 'before-save-hook 'tide-format-before-save)
+;(add-hook 'before-save-hook 'tide-format-before-save)
 
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
+;(add-hook 'typescript-mode-hook #'setup-tide-mode)
 
-(add-hook 'before-save-hook 'cider-format-buffer t t)
+(add-hook 'before-save-hook 'cider-format-buffer)
+
+(setenv "PATH" (concat
+                "/usr/local/bin" path-separator
+                (getenv "PATH")))
 
 (provide 'init-work)
