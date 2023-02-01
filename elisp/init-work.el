@@ -40,7 +40,7 @@
 
 ;(add-hook 'typescript-mode-hook #'setup-tide-mode)
 
-(add-hook 'before-save-hook 'cider-format-buffer)
+;(add-hook 'before-save-hook 'cider-format-buffer)
 
 (setenv "PATH" (concat
                 "/usr/local/bin" path-separator
