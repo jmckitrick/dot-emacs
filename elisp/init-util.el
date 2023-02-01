@@ -36,20 +36,20 @@ REGEXP defaults to ^init-.*\.el$"
 (cl-defun is-home-machine (&optional force)
   (interactive)
   (or force
-      (match-system-name "jcm")
-      (match-system-name "jcm-m1")
-      (match-system-name "jcm-mac")
-      (match-system-name "jcm-mbp")
+      ;;(match-system-name "jcm-m1")
+      ;;(match-system-name "jcm-mac")
+      ;;(match-system-name "jcm-mbp")
       ;;(match-system-name "jcm-mac.local")
-      (match-system-name "jcm-macbook")))
+      ;;(match-system-name "jcm-macbook")
+      (match-system-name "jcm")))
 
 (cl-defun is-work-machine (&optional force)
   (interactive)
   (or force
-      (match-system-name "dtd")
-      (match-system-name "jmckitrick-mbp")
-      (match-system-name "jonathons-mbp")
-      (match-system-name "jonathonsDTDMBP")))
+      ;;(match-system-name "jmckitrick-mbp")
+      ;;(match-system-name "jonathons-mbp")
+      ;;(match-system-name "jonathonsDTDMBP")
+      (match-system-name "dtd")))
 
 (defun nuke-all-buffers ()
   "Kill all emacs buffers."
