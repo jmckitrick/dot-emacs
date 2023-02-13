@@ -44,7 +44,7 @@
 ;; Scrolling settings
 (setq ;;scroll-step 10
       scroll-margin 0
-      scroll-conservatively 0
+      scroll-conservatively 1000
       scroll-preserve-screen-position t)
 ;; (setq-default scroll-up-aggressively 0.0
 ;;               scroll-down-aggressively 0.0)

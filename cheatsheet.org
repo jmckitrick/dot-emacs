@@ -97,6 +97,7 @@ Tips and tricks
 - browse-at-remote
 
 * Magit
+- M-RET when entering author name - ivy-immediate-done
 - C-j when entering author name - ivy-immediate-done
 
 * Themes

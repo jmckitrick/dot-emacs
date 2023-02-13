@@ -46,6 +46,7 @@
         tab-always-indent 'complete))
 
 (use-package consult
+  :ensure t
   :init
   ;; Use Consult to select xref locations with preview
   (setq xref-show-xrefs-function #'consult-xref
@@ -78,6 +79,7 @@
          ))
 
 (use-package embark
+  :ensure t
   :config
   (add-hook 'embark-post-action-hook #'embark-collect--update-linked)
   (add-hook 'embark-collect-post-revert-hook
@@ -135,6 +137,7 @@
 (global-set-key (kbd "C-x m") 'execute-extended-command)
 
 (use-package cider
+  :ensure t
   :hook
   (cider-mode . (lambda () (setq-local completion-styles '(basic))))
   (cider-repl-mode . (lambda () (setq-local completion-styles '(basic)))))
