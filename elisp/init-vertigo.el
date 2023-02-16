@@ -52,7 +52,7 @@
   (setq xref-show-xrefs-function #'consult-xref
         xref-show-definitions-function #'consult-xref)
   ;; Optionally replace `completing-read-multiple' with an enhanced version.
-  (advice-add #'completing-read-multiple :override #'consult-completing-read-multiple)
+  ;;(advice-add #'completing-read-multiple :override #'consult-completing-read-multiple)
 
   :hook (completion-list-mode . consult-preview-at-point-mode)
 
