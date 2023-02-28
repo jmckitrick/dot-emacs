@@ -1,16 +1,15 @@
 Tips and tricks
-* TODO verify/update all bindings
-* TODO clarify easy-kill/mark
-* TODO clarify paredit/indent
-- M-k paredit-copy-as-kill
-- C-k kill sexp (smaller)
-- C-M-k kill sexp (bigger - paredit)
-- C-M-\ indent region
-- C-M-q prog indent sexp
-- M-q paredit reindent defun
-- C-c SPC clojure align
 
-* reminders 2023
+* Priority reminders
+- C-x left C-x right buffer switching
+- C-c g magit-file-dispatch
+- C-x t magit transient
+- C-x v [ and ] prev/next diff
+- M-w/C-M-SPC easy-kill/easy-mark
+- C-x w h/r (hi-lock mode first)
+- occur
+
+* Reminders 2023
 - C-c C-f - web mode fold
 - C-c C-e k - web mode kill element
 - C-c C-e i - web mode insert element
@@ -18,32 +17,6 @@ Tips and tricks
 - C-c C-e v - vanish element, retaining content
 - C-c C-a - csv align
 - C-c e for embark
-
-* reminders 2022 - VCE
-- C-x for magit transient?
-- C-c C-w isearch word - obsolete?
-- check for clojure namespaced completion
-- check for thorough completion features
-
-* reminders 2022
-- describe-bindings (f1-b)
-- info (f1-i)
-- C-x left C-x right buffer switching
-- C-x w h/r (hi-lock mode first)
-- occur
-
-* reminders OLD
-- C-c s swiper-thing-at-point
-- C-SPC-SPC/C-u C-SPC, C-SPC set-mark/pop-mark
-- C-u C-x C-x exchange-point-and-mark
-- C-u C-x C-x temp-enable-transient-mode (no?)
-
-* Priority reminders
-- C-c g magit-file-dispatch
-- C-x v [ and ] prev/next diff
-- M-w/C-M-SPC easy-kill/easy-mark <--
-- C-SPC set-transient-mode
-- M-; (also on region) comment-dwim
 
 * CIDER
 - C-c C-e eval last
@@ -55,32 +28,35 @@ Tips and tricks
 
 * Clojure
 - C-: rotate keyword/string
-
-* Clojure refactor
+- C-c SPC clojure align
+- Learn/use Clojure Refactor!
 - C-c C-r - toggle ignore
 - C-c C-r _ toggle ignore surrounding
 - C-c C-r n s sort namespace
 
 * Lisp
-- C-x C-e eval last (elisp)
-- M-q indent sexp ??
-- C-M-q reindent defun ??
+- C-M-\ indent region
+- C-k kill sexp (smaller)
+- C-M-k kill sexp (bigger - paredit)
+- M-k paredit-copy-as-kill
+- M-q paredit reindent defun
+- C-M-q prog indent sexp
 - C-' splice
 - M-' wrap
 - M-r raise
 - M-s splice
 - M-S split
 - C-w kill-region
-- M-? help
+- C-x C-e eval last (elisp)
 
 * Nav/editing
 - C-c C-w `n` eyebrowse
 - M-; comment-dwim
 - M-w for easy-kill (then w, s, l)
 - C-M-SPC easy-mark
+- browse-kill-ring
 - C-v page down, M-v page up
 - Switch buffers with shift-arrow
-- M-o ace jump window
 - s-. avy jump to word first letter
 - C-u C-x = to show info about a character
 - M-x add-dir-local-v
@@ -92,18 +68,5 @@ Tips and tricks
 * Projectile
 - s-p m commander mode
 
-* Other
-- exuberant-ctags - in xref mode, TAB to jump and close
-- browse-kill-ring
+* Misc
 - browse-at-remote
-
-* Magit
-- M-RET when entering author name - ivy-immediate-done
-- C-j when entering author name - ivy-immediate-done
-
-* Themes
-- (anti-)zenburn
-- solarized(-zenburn/-light)
-- material-light
-- doneburn
-- solarized-selenized-*
