@@ -7,9 +7,10 @@
  '(c-basic-offset 4)
  '(cider-clojure-cli-global-options "-A:dev")
  '(cider-known-endpoints
-   '(("dtd-clj" "localhost" "62909")
+   '(("dtd-clj-old" "localhost" "62909")
      ("dtd-cljs" "localhost" "9000")
-     ("dtd-prod" "localhost" "30000")))
+     ("dtd-prod" "localhost" "30000")
+     ("dtd-clj" "localhost" "62000")))
  '(cider-prompt-for-symbol nil)
  '(cider-repl-display-in-current-window nil)
  '(cider-repl-pop-to-buffer-on-connect nil)
