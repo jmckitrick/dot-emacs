@@ -2,12 +2,12 @@ Tips and tricks
 
 * Priority reminders
 - C-x left C-x right buffer switching
-- C-c g magit-file-dispatch
-- C-x t magit transient
 - C-x v [ and ] prev/next diff
 - M-w/C-M-SPC easy-kill/easy-mark
 - C-x w h/r (hi-lock mode first)
 - occur
+- C-x t magit transient
+- C-c g magit-file-dispatch
 
 * Reminders 2023
 - C-c C-f - web mode fold

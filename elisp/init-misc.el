@@ -54,8 +54,6 @@
 
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
-;;(setq tab-always-indent 'complete)
-
 (use-package volatile-highlights
   :ensure t
   :config

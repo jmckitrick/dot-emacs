@@ -22,14 +22,12 @@
 
 (message "Configuring %s" (system-name))
 (when (is-home-machine)
-  (setq custom-file (concat user-emacs-directory "customize.el"))
-  (load custom-file)
+  (load-customize-file "customize.el")
   (require 'init-package)
   (when (member 'consult jcm/extras)
     (require 'init-consult)))
 
 (when (is-work-machine)
-  (setq custom-file (concat user-emacs-directory "customize-work.el"))
-  (load custom-file)
+  (load-customize-file "customize-work.el")
   (require 'init-package-work)
   (require 'init-work))
