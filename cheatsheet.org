@@ -1,22 +1,23 @@
 Tips and tricks
 
 * Priority reminders
-- C-x left C-x right buffer switching
-- C-x v [ and ] prev/next diff
-- M-w/C-M-SPC easy-kill/easy-mark
-- C-x w h/r (hi-lock mode first)
-- occur
-- C-x t magit transient
-- C-c g magit-file-dispatch
+- C-x left C-x right - buffer switching
+- M-w for easy-kill (then w, s, l)
+- C-M-SPC easy-mark
+- C-c e - embark
 
 * Reminders 2023
+- C-c C-a - csv align
 - C-c C-f - web mode fold
 - C-c C-e k - web mode kill element
 - C-c C-e i - web mode insert element
 - C-c C-e a - select all element content
 - C-c C-e v - vanish element, retaining content
-- C-c C-a - csv align
-- C-c e for embark
+- C-x v [ and ] - prev/next diff
+- C-c g - magit-file-dispatch
+- C-x t - magit transient
+- C-x w h/r - hi-lock mode (activate mode first)
+- C-c p o - occur
 
 * CIDER
 - C-c C-e eval last
@@ -52,18 +53,16 @@ Tips and tricks
 * Nav/editing
 - C-c C-w `n` eyebrowse
 - M-; comment-dwim
-- M-w for easy-kill (then w, s, l)
-- C-M-SPC easy-mark
 - browse-kill-ring
 - C-v page down, M-v page up
 - Switch buffers with shift-arrow
 - s-. avy jump to word first letter
 - C-u C-x = to show info about a character
 - M-x add-dir-local-v
-- C-SPC, C-u C-SPC
-- C-SPC C-SPC set mark with transient mode
-- C-x C-x exchange point and mark
-- C-u C-x C-x temporarily show region
+- C-SPC, C-u C-SPC?
+- C-SPC C-SPC set mark with transient mode?
+- C-x C-x exchange point and mark?
+- C-u C-x C-x temporarily show region?
 
 * Projectile
 - s-p m commander mode
