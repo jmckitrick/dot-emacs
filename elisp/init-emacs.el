@@ -61,7 +61,6 @@
  make-backup-files nil
  scroll-error-top-bottom t
  show-paren-delay 0.5
- use-package-always-ensure t
  sentence-end-double-space nil
  initial-scratch-message nil
  initial-major-mode 'fundamental-mode)
