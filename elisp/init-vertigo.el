@@ -133,13 +133,4 @@
   :init
   (global-corfu-mode))
 
-(global-set-key (kbd "C-x C-m") 'execute-extended-command)
-(global-set-key (kbd "C-x m") 'execute-extended-command)
-
-(use-package cider
-  :ensure t
-  :hook
-  (cider-mode . (lambda () (setq-local completion-styles '(basic))))
-  (cider-repl-mode . (lambda () (setq-local completion-styles '(basic)))))
-
 (provide 'init-vertigo)

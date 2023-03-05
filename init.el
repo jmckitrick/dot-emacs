@@ -20,7 +20,6 @@
 (when (member 'elisp jcm/extras)
   (require 'init-elisp))
 
-(message "Configuring %s" (system-name))
 (when (is-home-machine)
   (load-customize-file "customize.el")
   (require 'init-package)

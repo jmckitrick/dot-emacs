@@ -17,4 +17,8 @@
 
 (global-set-key [remap comment-dwim] #'comment-line)
 
+;;(global-set-key (kbd "C-x C-b") #'ibuffer) ;; Do we want or use this?
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+(global-set-key (kbd "C-x m") 'execute-extended-command)
+
 (provide 'init-keys)

@@ -16,43 +16,11 @@
   :ensure t
   :bind (("C-c g" . magit-file-dispatch)))
 
-;;;; XXX TODO clean this up
-;;;; Everything below this line is being evaluated
-;;;; and should eventually be moved to the appropriate module.
-
-(windmove-default-keybindings)          ; conflicts with org mode?
-
-(when (display-graphic-p)
-  ;; Enable emoji! 💩
-  (set-fontset-font
-   t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend)
-  ;; other stuff for window mode
-  (setq frame-title-format
-        '((:eval (if (buffer-file-name)
-                     (abbreviate-file-name (buffer-file-name))
-                   "%b")))))
-
-(setq
- create-lockfiles nil
- make-backup-files nil
- scroll-error-top-bottom t
- show-paren-delay 0.5
- use-package-always-ensure t
- sentence-end-double-space nil
- initial-scratch-message nil
- initial-major-mode 'fundamental-mode)
-
 (use-package easy-kill
   :ensure t
   :config
   (global-set-key [remap kill-ring-save] #'easy-kill)
   (global-set-key [remap mark-sexp] #'easy-mark))
-
-(global-diff-hl-mode 1)
-(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-
-(global-set-key (kbd "C-x C-b") #'ibuffer)
 
 (use-package volatile-highlights
   :ensure t
@@ -63,5 +31,47 @@
 (use-package restclient
   :ensure t
   :mode (("\\.http$" . restclient-mode)))
+
+(use-package eyebrowse
+  :ensure t
+  :config
+  (progn
+    (eyebrowse-mode t)))
+
+;; Themes
+(when (display-graphic-p)
+  (require 'modus-themes)
+  (use-package modus-themes
+    :ensure
+    :config
+    (load-theme 'modus-operandi-tinted :no-confirm)
+    :bind ("<f5>" . modus-themes-toggle))
+
+  ;;(add-to-list 'initial-frame-alist '(undecorated . t))
+  (add-to-list 'initial-frame-alist '(fullscreen . maximized)))
+
+(when (display-graphic-p)
+  (use-package moody
+    :ensure t
+    :config
+    (setq x-underline-at-descent-line t)
+    (moody-replace-mode-line-buffer-identification)
+    ;;(moody-replace-vc-mode)
+    (setq-default mode-line-format
+                  (delete '(vc-mode vc-mode) mode-line-format))
+    (moody-replace-eldoc-minibuffer-message-function)))
+
+(use-package minions
+  :ensure t
+  :config
+  (minions-mode 1))
+
+(use-package smooth-scrolling)
+(use-package smex)
+
+(which-key-mode)
+(diminish 'which-key-mode)
+(diminish 'auto-revert-mode)
+(diminish 'eldoc-mode)
 
 (provide 'init-misc)

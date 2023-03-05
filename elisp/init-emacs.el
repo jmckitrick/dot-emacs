@@ -9,6 +9,11 @@
 (global-hl-line-mode t)
 (column-number-mode t)
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
+(setq save-interprogram-paste-before-kill t)
+(recentf-mode 1)
+(save-place-mode 1)
+(desktop-save-mode 1)
+(setq-default indicate-empty-lines t)
 
 ;; DISABLE
 (setq tooltip-mode nil)
@@ -19,9 +24,10 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode 0))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode 0))
 ;;(transient-mark-mode -1)
+(setq use-dialog-box nil)
 
 ;; Editing settings.
-(setq tab-width 4)            ;could be 4 or 8?
+(setq tab-width 4)
 (setq-default indent-tabs-mode nil)
 (setq-default cursor-type 'bar)
 (setq fill-column 80)
@@ -37,24 +43,28 @@
 (setq dired-use-ls-dired nil)
 (setq dired-dwim-target t)
 
-;; Other settings.
-(fset 'yes-or-no-p 'y-or-n-p)
-(setq enable-local-variables :safe)
-
 ;; Scrolling settings
 (setq ;;scroll-step 10
-      scroll-margin 0
-      scroll-conservatively 1000
-      scroll-preserve-screen-position t)
+ scroll-margin 0
+ scroll-conservatively 1000
+ scroll-preserve-screen-position t)
 ;; (setq-default scroll-up-aggressively 0.0
 ;;               scroll-down-aggressively 0.0)
 (when (fboundp 'pixel-scroll-precision-mode)
   (pixel-scroll-precision-mode t))
 
-;; Try this out.
-(setq save-interprogram-paste-before-kill t)
-;;(server-start)
-(setq use-dialog-box nil)
+;; Other settings.
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq enable-local-variables :safe)
+(setq
+ create-lockfiles nil
+ make-backup-files nil
+ scroll-error-top-bottom t
+ show-paren-delay 0.5
+ use-package-always-ensure t
+ sentence-end-double-space nil
+ initial-scratch-message nil
+ initial-major-mode 'fundamental-mode)
 
 ;; Fix the PATH variable
 (defun set-exec-path-from-shell-PATH ()
@@ -69,59 +79,20 @@
   (setq shell-file-name "/bin/zsh")
   (set-exec-path-from-shell-PATH))
 
-;; Themes
 (when (display-graphic-p)
-  (require 'modus-themes)
-  (use-package modus-themes
-    :ensure
-    :config
-    (load-theme 'modus-operandi-tinted :no-confirm)
-    :bind ("<f5>" . modus-themes-toggle))
+  ;; Enable emoji! 💩
+  (set-fontset-font
+   t 'emoji '("Apple Color Emoji" . "iso10646-1") nil 'prepend)
+  ;; other stuff for window mode
+  (setq frame-title-format
+        '((:eval (if (buffer-file-name)
+                     (abbreviate-file-name (buffer-file-name))
+                   "%b")))))
 
-  ;;(add-to-list 'initial-frame-alist '(undecorated . t))
-  (add-to-list 'initial-frame-alist '(fullscreen . maximized)))
-
-(recentf-mode 1)
-(save-place-mode 1)
-
+(windmove-default-keybindings)          ; conflicts with org mode?
+(global-diff-hl-mode 1)
+(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(setq-default indicate-empty-lines t)
-
-(use-package smooth-scrolling)
-
-(which-key-mode)
-(diminish 'which-key-mode)
-
-(diminish 'auto-revert-mode)
-
-(use-package smex)
-
-(diminish 'eldoc-mode)
-
-;; check out eyebrowse
-(use-package eyebrowse
-  :ensure t
-  :config
-  (progn
-    (eyebrowse-mode t)))
-
-(desktop-save-mode 1)
-
-(when (display-graphic-p)
-  (use-package moody
-    :ensure t
-    :config
-    (setq x-underline-at-descent-line t)
-    (moody-replace-mode-line-buffer-identification)
-    ;;(moody-replace-vc-mode)
-    (setq-default mode-line-format
-                  (delete '(vc-mode vc-mode) mode-line-format))
-    (moody-replace-eldoc-minibuffer-message-function)))
-
-(use-package minions
-  :ensure t
-  :config
-  (minions-mode 1))
 
 (provide 'init-emacs)

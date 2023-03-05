@@ -14,7 +14,10 @@
    cider-auto-select-error-buffer t
    cider-repl-display-in-current-window nil
    cider-prompt-save-file-on-load nil
-   cider-repl-display-help-banner nil))
+   cider-repl-display-help-banner nil)
+  :hook
+  (cider-mode . (lambda () (setq-local completion-styles '(basic))))
+  (cider-repl-mode . (lambda () (setq-local completion-styles '(basic)))))
 
 (defun my-cider-mode-hook ()
   (eldoc-mode 1)
