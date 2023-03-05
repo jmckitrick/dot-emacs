@@ -56,12 +56,12 @@
 
   :hook (completion-list-mode . consult-preview-at-point-mode)
 
-  :config
-  ;; Optionally configure a function which returns the project root directory
-  (setq consult-project-root-function
-        (lambda ()
-          (when-let (project (project-current))
-            (car (project-roots project)))))
+  ;; :config
+  ;; ;; Optionally configure a function which returns the project root directory
+  ;; (setq consult-project-root-function
+  ;;       (lambda ()
+  ;;         (when-let (project (project-current))
+  ;;           (car (project-roots project)))))
 
   :bind (("C-c t" . consult-line)       ; jcm mod
          ("C-c r" . consult-ripgrep)
@@ -80,13 +80,13 @@
 
 (use-package embark
   :ensure t
-  :config
-  (add-hook 'embark-post-action-hook #'embark-collect--update-linked)
-  (add-hook 'embark-collect-post-revert-hook
-            (defun resize-embark-collect-window (&rest _)
-              (when (memq embark-collect--kind '(:live :completions))
-                (fit-window-to-buffer (get-buffer-window)
-                                      (floor (frame-height) 2) 1))))
+  ;; :config
+  ;; (add-hook 'embark-post-action-hook #'embark-collect--update-linked)
+  ;; (add-hook 'embark-collect-post-revert-hook
+  ;;           (defun resize-embark-collect-window (&rest _)
+  ;;             (when (memq embark-collect--kind '(:live :completions))
+  ;;               (fit-window-to-buffer (get-buffer-window)
+  ;;                                     (floor (frame-height) 2) 1))))
   :bind (("C-c e" . embark-act)
          ("C-c o" . embark-export)))
 
