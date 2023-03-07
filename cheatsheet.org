@@ -1,7 +1,6 @@
 Tips and tricks
 
 * Priority reminders
-- C-x left C-x right - buffer switching
 - M-w for easy-kill (then w, s, l)
 - C-M-SPC easy-mark
 - C-c e - embark
@@ -18,6 +17,7 @@ Tips and tricks
 - C-x t - magit transient
 - C-x w h/r - hi-lock mode (activate mode first)
 - C-c p o - occur
+- C-x left C-x right - buffer switching
 
 * CIDER
 - C-c C-e eval last
