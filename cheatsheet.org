@@ -4,6 +4,10 @@ Tips and tricks
 - M-w for easy-kill (then w, s, l)
 - C-M-SPC easy-mark
 - C-c e - embark
+- C-SPC, C-u C-SPC?
+- C-SPC C-SPC set mark with transient mode?
+- C-x C-x exchange point and mark?
+- C-u C-x C-x temporarily show region?
 
 * Reminders 2023
 - C-c C-a - csv align
@@ -59,10 +63,6 @@ Tips and tricks
 - s-. avy jump to word first letter
 - C-u C-x = to show info about a character
 - M-x add-dir-local-v
-- C-SPC, C-u C-SPC?
-- C-SPC C-SPC set mark with transient mode?
-- C-x C-x exchange point and mark?
-- C-u C-x C-x temporarily show region?
 
 * Projectile
 - s-p m commander mode
