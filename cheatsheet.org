@@ -1,13 +1,13 @@
 Tips and tricks
 
 * Priority reminders
-- M-w for easy-kill (then w, s, l)
-- C-M-SPC easy-mark
-- C-c e - embark
 - C-SPC, C-u C-SPC - set mark/pop mark
 - C-SPC C-SPC set mark with transient mode
 - C-x C-x exchange point and mark
 - C-u C-x C-x temporarily enable transient mark mode
+- M-w for easy-kill (then w, s, l)
+- C-M-SPC easy-mark
+- C-c e - embark
 
 * Reminders 2023
 - C-c C-a - csv align
