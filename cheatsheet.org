@@ -4,10 +4,10 @@ Tips and tricks
 - M-w for easy-kill (then w, s, l)
 - C-M-SPC easy-mark
 - C-c e - embark
-- C-SPC, C-u C-SPC?
-- C-SPC C-SPC set mark with transient mode?
-- C-x C-x exchange point and mark?
-- C-u C-x C-x temporarily show region?
+- C-SPC, C-u C-SPC - set mark/pop mark
+- C-SPC C-SPC set mark with transient mode
+- C-x C-x exchange point and mark
+- C-u C-x C-x temporarily enable transient mark mode
 
 * Reminders 2023
 - C-c C-a - csv align
