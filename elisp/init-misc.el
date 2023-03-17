@@ -25,7 +25,7 @@
 (use-package volatile-highlights
   :ensure t
   :config
-  (volatile-highlights-mode 1)
+  (volatile-highlights-mode -1)         ; DO WE WANT THIS?
   (diminish 'volatile-highlights-mode))
 
 (use-package restclient
