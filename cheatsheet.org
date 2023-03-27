@@ -8,6 +8,7 @@ Tips and tricks
 - M-w for easy-kill (then w, s, l)
 - C-M-SPC easy-mark
 - C-c e - embark
+- C-c y - yank browse from kill ring
 
 * Reminders 2023
 - C-c C-a - csv align
