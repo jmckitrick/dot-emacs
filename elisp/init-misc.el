@@ -56,9 +56,9 @@
     :config
     (setq x-underline-at-descent-line t)
     (moody-replace-mode-line-buffer-identification)
-    ;;(moody-replace-vc-mode)
-    (setq-default mode-line-format
-                  (delete '(vc-mode vc-mode) mode-line-format))
+    (moody-replace-vc-mode)
+    ;; (setq-default mode-line-format
+    ;;               (delete '(vc-mode vc-mode) mode-line-format))
     (moody-replace-eldoc-minibuffer-message-function)))
 
 (use-package minions

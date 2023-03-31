@@ -9,7 +9,7 @@
  '(cider-dynamic-indentation nil)
  '(cider-known-endpoints
    '(("dtd-cljs" "localhost" "9000")
-     ("dtd-prod" "localhost" "30000")
+     ("production" "localhost" "30000")
      ("dtd-clj" "localhost" "62000")))
  '(cider-prompt-for-symbol nil)
  '(cider-repl-display-in-current-window nil)
