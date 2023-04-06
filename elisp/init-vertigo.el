@@ -80,7 +80,7 @@
   :hook
   (embark-collect-mode-hook . consult-preview-at-point-mode))
 
-;; Enable richer annotations using the Marginalia package
+;;Enable richer annotations using the Marginalia package
 (use-package marginalia
   :ensure t
   ;; The :init configuration is always executed (Not lazy!)

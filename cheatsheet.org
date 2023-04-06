@@ -9,6 +9,7 @@ Tips and tricks
 - C-M-SPC easy-mark
 - C-c e - embark
 - C-c y - yank browse from kill ring
+- C-u f1 n - emacs news for version
 
 * Reminders 2023
 - C-c C-a - csv align
@@ -54,6 +55,7 @@ Tips and tricks
 - M-S split
 - C-w kill-region
 - C-x C-e eval last (elisp)
+- C-up C-down prev/next defun (after fix macos mission control keys)
 
 * Nav/editing
 - C-c C-w `n` eyebrowse

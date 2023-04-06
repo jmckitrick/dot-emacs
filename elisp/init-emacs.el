@@ -47,7 +47,7 @@
 (setq ;;scroll-step 10
  scroll-margin 0
  scroll-conservatively 0
- scroll-preserve-screen-position nil)
+ scroll-preserve-screen-position t)
 ;; (setq-default scroll-up-aggressively 0.0
 ;;               scroll-down-aggressively 0.0)
 (when (fboundp 'pixel-scroll-precision-mode)

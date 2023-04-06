@@ -22,7 +22,7 @@
   "Kill all emacs buffers."
   (interactive)
   (mapcar (lambda (x) (kill-buffer x))
-		  (buffer-list))
+	  (buffer-list))
   (delete-other-windows))
 
 (defun jcm/edit-startup-file ()
