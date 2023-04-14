@@ -6,7 +6,8 @@
   :ensure t
   :config
   (setq
-   nrepl-log-messages t
+   nrepl-log-messages nil
+   cider-repl-buffer-size-limit 500
    nrepl-hide-special-buffers t
    cider-repl-pop-to-buffer-on-connect t
    cider-popup-stacktraces t

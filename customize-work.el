@@ -5,12 +5,14 @@
  ;; If there is more than one, they won't work right.
  '(avy-keys '(97 111 101 117 104 116 110 115))
  '(c-basic-offset 4)
+ '(cider-auto-mode t)
  '(cider-clojure-cli-global-options "-A:dev")
  '(cider-dynamic-indentation nil)
  '(cider-known-endpoints
    '(("dtd-cljs" "localhost" "9000")
      ("production" "localhost" "30000")
      ("dtd-clj" "localhost" "62000")))
+ '(cider-prefer-local-resources t)
  '(cider-prompt-for-symbol nil)
  '(cider-repl-display-in-current-window nil)
  '(cider-repl-pop-to-buffer-on-connect nil)
@@ -105,6 +107,7 @@
  '(modus-themes-hl-line '(accented))
  '(modus-themes-to-toggle '(modus-operandi-tinted modus-vivendi-tinted))
  '(nav-flash-delay 4)
+ '(nrepl-log-messages nil)
  '(org-agenda-span 'day)
  '(package-selected-packages
    '(magit cider csv-mode avy avy-jump ace-jump-mode embark-consult projectile corfu consult embark marginalia orderless vertico modus-themes emmet-mode paredit paredit-menu crux volatile-highlights nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep markdown-mode diminish counsel company-quickhelp browse-at-remote ag ace-window))
