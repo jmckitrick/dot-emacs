@@ -38,6 +38,7 @@
   (my-lisp-setup))
 
 (defun my-clojure-mode-hook ()
+  (require 'clj-refactor)
   (clj-refactor-mode 1)
   (cljr-add-keybindings-with-prefix "C-c C-m"))
 
