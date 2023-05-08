@@ -5,6 +5,6 @@
 ;; Set up lib path for native compilation.
 (setenv "LIBRARY_PATH"
         (string-join
-         '("/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/12/"
-           "/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/12/gcc/aarch64-apple-darwin21/12")
+         '("/opt/homebrew/Cellar/gcc/13.1.0/lib/gcc/13/"
+           "/opt/homebrew/Cellar/gcc/13.1.0/lib/gcc/13/gcc/aarch64-apple-darwin22/13")
          ":"))
