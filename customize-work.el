@@ -110,7 +110,7 @@
  '(nrepl-log-messages nil)
  '(org-agenda-span 'day)
  '(package-selected-packages
-   '(magit cider csv-mode avy avy-jump ace-jump-mode embark-consult projectile corfu consult embark marginalia orderless vertico modus-themes emmet-mode paredit paredit-menu crux volatile-highlights nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep markdown-mode diminish counsel company-quickhelp browse-at-remote ag ace-window))
+   '(magit transient cider csv-mode avy avy-jump ace-jump-mode embark-consult projectile corfu consult embark marginalia orderless vertico modus-themes emmet-mode paredit paredit-menu crux volatile-highlights nav-flash bug-hunter anti-zenburn-theme doneburn-theme hc-zenburn-theme labburn-theme zenburn-theme eyebrowse minions moody wgrep tide browse-kill-ring diff-hl easy-kill org js2-mode yaml-mode which-key web-mode use-package solarized-theme smooth-scrolling smex smartparens restclient rainbow-delimiters projectile-ripgrep markdown-mode diminish counsel company-quickhelp browse-at-remote ag ace-window))
  '(projectile-mode-line-prefix " Prj")
  '(projectile-sort-order 'recently-active)
  '(recentf-auto-cleanup 'never)

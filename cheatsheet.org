@@ -5,8 +5,8 @@ Tips and tricks
 - C-SPC C-SPC set mark with transient mode
 - C-x C-x exchange point and mark
 - C-u C-x C-x temporarily enable transient mark mode
-- M-w for easy-kill (then w, s, l)
 - C-M-SPC easy-mark
+- M-w for easy-kill (then w, s, l)
 - C-c e - embark
 - C-c y - yank browse from kill ring
 - C-u f1 n - emacs news for version

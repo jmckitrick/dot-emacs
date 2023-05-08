@@ -46,4 +46,8 @@
                 "/usr/local/bin" path-separator
                 (getenv "PATH")))
 
+(add-to-list 'load-path "/Users/jmckitrick/projects/gcmh")
+(require 'gcmh)
+(gcmh-mode t)
+
 (provide 'init-work)
